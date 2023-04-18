@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18385847, g: 0.22865398, b: 0.30107868, a: 1}
+  m_IndirectSpecularColor: {r: 0.18385874, g: 0.22865474, b: 0.30107945, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -782,6 +782,7 @@ MonoBehaviour:
   materialBindings:
   - material: {fileID: 2100000, guid: b7d93d3cce5674b46b915ae276dc9395, type: 2}
   - material: {fileID: 2100000, guid: a111762c73311a743a9d95eafbbafb74, type: 2}
+  - material: {fileID: 2100000, guid: 09142f30dbe2ff843a6569d4ebc40aa2, type: 2}
   targetObject: {fileID: 1033396489}
 --- !u!4 &1033396489
 Transform:
@@ -791,7 +792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033396487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.27, y: 0.11, z: 0.55}
+  m_LocalPosition: {x: 12, y: 0.11, z: 0.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -851,6 +852,7 @@ MonoBehaviour:
   materialBindings:
   - material: {fileID: 2100000, guid: b7d93d3cce5674b46b915ae276dc9395, type: 2}
   - material: {fileID: 2100000, guid: a111762c73311a743a9d95eafbbafb74, type: 2}
+  - material: {fileID: 2100000, guid: 09142f30dbe2ff843a6569d4ebc40aa2, type: 2}
   targetObject: {fileID: 1059792285}
 --- !u!4 &1059792285
 Transform:
@@ -860,7 +862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059792283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.05, y: 0.11, z: -0.51}
+  m_LocalPosition: {x: 8.78, y: 0.11, z: -0.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1238,6 +1240,7 @@ MonoBehaviour:
   materialBindings:
   - material: {fileID: 2100000, guid: b7d93d3cce5674b46b915ae276dc9395, type: 2}
   - material: {fileID: 2100000, guid: a111762c73311a743a9d95eafbbafb74, type: 2}
+  - material: {fileID: 2100000, guid: 09142f30dbe2ff843a6569d4ebc40aa2, type: 2}
   targetObject: {fileID: 1260256777}
 --- !u!4 &1260256777
 Transform:
@@ -1247,7 +1250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260256775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.16, y: 0.11, z: -3.53}
+  m_LocalPosition: {x: 10.889999, y: 0.11, z: -3.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1473,7 +1476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785455357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.88, y: 0.49, z: -3.3}
+  m_LocalPosition: {x: 6.6099997, y: 0.49, z: -3.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1516,6 +1519,7 @@ MonoBehaviour:
   materialBindings:
   - material: {fileID: 2100000, guid: b7d93d3cce5674b46b915ae276dc9395, type: 2}
   - material: {fileID: 2100000, guid: a111762c73311a743a9d95eafbbafb74, type: 2}
+  - material: {fileID: 2100000, guid: 09142f30dbe2ff843a6569d4ebc40aa2, type: 2}
   targetObject: {fileID: 1785455358}
 --- !u!1 &2059526136
 GameObject:
