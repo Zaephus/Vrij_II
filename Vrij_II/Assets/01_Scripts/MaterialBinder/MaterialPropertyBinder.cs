@@ -10,7 +10,18 @@ public class MaterialPropertyBinder : MonoBehaviour
         public Material material;
     }
 
-    public List<string> propertyNames = new List<string>();
+    [System.Serializable]
+    public class PropertyBinding
+    {
+        public string propertyName;
+        public bool isHDRColor;
+        public bool isFloat;
+        [ColorUsageAttribute(true, true)]
+        public Color colorValueHDR;
+        public float floatValue;
+    }
+
+    public List<PropertyBinding> propertyBindings = new List<PropertyBinding>();
     public List<MaterialBinding> materialBindings = new List<MaterialBinding>();
     public Transform targetObject;
 
@@ -25,12 +36,23 @@ public class MaterialPropertyBinder : MonoBehaviour
     {
         if (targetObject == null) return;
 
-        Vector4 position = targetObject.position;
-
-        foreach (var kvp in bindingDict)
+        foreach (var binding in propertyBindings)
         {
-            string propertyName = kvp.Key;
-            List<Material> materials = kvp.Value;
+            string propertyName = binding.propertyName;
+            List<Material> materials = bindingDict[propertyName];
+            object value;
+            if (binding.isHDRColor)
+            {
+                value = (object)binding.colorValueHDR;
+            }
+            else if (binding.isFloat)
+            {
+                value = (object)binding.floatValue;
+            }
+            else
+            {
+                value = (object)targetObject.position;
+            }
 
             if (materials != null && materials.Count > 0)
             {
@@ -38,7 +60,18 @@ public class MaterialPropertyBinder : MonoBehaviour
                 {
                     if (material != null && material.HasProperty(propertyName))
                     {
-                        material.SetVector(propertyName, position);
+                        if (binding.isHDRColor)
+                        {
+                            material.SetColor(propertyName, binding.colorValueHDR);
+                        }
+                        else if (binding.isFloat)
+                        {
+                            material.SetFloat(propertyName, binding.floatValue);
+                        }
+                        else
+                        {
+                            material.SetVector(propertyName, targetObject.position);
+                        }
                     }
                     else
                     {
@@ -64,14 +97,16 @@ public class MaterialPropertyBinder : MonoBehaviour
     void UpdateBindingDict()
     {
         bindingDict.Clear();
-        foreach (var propertyName in propertyNames)
+        foreach (var binding in propertyBindings)
         {
+            string propertyName = binding.propertyName;
             bindingDict[propertyName] = new List<Material>();
-            foreach (var binding in materialBindings)
+            foreach (var materialBinding in materialBindings)
             {
-                if (binding.material != null && binding.material.HasProperty(propertyName))
+                Material material = materialBinding.material;
+                if (material != null && material.HasProperty(propertyName))
                 {
-                    bindingDict[propertyName].Add(binding.material);
+                    bindingDict[propertyName].Add(material);
                 }
             }
         }
