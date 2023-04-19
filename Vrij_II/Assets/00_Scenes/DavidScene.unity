@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18385847, g: 0.22865398, b: 0.30107868, a: 1}
+  m_IndirectSpecularColor: {r: 0.18385874, g: 0.22865474, b: 0.30107945, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2715,6 +2715,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 985219164264007078, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3653849793495347575, guid: c9c263a6465cd464ebced13fa2c7675a,
         type: 3}
       propertyPath: m_RootOrder
@@ -2775,5 +2781,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockOutPlayer
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6407201863831450247, guid: c9c263a6465cd464ebced13fa2c7675a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c9c263a6465cd464ebced13fa2c7675a, type: 3}
