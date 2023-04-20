@@ -2715,6 +2715,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 876664148856719815, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_Weight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 985219164264007078, guid: c9c263a6465cd464ebced13fa2c7675a,
         type: 3}
       propertyPath: m_Icon
@@ -2775,6 +2780,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489132044222298696, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_RigLayers.Array.data[0].m_Active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489132044222298696, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_RigLayers.Array.data[1].m_Active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489132044222298696, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_RigLayers.Array.data[2].m_Active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804148657609544100, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_Weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8000795697679376977, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_Weight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8799203888311731310, guid: c9c263a6465cd464ebced13fa2c7675a,
         type: 3}
