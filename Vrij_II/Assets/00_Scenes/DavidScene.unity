@@ -1729,6 +1729,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1334734982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7125894086951399301, guid: c9c263a6465cd464ebced13fa2c7675a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1265936384354178358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1334734986 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4562074485045784389, guid: c9c263a6465cd464ebced13fa2c7675a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1265936384354178358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1334734988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334734982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2132435fb6271544ab4e6e67b667865c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1334734986}
+  hasSpear: 0
 --- !u!1 &1352540172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6934356464381969469, guid: 72c6f4a35e8d7094cb34b317069007c2,
@@ -2795,6 +2821,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RigLayers.Array.data[2].m_Active
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562074485045784389, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'spine.001'\n\tTransform 'spine.002'\n\tTransform
+        'hand.R'\n\tTransform 'upper_arm.L'\n\tTransform 'forearm.R'\n\tTransform
+        'shoulder.L'\n\tTransform 'spine.001'\n\tTransform 'spine.002'\n\tTransform
+        'hand.R'\n\tTransform 'upper_arm.L'\n\tand more ..."
       objectReference: {fileID: 0}
     - target: {fileID: 7804148657609544100, guid: c9c263a6465cd464ebced13fa2c7675a,
         type: 3}
