@@ -739,7 +739,10 @@ VisualEffect:
     m_Vector3f:
       m_Array: []
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0.46617836, y: 2.6188257, z: 1.0566543, w: 0}
+        m_Name: Color
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:
@@ -2975,6 +2978,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4210901658133608495, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4489132044222298696, guid: c9c263a6465cd464ebced13fa2c7675a,
         type: 3}
       propertyPath: m_RigLayers.Array.data[0].m_Active
@@ -2998,7 +3006,17 @@ PrefabInstance:
     - target: {fileID: 4562074485045784389, guid: c9c263a6465cd464ebced13fa2c7675a,
         type: 3}
       propertyPath: m_WarningMessage
-      value: 
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'spine.001'\n\tTransform 'spine.002'\n\tTransform
+        'hand.R'\n\tTransform 'upper_arm.L'\n\tTransform 'forearm.R'\n\tTransform
+        'shoulder.L'\n\tTransform 'spine.001'\n\tTransform 'spine.002'\n\tTransform
+        'hand.R'\n\tTransform 'upper_arm.L'\n\tand more ..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170142158442467769, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6047963855842838979, guid: c9c263a6465cd464ebced13fa2c7675a,
         type: 3}
@@ -3006,6 +3024,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6581301728884297441, guid: c9c263a6465cd464ebced13fa2c7675a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990946656539710625, guid: c9c263a6465cd464ebced13fa2c7675a,
         type: 3}
       propertyPath: m_Enabled
       value: 1
