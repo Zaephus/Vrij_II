@@ -34,8 +34,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 inputdir = transform.right * leftHorizontalInput + transform.forward * leftVerticalInput;
         float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
 
-        Debug.Log("dir: " + dir + " inputdir: " + inputdir);
-
         if (inputdir.magnitude >= 0.5f)
         {
             rb.AddForce(inputdir * runSpeed * 10, ForceMode.Force);
