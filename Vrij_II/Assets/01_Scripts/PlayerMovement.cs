@@ -30,19 +30,27 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate(){
 
         //moving
-        Vector3 dir = transform.forward * leftVerticalInput + transform.right * leftHorizontalInput;
+        Vector3 dir = new Vector3(leftHorizontalInput, 0, leftVerticalInput).normalized;
+        Vector3 inputdir = transform.right * leftHorizontalInput + transform.forward * leftVerticalInput;
+        float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
 
-        rb.AddForce(dir * walkSpeed * 10, ForceMode.Force);
-     
-        animator.SetFloat("VelocityZ", dir.normalized.z);
-        animator.SetFloat("VelocityX", dir.normalized.x);
+        if (inputdir.magnitude >= 0.5f)
+        {
+            rb.AddForce(inputdir * runSpeed * 10, ForceMode.Force);
+            transform.rotation = Quaternion.Euler(0, angle, 0);
+        }
+        else if (inputdir.magnitude >= 0.01f && inputdir.magnitude < 0.5f)
+        {
+            rb.AddForce(inputdir * walkSpeed * 10, ForceMode.Force);
+            transform.rotation = Quaternion.Euler(0, angle, 0);
+        }
+        
+        animator.SetFloat("VelocityZ", inputdir.magnitude);
+        animator.SetFloat("VelocityX", inputdir.magnitude);
 
         //looking
-        targetPosition = target.localPosition;
-        targetPosition = new Vector3(rightHorizontalInput, 0, rightVerticalInput);
-       
-        float angle = Mathf.Atan2(targetPosition.x, targetPosition.z) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, angle, 0);
+        //targetPosition = target.localPosition;
+        //targetPosition = new Vector3(rightHorizontalInput, 0, rightVerticalInput);
     }
 
 
