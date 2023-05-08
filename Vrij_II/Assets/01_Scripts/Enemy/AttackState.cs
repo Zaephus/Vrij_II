@@ -14,6 +14,7 @@ public class AttackState : BaseState {
 
     public override void OnEnd() {}
 
+    // TODO: Add rotation to attack.
     private IEnumerator Attack() {
 
         Vector3 targetDir = (enemyController.target.position - enemyController.transform.position).normalized;
@@ -23,7 +24,7 @@ public class AttackState : BaseState {
         yield return new WaitForSeconds(enemyController.beforeAttackDelay);
 
         while(distLeft > 0.0f) {
-            enemyController.transform.position += targetDir * enemyController.attackSpeed * Time.deltaTime;
+            enemyController.agent.Move(targetDir * enemyController.attackSpeed * Time.deltaTime);
             distLeft -= (targetDir * enemyController.attackSpeed * Time.deltaTime).magnitude;
             yield return new WaitForEndOfFrame();
         }
