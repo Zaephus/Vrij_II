@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour {
     private AttackState attackState;
 
     private BaseState currentState;
+    private string state;
 
     public Transform target;
 
@@ -59,9 +60,20 @@ public class EnemyController : MonoBehaviour {
                 return;
         }
 
+        state = _stateType;
+
         Debug.Log("Switched State to " + _stateType);
 
         currentState.OnStart();
+    }
+
+    public void OnTriggerEnter(Collider _other) {
+        if(state == "AttackState") {
+            Debug.Log("Hit something");
+            if(_other.GetComponent<IDamageable>() != null) {
+                _other.GetComponent<IDamageable>().Hit();
+            }
+        }
     }
 
 }
