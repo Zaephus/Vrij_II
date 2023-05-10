@@ -8,7 +8,6 @@ public class PlayerManager : MonoBehaviour, IDamageable {
     private PlayerInputManager playerInput;
     [SerializeField]
     private PlayerMovement playerMovement;
-    private bool isAiming;
 
 
     private void Start() {
@@ -22,6 +21,10 @@ public class PlayerManager : MonoBehaviour, IDamageable {
     private void FixedUpdate()
     {
         playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput);
+        if (playerInput.isAiming)
+        {
+            
+        }
     }
 
     public void Hit() {

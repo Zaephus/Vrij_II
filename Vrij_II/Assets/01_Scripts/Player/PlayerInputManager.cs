@@ -39,5 +39,7 @@ public class PlayerInputManager: MonoBehaviour
         {
             isAiming = false;
         }
+
+        GetComponent<AnimatorLayerWeight>().isAiming = isAiming;
     }
 }
