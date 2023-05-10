@@ -809,11 +809,11 @@ GameObject:
   - component: {fileID: 6246893204688616633}
   - component: {fileID: 4385065413008941716}
   - component: {fileID: 5260196009398717383}
-  - component: {fileID: 6177992837726886467}
   - component: {fileID: 5260196009398717376}
   - component: {fileID: 5260196009398717377}
   - component: {fileID: 3243694117133227933}
   - component: {fileID: 3276107995071266722}
+  - component: {fileID: 5328703834928069489}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -902,24 +902,6 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.75, z: 0}
---- !u!114 &6177992837726886467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4176986963492340819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5da084ff348701d439ad7f12edcef56d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 5
-  runSpeed: 10
-  aimSpeed: 5
-  rb: {fileID: 6246893204688616633}
-  animator: {fileID: 7231760633856492691}
-  target: {fileID: 6445601855673153878}
 --- !u!114 &5260196009398717376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -932,6 +914,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae328b527f039ef46b0265dab65aec74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInput: {fileID: 5328703834928069489}
+  playerMovement:
+    walkSpeed: 5
+    runSpeed: 10
+    aimSpeed: 5
+    rb: {fileID: 6246893204688616633}
+    animator: {fileID: 7231760633856492691}
+    target: {fileID: 6445601855673153878}
 --- !u!114 &5260196009398717377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,8 +950,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6177992837726886467}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 5328703834928069489}
+        m_TargetAssemblyTypeName: PlayerInputManager, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
@@ -976,8 +966,8 @@ MonoBehaviour:
     m_ActionName: Player/Move[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6177992837726886467}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 5328703834928069489}
+        m_TargetAssemblyTypeName: PlayerInputManager, Assembly-CSharp
         m_MethodName: OnLook
         m_Mode: 0
         m_Arguments:
@@ -1034,6 +1024,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5328703834928069489}
+        m_TargetAssemblyTypeName: PlayerInputManager, Assembly-CSharp
+        m_MethodName: OnAim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 60c90023-9283-452a-81f5-b19c17928f4d
+    m_ActionName: Player/Aim[/SwitchProControllerHID/leftTrigger,/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1073,6 +1079,23 @@ MonoBehaviour:
   - m_Rig: {fileID: 3754709226376284551}
     m_Active: 1
   m_Effectors: []
+--- !u!114 &5328703834928069489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4176986963492340819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e84157c627762a45bb0edb9057816b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHorizontalInput: 0
+  leftVerticalInput: 0
+  rightHorizontalInput: 0
+  rightVerticalInput: 0
+  isAiming: 0
 --- !u!1 &4377711621101028073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,7 +1825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6562836925462684222}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0, y: 0.105732694, z: 0.03827095}
+  m_LocalPosition: {x: 0, y: 0.10573278, z: 0.038269997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
