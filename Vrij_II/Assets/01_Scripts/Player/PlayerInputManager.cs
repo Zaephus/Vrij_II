@@ -12,8 +12,7 @@ public class PlayerInputManager: MonoBehaviour
     public bool isAiming;
 
     // A method that receives input from input manager, that lets you move around
-    public void OnMove(InputAction.CallbackContext context)
-    {
+    public void OnMove(InputAction.CallbackContext context){
 
         Vector2 inputVector = context.ReadValue<Vector2>();
         leftHorizontalInput = inputVector.x;
@@ -21,16 +20,14 @@ public class PlayerInputManager: MonoBehaviour
     }
 
     // A method that receives input from input manager, when you look around/aim
-    public void OnLook(InputAction.CallbackContext context)
-    {
+    public void OnLook(InputAction.CallbackContext context){
 
         Vector2 inputVector = context.ReadValue<Vector2>();
         rightHorizontalInput = inputVector.x;
         rightVerticalInput = inputVector.y;
     }
 
-    public void OnAim(InputAction.CallbackContext context)
-    {
+    public void OnAim(InputAction.CallbackContext context){
         if (context.performed)
         {
             isAiming = true;

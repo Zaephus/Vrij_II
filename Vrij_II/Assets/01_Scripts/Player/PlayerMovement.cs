@@ -17,15 +17,13 @@ public class PlayerMovement{
 
     [Header ("Components")]
     [SerializeField]
-   public Rigidbody rb;  
+    public Rigidbody rb;  
     [SerializeField]
     public Animator animator;
     [SerializeField]
     public Transform target;
 
-    public void Move(Transform _playerTransform, float _horizontalInput, float _verticalInput) {
-
-        // moving
+    public void Move(Transform _playerTransform, float _horizontalInput, float _verticalInput){
         Vector3 dir = Vector3.ClampMagnitude(new Vector3(_horizontalInput, 0, _verticalInput), 1.0f);
         float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
 
@@ -40,10 +38,6 @@ public class PlayerMovement{
         
         animator.SetFloat("VelocityZ", dir.magnitude);
         animator.SetFloat("VelocityX", dir.magnitude);
-
-        // looking
-        // targetPosition = target.localPosition;
-        // targetPosition = new Vector3(rightHorizontalInput, 0, rightVerticalInput);
     }
 
     // TODO: Add a slope limit.

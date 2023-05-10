@@ -18,8 +18,7 @@ public class PlayerManager : MonoBehaviour, IDamageable {
 
     }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate(){
         playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput);
         if (playerInput.isAiming)
         {
