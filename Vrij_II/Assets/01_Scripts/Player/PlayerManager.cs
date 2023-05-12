@@ -22,7 +22,7 @@ public class PlayerManager : MonoBehaviour, IDamageable {
         playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput);
         if (playerInput.isAiming)
         {
-            
+            playerMovement.Aim(transform, playerInput.rightHorizontalInput, playerInput.rightVerticalInput);
         }
     }
 

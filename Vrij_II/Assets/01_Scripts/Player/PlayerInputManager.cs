@@ -38,5 +38,6 @@ public class PlayerInputManager: MonoBehaviour
         }
 
         GetComponent<AnimatorLayerWeight>().isAiming = isAiming;
+        GetComponent<Animator>().SetBool("isAiming", isAiming);
     }
 }

@@ -5066,6 +5066,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5260196009398717376, guid: 145ae16e06c6dce448d7f344411d55e1,
+        type: 3}
+      propertyPath: playerMovement.aimDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260196009398717376, guid: 145ae16e06c6dce448d7f344411d55e1,
+        type: 3}
+      propertyPath: playerMovement.offsetFromPlayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445601855673153878, guid: 145ae16e06c6dce448d7f344411d55e1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445601855673153878, guid: 145ae16e06c6dce448d7f344411d55e1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7613040977061730977, guid: 145ae16e06c6dce448d7f344411d55e1,
         type: 3}
       propertyPath: m_RootOrder
@@ -5120,6 +5140,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140315990164438160, guid: 145ae16e06c6dce448d7f344411d55e1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 145ae16e06c6dce448d7f344411d55e1, type: 3}
@@ -5542,18 +5567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da084ff348701d439ad7f12edcef56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHorizontalInput: 0
-  leftVerticalInput: 0
-  rightHorizontalInput: 0
-  rightVerticalInput: 0
-  targetPosition: {x: 0, y: 0, z: 0}
-  isAiming: 0
-  walkSpeed: 1
-  runSpeed: 2
-  aimSpeed: 5
-  rb: {fileID: 1191927783795981791}
-  animator: {fileID: 2479134561254786549}
-  target: {fileID: 2013389242}
 --- !u!114 &9208836250573849911
 MonoBehaviour:
   m_ObjectHideFlags: 0
