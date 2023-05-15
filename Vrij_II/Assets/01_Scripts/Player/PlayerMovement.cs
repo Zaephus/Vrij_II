@@ -11,11 +11,7 @@ public class PlayerMovement{
     [SerializeField]
     public float runSpeed;
     [SerializeField]
-    public float aimSpeed;
-    [SerializeField]
     public float aimDistance;
-    [SerializeField]
-    public float offsetFromPlayer;
 
     [Header ("Components")]
     [SerializeField]
@@ -24,6 +20,12 @@ public class PlayerMovement{
     public Animator animator;
     [SerializeField]
     public Transform target;
+
+    [Header("Spear")]
+    [SerializeField]
+    private GameObject spearPrefab;
+    [SerializeField]
+    public GameObject spear;
 
     public void Move(Transform _playerTransform, float _horizontalInput, float _verticalInput){
         Vector3 dir = Vector3.ClampMagnitude(new Vector3(_horizontalInput, 0, _verticalInput), 1.0f);
@@ -52,7 +54,7 @@ public class PlayerMovement{
             dir = new Vector3(0, 0, aimDistance);
         }
 
-        Vector3 targetPosition = _playerTransform.position + (dir).normalized * aimDistance;
+        Vector3 targetPosition = _playerTransform.position + (dir).normalized * aimDistance + new Vector3(0,1.5f,0);
 
         Debug.DrawLine(targetPosition, _playerTransform.position);
 
@@ -66,7 +68,13 @@ public class PlayerMovement{
         {
             _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
         }
-        Debug.Log(angle);
+    }
+
+    public bool Throw() {
+
+        Debug.Log("hallo");
+
+        return false;
     }
 
 }
