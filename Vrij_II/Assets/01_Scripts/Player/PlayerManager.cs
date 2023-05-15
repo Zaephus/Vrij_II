@@ -8,14 +8,15 @@ public class PlayerManager : MonoBehaviour, IDamageable {
     private PlayerInputManager playerInput;
     [SerializeField]
     private PlayerMovement playerMovement;
-
+    [SerializeField]
+    private GameObject aimingTarget;
 
     private void Start() {
 
     }
 
     private void Update() {
-
+        aimingTarget.SetActive(playerInput.isAiming);
     }
 
     private void FixedUpdate(){
