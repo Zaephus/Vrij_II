@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CleverCrow.Fluid.UniqueIds;
 
 namespace SaveSystem {
 
@@ -9,12 +10,16 @@ namespace SaveSystem {
         [SerializeField]
         private string stringToDisplay;
 
+        private UniqueId uniqueId;
+
         private void Start() {
             SaveManager.SaveCallMade += SaveObject;
+            uniqueId = GetComponent<UniqueId>();
+
         }
 
         private void SaveObject(ObjectSavedCallback _callback) {
-            _callback(stringToDisplay);
+            _callback(uniqueId.Id);
         }
         
     }
