@@ -1,11 +1,23 @@
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
+
 
 public class AnimatorLayerWeight : MonoBehaviour
 {
-    public Animator animator;
-    public bool hasSpear;
+    [SerializeField]
+    private Animator animator;
+    public bool isAiming;
 
     private int upperBodyLayerIndex;
+
+    [SerializeField]
+    private Rig[] rigs;
+    [SerializeField]
+    private Transform spearHeldTransform;
+    [SerializeField]
+    private Transform spearAimTransform;
+    [SerializeField]
+    private Transform spearBoneTransform;
 
     private void Start()
     {
@@ -14,8 +26,24 @@ public class AnimatorLayerWeight : MonoBehaviour
 
     private void Update()
     {
-        float weight = hasSpear ? 1f : 0f;
+        float weight = isAiming ? 1f : 0f;
         animator.SetLayerWeight(upperBodyLayerIndex, weight);
-        animator.SetBool("hasSpear", hasSpear);
+        animator.SetBool("hasSpear", isAiming);
+
+        foreach (Rig rig in rigs)
+        {
+            rig.weight = weight;
+        }
+
+        if (weight == 0)
+        {
+            spearBoneTransform.localRotation = spearHeldTransform.localRotation;
+            spearBoneTransform.localPosition = spearHeldTransform.localPosition;
+        }
+        else
+        {
+            spearBoneTransform.localRotation = spearAimTransform.localRotation;
+            spearBoneTransform.localPosition = spearAimTransform.localPosition;
+        }
     }
 }
