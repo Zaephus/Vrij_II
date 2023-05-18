@@ -6,9 +6,11 @@ public class Spear : MonoBehaviour
 {
     [SerializeField]
     private Rigidbody rb;
+    [SerializeField]
+    private Transform boneTransform; 
 
-    private void OnEnable()
+    public void Fire(float _throwStrenght)
     {
-        rb.AddForce(transform.forward, ForceMode.Impulse);         
+        rb.AddForce(-boneTransform.up * _throwStrenght, ForceMode.Impulse);         
     }
 }

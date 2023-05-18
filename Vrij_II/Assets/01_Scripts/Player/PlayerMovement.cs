@@ -26,6 +26,8 @@ public class PlayerMovement{
     private GameObject spearPrefab;
     [SerializeField]
     public GameObject spear;
+    [SerializeField]
+    private float throwStrenght;
 
     public void Move(Transform _playerTransform, float _horizontalInput, float _verticalInput){
         Vector3 dir = Vector3.ClampMagnitude(new Vector3(_horizontalInput, 0, _verticalInput), 1.0f);
@@ -73,7 +75,8 @@ public class PlayerMovement{
     public bool Throw() {
 
         Debug.Log("hallo");
-
+        Spear _spear = GameObject.Instantiate(spearPrefab, spear.transform.position, spear.transform.rotation, null).GetComponent<Spear>();
+        _spear.Fire(throwStrenght);
         return false;
     }
 
