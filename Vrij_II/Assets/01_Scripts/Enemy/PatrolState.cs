@@ -11,16 +11,22 @@ public class PatrolState : BaseState {
 
     public PatrolState(EnemyController _e, Transform[] _waypoints) : base(_e) {
         waypoints = _waypoints;
-        currentWaypoint = waypoints[0];
+        if(_waypoints.Length > 0) {
+            currentWaypoint = waypoints[0];
+        }
     }
 
     public override void OnStart() {
-        enemyController.agent.SetDestination(currentWaypoint.position);
-        enemyController.agent.isStopped = false;
+        if(currentWaypoint != null) {
+            enemyController.agent.SetDestination(currentWaypoint.position);
+            enemyController.agent.isStopped = false;
+        }
     }
 
     public override void OnUpdate() {
-        Navigate();
+        if(currentWaypoint != null) {
+            Navigate();
+        }
         CheckTarget();
     }
 
@@ -51,7 +57,7 @@ public class PatrolState : BaseState {
             RaycastHit hit;
 
             if(Physics.Raycast(ray, out hit, enemyController.viewDistance)) {
-                if(hit.collider.GetComponent<PlayerMovement>() != null) {
+                if(hit.collider.GetComponent<IDamageable>() != null) {
                     enemyController.SwitchState("ChaseState");
                 }
             }
