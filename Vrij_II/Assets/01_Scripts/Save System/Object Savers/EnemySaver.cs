@@ -28,7 +28,7 @@ namespace SaveSystem {
         protected override void LoadObject(string _text) {
 
             EnemyData data;
-
+            
             using(StringReader stringReader = new StringReader(_text)) {
                 data = xmlSerializer.Deserialize(stringReader) as EnemyData;
             }

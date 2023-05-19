@@ -20,7 +20,7 @@ namespace SaveSystem {
 
             fileLoadedCallback = LoadObject;
             SaveManager.ObjectSaverRegistration?.Invoke(uniqueId.Id, fileLoadedCallback);
-            SaveManager.SaveCallMade += SaveObject;
+            SaveManager.SerializationCall += SaveObject;
 
         }
 

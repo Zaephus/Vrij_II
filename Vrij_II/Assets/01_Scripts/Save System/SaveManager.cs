@@ -14,7 +14,8 @@ namespace SaveSystem {
     // Structure needs to be clearer, it is not always apparent which function belongs to saving, and which to loading.
     public class SaveManager : MonoBehaviour {
 
-        public static Action<ObjectSavedCallback> SaveCallMade;
+        public static Action SaveGameCall;
+        public static Action<ObjectSavedCallback> SerializationCall;
         public static Action<string, FileLoadedCallback> ObjectSaverRegistration;
 
         private ObjectSavedCallback savedCallback;
@@ -25,16 +26,17 @@ namespace SaveSystem {
         private int objectSaverAmount;
 
         private string path = "Assets/Resources/saveFile.txt";
-        private string dataSeparator = $"\n\n";
+        private string dataSeparator = "~~File Separator~~";
 
         private void Start() {
             savedCallback = AddDataToWrite;
+            SaveGameCall += TrySaveGame;
             ObjectSaverRegistration += RegisterObjectSaver;
         }
 
         private void Update() {
             if(Input.GetKeyDown(KeyCode.F5)) {
-                TrySaveGame();
+                SaveGameCall?.Invoke();
             }
             if(Input.GetKeyDown(KeyCode.F6)) {
                 ReadFromFile();
@@ -42,8 +44,8 @@ namespace SaveSystem {
         }
 
         private void TrySaveGame() {
-            objectSaverAmount = SaveCallMade.GetInvocationList().Length;
-            SaveCallMade?.Invoke(savedCallback);
+            objectSaverAmount = SerializationCall.GetInvocationList().Length;
+            SerializationCall?.Invoke(savedCallback);
         }
 
         private void WriteToFile() {
