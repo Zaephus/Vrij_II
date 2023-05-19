@@ -5,34 +5,28 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour {
 
+    [SerializeField]
     private PatrolState patrolState;
+    [SerializeField]
     private ChaseState chaseState;
+    [SerializeField]
     private AttackState attackState;
 
-    private BaseState currentState;
+    private BaseState<EnemyController> currentState;
     private string state;
-
-    public Transform target;
 
     public NavMeshAgent agent;
 
-    [SerializeField]
-    private Transform[] waypoints;
+    public Transform target;
 
     public float viewDistance;
     public float attackRange;
 
-    public float beforeAttackDelay;
-    public float afterAttackDelay;
-    
-    public float attackSpeed;
-
     private void Start() {
-        BaseState.ExitState += SwitchState;
 
-        patrolState = new PatrolState(this, waypoints);
-        chaseState = new ChaseState(this);
-        attackState = new AttackState(this);
+        patrolState.runner = this;
+        chaseState.runner = this;
+        attackState.runner = this;
 
         SwitchState("PatrolState");
     }

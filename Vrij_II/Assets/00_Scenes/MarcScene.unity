@@ -551,14 +551,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9701872bc1c534892685187d1f052b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1007949920}
+  patrolState:
+    runner: {fileID: 0}
+    waypoints: []
+  chaseState:
+    runner: {fileID: 0}
+  attackState:
+    runner: {fileID: 0}
+    beforeAttackDelay: 0
+    afterAttackDelay: 0
+    attackSpeed: 0
   agent: {fileID: 388061223}
-  waypoints: []
+  target: {fileID: 1007949920}
   viewDistance: 20
   attackRange: 4
-  beforeAttackDelay: 0.3
-  afterAttackDelay: 0.5
-  attackSpeed: 12
 --- !u!195 &388061223
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -720,14 +726,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9701872bc1c534892685187d1f052b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1007949920}
+  patrolState:
+    runner: {fileID: 0}
+    waypoints: []
+  chaseState:
+    runner: {fileID: 0}
+  attackState:
+    runner: {fileID: 0}
+    beforeAttackDelay: 0
+    afterAttackDelay: 0
+    attackSpeed: 0
   agent: {fileID: 727791197}
-  waypoints: []
+  target: {fileID: 1007949920}
   viewDistance: 20
   attackRange: 4
-  beforeAttackDelay: 0.3
-  afterAttackDelay: 0.5
-  attackSpeed: 12
 --- !u!195 &727791197
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1738,14 +1750,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9701872bc1c534892685187d1f052b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1007949920}
+  patrolState:
+    runner: {fileID: 0}
+    waypoints:
+    - {fileID: 854539859}
+    - {fileID: 775412187}
+    - {fileID: 1156001167}
+    - {fileID: 794279798}
+    - {fileID: 133396217}
+    - {fileID: 1066055183}
+  chaseState:
+    runner: {fileID: 0}
+  attackState:
+    runner: {fileID: 0}
+    beforeAttackDelay: 0.3
+    afterAttackDelay: 0.5
+    attackSpeed: 12
   agent: {fileID: 1388089155}
-  waypoints: []
+  target: {fileID: 1007949920}
   viewDistance: 20
   attackRange: 4
-  beforeAttackDelay: 0.3
-  afterAttackDelay: 0.5
-  attackSpeed: 12
 --- !u!114 &1388089162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2018,12 +2042,27 @@ PrefabInstance:
     - target: {fileID: 7198198969682315282, guid: 10b312a61a6b3a14db82925813ebcc71,
         type: 3}
       propertyPath: m_Size.x
-      value: 15.61
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198198969682315282, guid: 10b312a61a6b3a14db82925813ebcc71,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198198969682315282, guid: 10b312a61a6b3a14db82925813ebcc71,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7198198969682315285, guid: 10b312a61a6b3a14db82925813ebcc71,
         type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198198969682315285, guid: 10b312a61a6b3a14db82925813ebcc71,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.14
       objectReference: {fileID: 0}
     - target: {fileID: 7198198969682315285, guid: 10b312a61a6b3a14db82925813ebcc71,
         type: 3}

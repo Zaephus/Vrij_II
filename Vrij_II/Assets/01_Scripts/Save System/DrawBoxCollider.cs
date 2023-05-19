@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 #if UNITY_EDITOR
 
@@ -31,14 +30,14 @@ public class DrawBoxCollider : MonoBehaviour {
 
     private void DrawCollider() {
 
-        Vector3 size = boxCollider.size/2;
+        Vector3 size = Vector3.Scale(boxCollider.size/2, transform.localScale);
          
         Vector3[] colliderVertices = {
             transform.position + transform.rotation * (boxCollider.center + new Vector3(size.x, size.y, size.z)),
             transform.position + transform.rotation * (boxCollider.center + new Vector3(size.x, size.y, -size.z)),
             transform.position + transform.rotation * (boxCollider.center + new Vector3(-size.x, size.y, -size.z)),
             transform.position + transform.rotation * (boxCollider.center + new Vector3(-size.x, size.y, size.z)),
-            
+
             transform.position + transform.rotation * (boxCollider.center + new Vector3(size.x, -size.y, size.z)),
             transform.position + transform.rotation * (boxCollider.center + new Vector3(size.x, -size.y, -size.z)),
             transform.position + transform.rotation * (boxCollider.center + new Vector3(-size.x, -size.y, -size.z)),
