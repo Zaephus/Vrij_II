@@ -12,6 +12,8 @@ public class PlayerManager : MonoBehaviour, IDamageable {
     private bool hasSpear;
 
     public static System.Action<Spear> SpearInRangeCall;
+    private GameObject currentOverworldSpear;
+
 
     private void Start() {
         SpearInRangeCall += PickUpSpear;
@@ -24,7 +26,7 @@ public class PlayerManager : MonoBehaviour, IDamageable {
     }
 
     private void FixedUpdate() {
-        playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput);
+        playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput, hasSpear);
         if (playerInput.isAiming && hasSpear) {
             playerMovement.Aim(transform, playerInput.rightHorizontalInput, playerInput.rightVerticalInput);
         }
@@ -32,7 +34,7 @@ public class PlayerManager : MonoBehaviour, IDamageable {
 
     public void Throw() {
         if (hasSpear) {
-            hasSpear = playerMovement.Throw();
+            hasSpear = playerMovement.Throw(currentOverworldSpear);
         }
     }
 
@@ -42,9 +44,10 @@ public class PlayerManager : MonoBehaviour, IDamageable {
 
     public void PickUpSpear(Spear _spearToPickup) {
 
-            Debug.Log("PAK OP LUL");
-        if (playerInput.isInteracting) {
-            Debug.Log("OKEE LUL");
+        if (playerInput.isInteracting && !hasSpear) {
+            _spearToPickup.gameObject.SetActive(false);
+            hasSpear = true;
+            currentOverworldSpear = _spearToPickup.gameObject;
         }
     }
 

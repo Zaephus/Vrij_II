@@ -11,23 +11,21 @@ public class Spear : MonoBehaviour {
     [SerializeField]
     private VisualEffect spearTrails;
 
-    private bool playerInRange;
+    public bool playerInRange;
 
     private void Update() {
 
         pickupCanvas.SetActive(playerInRange);
         pickupCanvas.transform.position = transform.position + new Vector3(0, 1, 0);
 
-
         if (rb.velocity == Vector3.zero) {
             spearTrails.Stop();
         }
-
-        if (playerInRange) {
-            PlayerManager.SpearInRangeCall?.Invoke(this);
+        else {
+            playerInRange = false;
         }
-    }
 
+    }
 
     public void Fire(float _throwStrenght) {
         rb.AddForce(-boneTransform.up * _throwStrenght, ForceMode.Impulse);
@@ -35,5 +33,9 @@ public class Spear : MonoBehaviour {
 
     private void OnTriggerStay(Collider _other) {
         playerInRange = _other.gameObject.GetComponent<PlayerManager>();
+
+        if (_other.gameObject.GetComponent<PlayerManager>()) {
+            PlayerManager.SpearInRangeCall?.Invoke(this);
+        }
     }
 }

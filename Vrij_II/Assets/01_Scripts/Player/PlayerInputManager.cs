@@ -26,6 +26,7 @@ public class PlayerInputManager : MonoBehaviour {
         rightVerticalInput = inputVector.y;
     }
 
+    // A method that receives input from input manager, when the aim button is held
     public void OnAim(InputAction.CallbackContext _context) {
         if (hasSpear) {
             if (_context.performed) {
@@ -34,7 +35,6 @@ public class PlayerInputManager : MonoBehaviour {
             if (_context.canceled) {
                 isAiming = false;
             }
-
         }
         else {
             isAiming = false;
@@ -44,23 +44,16 @@ public class PlayerInputManager : MonoBehaviour {
         GetComponent<Animator>().SetBool("isAiming", isAiming);
     }
 
+    // A method that receives input from input manager, when the fire button is pressed
     public void OnFire(InputAction.CallbackContext _context) {
         if (_context.started && isAiming) {
             GetComponent<Animator>().SetTrigger("ThrowSpear");
         }
-
     }
 
+    // A method that receives input from input manager, when the interact button is pressed
     public void OnInteract(InputAction.CallbackContext _context) {
 
-        if (_context.started) {
-            isInteracting = true;
-        }
-        else {
-            isInteracting = false;
-        }
-
-        Debug.Log(isInteracting);
-        //isInteracting = context.started;
+        isInteracting = _context.performed;
     }
 }

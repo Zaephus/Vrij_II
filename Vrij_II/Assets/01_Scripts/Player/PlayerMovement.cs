@@ -10,6 +10,8 @@ public class PlayerMovement {
     public float runSpeed;
     [SerializeField]
     public float aimDistance;
+    [SerializeField]
+    public float holdingSpearClamp;
 
     [Header("Components")]
     [SerializeField]
@@ -27,9 +29,17 @@ public class PlayerMovement {
     [SerializeField]
     private float throwStrenght;
 
-    public void Move(Transform _playerTransform, float _horizontalInput, float _verticalInput) {
-        Vector3 dir = Vector3.ClampMagnitude(new Vector3(_horizontalInput, 0, _verticalInput), 1.0f);
+    public void Move(Transform _playerTransform, float _horizontalInput, float _verticalInput, bool _hasSpear) {
+
+        float clampValue = 1.0f;
+
+        if (_hasSpear) {
+            clampValue = holdingSpearClamp;
+        }
+
+        Vector3 dir = Vector3.ClampMagnitude(new Vector3(_horizontalInput, 0, _verticalInput), clampValue);
         float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
+
 
         if (dir.magnitude >= 0.5f) {
             rb.AddForce(_playerTransform.forward * runSpeed * 10, ForceMode.Force);
@@ -68,9 +78,12 @@ public class PlayerMovement {
         }
     }
 
-    public bool Throw() {
+    public bool Throw(GameObject _spearToThrow) {
 
-        Spear _spear = GameObject.Instantiate(spearPrefab, spear.transform.position, spear.transform.rotation, null).GetComponent<Spear>();
+        _spearToThrow.transform.position = spear.transform.position;
+        _spearToThrow.transform.rotation = spear.transform.rotation;
+        Spear _spear = _spearToThrow.GetComponent<Spear>();
+        _spearToThrow.SetActive(true);
         _spear.Fire(throwStrenght);
         return false;
     }
