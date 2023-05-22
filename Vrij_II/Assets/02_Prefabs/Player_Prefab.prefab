@@ -986,10 +986,10 @@ MonoBehaviour:
     rb: {fileID: 6246893204688616633}
     animator: {fileID: 7231760633856492691}
     target: {fileID: 6445601855673153878}
-    spearPrefab: {fileID: 7900370012547922845, guid: 305665213afc63e4cb4fd7069fb63381,
+    spearPrefab: {fileID: 1563032992401279229, guid: 305665213afc63e4cb4fd7069fb63381,
       type: 3}
     spear: {fileID: 3605207727493540830}
-    throwStrenght: 50
+    throwStrenght: 10
   aimingTarget: {fileID: 6250946760851615344}
   hasSpear: 1
 --- !u!114 &5260196009398717377
@@ -1122,6 +1122,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 60c90023-9283-452a-81f5-b19c17928f4d
     m_ActionName: Player/Aim[/SwitchProControllerHID/leftTrigger,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5328703834928069489}
+        m_TargetAssemblyTypeName: PlayerInputManager, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a8052334-a7ee-4fae-8bcb-cdc669c06c0b
+    m_ActionName: Player/Interact[/SwitchProControllerHID/buttonEast,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1186,6 +1202,7 @@ MonoBehaviour:
   rightVerticalInput: 0
   isAiming: 0
   hasSpear: 0
+  isInteracting: 0
 --- !u!1 &4377711621101028073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b342d8ce5c2fd48b8fa3147d48d1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Effectors: []
 --- !u!114 &9079624179668069910
 MonoBehaviour:
@@ -1556,7 +1573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b342d8ce5c2fd48b8fa3147d48d1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Effectors: []
 --- !u!114 &3616414162199750724
 MonoBehaviour:
@@ -2343,7 +2360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b342d8ce5c2fd48b8fa3147d48d1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Effectors: []
 --- !u!114 &7750231098073216852
 MonoBehaviour:
@@ -2461,7 +2478,7 @@ PrefabInstance:
     - target: {fileID: 548443008491366439, guid: 32d50756875ee3e45bf4a8612f4f70bf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.043
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 548443008491366439, guid: 32d50756875ee3e45bf4a8612f4f70bf,
         type: 3}
@@ -2471,7 +2488,7 @@ PrefabInstance:
     - target: {fileID: 548443008491366439, guid: 32d50756875ee3e45bf4a8612f4f70bf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.36
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 548443008491366439, guid: 32d50756875ee3e45bf4a8612f4f70bf,
         type: 3}
@@ -2541,17 +2558,17 @@ PrefabInstance:
     - target: {fileID: 6577737681430797269, guid: 32d50756875ee3e45bf4a8612f4f70bf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6577737681430797269, guid: 32d50756875ee3e45bf4a8612f4f70bf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0045
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6577737681430797269, guid: 32d50756875ee3e45bf4a8612f4f70bf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0054
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6577737681430797269, guid: 32d50756875ee3e45bf4a8612f4f70bf,
         type: 3}

@@ -13,8 +13,10 @@ public class PlayerManager : MonoBehaviour, IDamageable {
     [SerializeField]
     private bool hasSpear;
 
-    private void Start() {
+    public static System.Action<Spear> SpearInRangeCall;
 
+    private void Start() {
+        SpearInRangeCall += PickUpSpear;
     }
 
     private void Update() {
@@ -41,6 +43,14 @@ public class PlayerManager : MonoBehaviour, IDamageable {
 
     public void Hit() {
         GameManager.PlayerDied?.Invoke();
+    }
+
+    public void PickUpSpear(Spear spearToPickup)
+    {
+        if (playerInput.isInteracting)
+        {
+            Debug.Log("PAK OP LUL");
+        }
     }
 
 }
