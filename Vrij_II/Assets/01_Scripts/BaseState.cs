@@ -8,7 +8,7 @@ public abstract class BaseState<T> : MonoBehaviour {
     [HideInInspector]
     public T runner;
 
-    private void Start() {
+    private void Awake() {
         runner = GetComponent<T>();
     }
     
