@@ -1,5 +1,15 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "NPM",
+      "url": "https://registry.npmjs.org",
+      "scopes": [
+        "com.fluid"
+      ]
+    }
+  ],
   "dependencies": {
+    "com.fluid.unique-id": "1.0.2",
     "com.unity.animation.rigging": "1.1.1",
     "com.unity.cinemachine": "2.8.9",
     "com.unity.ide.rider": "3.0.18",
