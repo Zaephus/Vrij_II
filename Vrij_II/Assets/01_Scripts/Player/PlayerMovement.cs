@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 [System.Serializable]
 public class PlayerMovement {
@@ -8,6 +9,8 @@ public class PlayerMovement {
     public float walkSpeed;
     [SerializeField]
     public float runSpeed;
+    [SerializeField]
+    public float footstepModifier;
     [SerializeField]
     public float aimDistance;
     [SerializeField]
@@ -20,6 +23,8 @@ public class PlayerMovement {
     public Animator animator;
     [SerializeField]
     public Transform target;
+    [SerializeField]
+    public VisualEffect footsteps;
 
     [Header("Spear")]
     [SerializeField]
@@ -51,6 +56,7 @@ public class PlayerMovement {
         }
 
         animator.SetFloat("VelocityZ", dir.magnitude);
+        footsteps.SetFloat("FootStepRate", dir.magnitude * footstepModifier);
         animator.SetFloat("VelocityX", dir.magnitude);
     }
 
