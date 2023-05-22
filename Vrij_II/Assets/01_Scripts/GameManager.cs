@@ -1,31 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SaveSystem;
 
 public class GameManager : MonoBehaviour {
 
     public static System.Action PlayerDied;
 
-    public GameState gameState = GameState.Initialization;
+    [HideInInspector]
+    public SaveManager saveManager;
 
-    private InitializationState initState;
-    private MainMenuState mainMenuState;
-    private RunningState runningState;
+    [ReadOnly]
+    public GameState gameState;
 
     private BaseState<GameManager> currentState;
 
-    [SerializeField]
-    private GameObject level;
+    public GameObject mainMenu;
+    public GameObject level;
 
-    [SerializeField]
-    private GameObject gameOverCanvas;
+    // [SerializeField]
+    // private GameObject gameOverCanvas;
 
     private void Start() {
-        initState.runner = this;
-        mainMenuState.runner = this;
-        runningState.runner = this;
+        saveManager = GetComponent<SaveManager>();
 
-        PlayerDied += EndGame;
+        // PlayerDied += EndGame;
+
+        SwitchState(GameState.Initialization);
     }
 
     private void Update() {
@@ -45,13 +46,13 @@ public class GameManager : MonoBehaviour {
 
         switch(_state) {
             case GameState.Initialization:
-                currentState = initState;
+                currentState = GetComponent<InitializationState>();
                 break;
             case GameState.MainMenu:
-                currentState = mainMenuState;
+                currentState = GetComponent<MainMenuState>();
                 break;
             case GameState.Running:
-                currentState = runningState;
+                currentState = GetComponent<RunningState>();
                 break;
             default:
                 return;
@@ -59,14 +60,14 @@ public class GameManager : MonoBehaviour {
 
         gameState = _state;
 
-        Debug.Log("Switched State to " + _state);
+        Debug.Log("Switched State to " + _state, this);
 
         currentState.OnStart();
     }
 
-    private void EndGame() {
-        level.SetActive(false);
-        gameOverCanvas.SetActive(true);
-    }
+    // private void EndGame() {
+    //     level.SetActive(false);
+    //     gameOverCanvas.SetActive(true);
+    // }
 
 }

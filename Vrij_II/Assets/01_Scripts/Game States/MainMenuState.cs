@@ -7,6 +7,9 @@ public class MainMenuState : BaseState<GameManager> {
 
     public override void OnStart() {
 
+        runner.mainMenu.SetActive(true);
+        runner.level.SetActive(false);
+
     }
 
     public override void OnUpdate() {
@@ -15,6 +18,11 @@ public class MainMenuState : BaseState<GameManager> {
 
     public override void OnEnd() {
         
+    }
+
+    public void StartGame() {
+        runner.mainMenu.SetActive(false);
+        runner.SwitchState(GameState.Running);
     }
     
 }

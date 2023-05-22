@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,7 +6,7 @@ using UnityEngine;
 
 // Public enums should be placed in a separate file called Enums.
 public enum ConventionType {                            // Enum values use Pascal Casing.
-    TypeOne = 0,                                        // If there are more than three values or they are numbered, they should be placed below eachother.
+    TypeOne = 0,                                        // If there are more than three values or they are numbered, they should be placed below each other.
     TypeTwo = 2
 }
 
@@ -49,7 +50,7 @@ public class Conventions : MonoBehaviour {              // Class names with Pasc
             DoTheSecondThing(timeToWait);
         }
         else if(timeToWait >= 1) {
-            DoTheThirdThing()
+            DoTheThirdThing();
         }
         
     }

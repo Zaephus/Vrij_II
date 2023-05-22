@@ -5,13 +5,6 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour {
 
-    [SerializeField]
-    private PatrolState patrolState;
-    [SerializeField]
-    private ChaseState chaseState;
-    [SerializeField]
-    private AttackState attackState;
-
     private BaseState<EnemyController> currentState;
     private string state;
 
@@ -23,10 +16,6 @@ public class EnemyController : MonoBehaviour {
     public float attackRange;
 
     private void Start() {
-
-        patrolState.runner = this;
-        chaseState.runner = this;
-        attackState.runner = this;
 
         SwitchState("PatrolState");
     }
@@ -42,13 +31,13 @@ public class EnemyController : MonoBehaviour {
 
         switch(_stateType) {
             case "PatrolState":
-                currentState = patrolState;
+                currentState = GetComponent<PatrolState>();
                 break;
             case "ChaseState":
-                currentState = chaseState;
+                currentState = GetComponent<ChaseState>();
                 break;
             case "AttackState":
-                currentState = attackState;
+                currentState = GetComponent<AttackState>();
                 break;
             default:
                 return;

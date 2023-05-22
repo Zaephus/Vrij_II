@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace SaveSystem {
 
-    public delegate void ObjectSavedCallback(string _result);
+    public delegate void ObjectSerializedCallback(string _result);
     public delegate void FileLoadedCallback(string _data);
 
     // TODO: Refactor SaveManager class.
@@ -16,10 +16,12 @@ namespace SaveSystem {
     public class SaveManager : MonoBehaviour {
 
         public static Action SaveGameCall;
-        public static Action<ObjectSavedCallback> SerializationCall;
-        public static Action<string, FileLoadedCallback> ObjectSaverRegistration;
+        public static Action LoadGameCall;
+        public static Action<ObjectSerializedCallback> SerializationCall;
+        public static Action InitializeObjectSaver;
+        public static Action<string, FileLoadedCallback> RegisterSaver;
 
-        private ObjectSavedCallback savedCallback;
+        private ObjectSerializedCallback serializedCallback;
 
         private List<string> dataToWrite = new List<string>();
         private Dictionary<string, FileLoadedCallback> objectSavers = new Dictionary<string, FileLoadedCallback>();
@@ -29,57 +31,36 @@ namespace SaveSystem {
         private string path = "Assets/Resources/saveFile.txt";
         private string dataSeparator = "~~File Separator~~";
 
-        private void Start() {
-            savedCallback = AddDataToWrite;
+        public void Initialize() {
+            serializedCallback = AddDataToWrite;
             SaveGameCall += TrySaveGame;
-            ObjectSaverRegistration += RegisterObjectSaver;
+            LoadGameCall += TryLoadGame;
+            RegisterSaver += RegisterObjectSaver;
+            InitializeObjectSaver?.Invoke();
         }
 
-        private void Update() {
+        public void OnUpdate() {
             if(Input.GetKeyDown(KeyCode.F5)) {
-                SaveGameCall?.Invoke();
+                TrySaveGame();
             }
             if(Input.GetKeyDown(KeyCode.F6)) {
-                ReadFromFile();
+                TryLoadGame();
             }
         }
 
         private void TrySaveGame() {
             objectSaverAmount = SerializationCall.GetInvocationList().Length;
-            SerializationCall?.Invoke(savedCallback);
+            SerializationCall?.Invoke(serializedCallback);
         }
 
-        private void WriteToFile() {
+        private void TryLoadGame() {
 
-            string data = String.Join(dataSeparator, dataToWrite);
-
-            if(File.Exists(path)) {
-                File.Delete(path);
-            }
-
-            using(FileStream fileStream = File.Create(path)) {
-                using(StreamWriter writer = new StreamWriter(fileStream)) {
-                    writer.Write(data);
-                }
-            }
-
-        }
-
-        private void ReadFromFile() {
-
-            string data;
-
-            using(FileStream fileStream = File.OpenRead(path)) {
-                using(StreamReader reader = new StreamReader(fileStream)) {
-                    data = reader.ReadToEnd();
-                }
-            }
+            string data = FileManager.ReadFromFile(path);
 
             string[] extracts = data.Split(dataSeparator);
 
             foreach(string s in extracts) {
                 foreach(KeyValuePair<string, FileLoadedCallback> kvp in objectSavers) {
-                    // Debug.Log(kvp.Key);
                     if(s.Contains(kvp.Key)) {
                         FileLoadedCallback callback = kvp.Value;
                         callback(s);
@@ -93,7 +74,7 @@ namespace SaveSystem {
             dataToWrite.Add(_result);
             objectSaverAmount--;
             if(objectSaverAmount <= 0) {
-                WriteToFile();
+                FileManager.WriteToFile(String.Join(dataSeparator, dataToWrite), path);
             }
         }
 

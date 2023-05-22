@@ -9,12 +9,11 @@ namespace SaveSystem {
 
         private EnemyController enemy;
 
-        protected override void Start() {
-            base.Start();
+        private void Start() {
             enemy = GetComponent<EnemyController>();
         }
 
-        protected override void SaveObject(ObjectSavedCallback _callback) {
+        protected override void SaveObject(ObjectSerializedCallback _callback) {
 
             EnemyData data = GetObjectData();
 

@@ -9,12 +9,11 @@ namespace SaveSystem {
 
         private PlayerTest playerTest;
 
-        protected override void Start() {
-            base.Start();
+        private void Start() {
             playerTest = GetComponent<PlayerTest>();
         }
 
-        protected override void SaveObject(ObjectSavedCallback _callback) {
+        protected override void SaveObject(ObjectSerializedCallback _callback) {
 
             PlayerData data = GetObjectData();
 

@@ -14,17 +14,18 @@ namespace SaveSystem {
 
         protected FileLoadedCallback fileLoadedCallback;
 
-        protected virtual void Start() {
-
+        private void Awake() {
             uniqueId = GetComponent<UniqueId>();
-
-            fileLoadedCallback = LoadObject;
-            SaveManager.ObjectSaverRegistration?.Invoke(uniqueId.Id, fileLoadedCallback);
-            SaveManager.SerializationCall += SaveObject;
-
+            SaveManager.InitializeObjectSaver += Initialize;
         }
 
-        protected virtual void SaveObject(ObjectSavedCallback _callback) {}
+        private void Initialize() {
+            SaveManager.SerializationCall += SaveObject;
+            fileLoadedCallback = LoadObject;
+            SaveManager.RegisterSaver?.Invoke(uniqueId.Id, fileLoadedCallback);
+        }
+
+        protected virtual void SaveObject(ObjectSerializedCallback _callback) {}
         protected virtual void LoadObject(string _text) {}
 
         protected virtual T GetObjectData() { return default(T); }
