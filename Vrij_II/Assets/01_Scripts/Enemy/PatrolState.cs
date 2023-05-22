@@ -3,56 +3,59 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class PatrolState : BaseState {
+public class PatrolState : BaseState<EnemyController> {
 
+    [SerializeField]
     private Transform[] waypoints;
 
     private Transform currentWaypoint;
 
-    public PatrolState(EnemyController _e, Transform[] _waypoints) : base(_e) {
-        waypoints = _waypoints;
-        currentWaypoint = waypoints[0];
-    }
-
     public override void OnStart() {
-        enemyController.agent.SetDestination(currentWaypoint.position);
-        enemyController.agent.isStopped = false;
+        if(waypoints.Length > 0) {
+            currentWaypoint = waypoints[0];
+        }
+        if(currentWaypoint != null) {
+            runner.agent.SetDestination(currentWaypoint.position);
+            runner.agent.isStopped = false;
+        }
     }
 
     public override void OnUpdate() {
-        Navigate();
+        if(currentWaypoint != null) {
+            Navigate();
+        }
         CheckTarget();
     }
 
     public override void OnEnd() {
-        enemyController.agent.isStopped = true;
+        runner.agent.isStopped = true;
     }
 
     private void Navigate() {
 
-        Vector3 comparePos = enemyController.transform.position;
+        Vector3 comparePos = runner.transform.position;
         comparePos.y = currentWaypoint.position.y;
 
-        if(Vector3.Distance(comparePos, currentWaypoint.position) <= enemyController.agent.stoppingDistance) {
+        if(Vector3.Distance(comparePos, currentWaypoint.position) <= runner.agent.stoppingDistance) {
             int index = (System.Array.IndexOf(waypoints, currentWaypoint)  + 1) % waypoints.Length;
             currentWaypoint = waypoints[index];
-            enemyController.agent.SetDestination(currentWaypoint.position);
+            runner.agent.SetDestination(currentWaypoint.position);
         }
 
     }
 
     private void CheckTarget() {
         
-        if(Vector3.Distance(enemyController.transform.position, enemyController.target.position) <= enemyController.viewDistance) {
+        if(Vector3.Distance(runner.transform.position, runner.target.position) <= runner.viewDistance) {
 
-            Vector3 targetDir = enemyController.target.position - enemyController.transform.position;
+            Vector3 targetDir = runner.target.position - runner.transform.position;
 
-            Ray ray = new Ray(enemyController.transform.position, targetDir.normalized);
+            Ray ray = new Ray(runner.transform.position, targetDir.normalized);
             RaycastHit hit;
 
-            if(Physics.Raycast(ray, out hit, enemyController.viewDistance)) {
-                if(hit.collider.GetComponent<PlayerMovement>() != null) {
-                    enemyController.SwitchState("ChaseState");
+            if(Physics.Raycast(ray, out hit, runner.viewDistance)) {
+                if(hit.collider.GetComponent<IDamageable>() != null) {
+                    runner.SwitchState("ChaseState");
                 }
             }
 

@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackState : BaseState {
+public class AttackState : BaseState<EnemyController> {
 
-    public AttackState(EnemyController _e) : base(_e)  {}
+    [SerializeField]
+    private float beforeAttackDelay;
+    [SerializeField]
+    private float afterAttackDelay;
+    
+    [SerializeField]
+    private float attackSpeed;
 
     public override void OnStart() {
-        enemyController.StartCoroutine(Attack());
+        runner.StartCoroutine(Attack());
     }
 
     public override void OnUpdate() {}
@@ -17,21 +23,21 @@ public class AttackState : BaseState {
     // TODO: Add rotation to attack.
     private IEnumerator Attack() {
 
-        Vector3 targetDir = (enemyController.target.position - enemyController.transform.position).normalized;
+        Vector3 targetDir = (runner.target.position - runner.transform.position).normalized;
 
-        float distLeft = enemyController.attackRange;
+        float distLeft = runner.attackRange;
 
-        yield return new WaitForSeconds(enemyController.beforeAttackDelay);
+        yield return new WaitForSeconds(beforeAttackDelay);
 
         while(distLeft > 0.0f) {
-            enemyController.agent.Move(targetDir * enemyController.attackSpeed * Time.deltaTime);
-            distLeft -= (targetDir * enemyController.attackSpeed * Time.deltaTime).magnitude;
+            runner.agent.Move(targetDir * attackSpeed * Time.deltaTime);
+            distLeft -= (targetDir * attackSpeed * Time.deltaTime).magnitude;
             yield return new WaitForEndOfFrame();
         }
 
-        yield return new WaitForSeconds(enemyController.afterAttackDelay);
+        yield return new WaitForSeconds(afterAttackDelay);
 
-        enemyController.SwitchState("ChaseState");
+        runner.SwitchState("ChaseState");
 
     }
 

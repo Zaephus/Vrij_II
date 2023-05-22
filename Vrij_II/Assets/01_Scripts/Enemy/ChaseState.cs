@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChaseState : BaseState {
-
-    public ChaseState(EnemyController _e) : base(_e)  {}
+public class ChaseState : BaseState<EnemyController> {
 
     public override void OnStart() {
-        enemyController.agent.SetDestination(enemyController.target.position);
-        enemyController.agent.isStopped = false;
+        runner.agent.SetDestination(runner.target.position);
+        runner.agent.isStopped = false;
     }
 
     public override void OnUpdate() {
@@ -17,25 +15,25 @@ public class ChaseState : BaseState {
     }
 
     public override void OnEnd() {
-        enemyController.agent.isStopped = true;
+        runner.agent.isStopped = true;
     }
 
     private void Chase() {
 
-        if(Vector3.Distance(enemyController.agent.destination, enemyController.target.position) > 1.0f) {
-            enemyController.agent.SetDestination(enemyController.target.position);
+        if(Vector3.Distance(runner.agent.destination, runner.target.position) > 1.0f) {
+            runner.agent.SetDestination(runner.target.position);
         }
 
-        if(Vector3.Distance(enemyController.transform.position, enemyController.target.position) >= enemyController.viewDistance) {
-            enemyController.SwitchState("PatrolState");
+        if(Vector3.Distance(runner.transform.position, runner.target.position) >= runner.viewDistance) {
+            runner.SwitchState("PatrolState");
         }
 
     }
 
     private void CheckAttack() {
 
-        if(Vector3.Distance(enemyController.transform.position, enemyController.target.position) <= enemyController.attackRange) {
-            enemyController.SwitchState("AttackState");
+        if(Vector3.Distance(runner.transform.position, runner.target.position) <= runner.attackRange) {
+            runner.SwitchState("AttackState");
         }
 
     }   
