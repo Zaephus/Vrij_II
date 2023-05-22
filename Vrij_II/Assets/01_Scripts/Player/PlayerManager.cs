@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour, IDamageable {
@@ -25,18 +23,15 @@ public class PlayerManager : MonoBehaviour, IDamageable {
         playerMovement.spear.SetActive(hasSpear);
     }
 
-    private void FixedUpdate(){
+    private void FixedUpdate() {
         playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput);
-        if (playerInput.isAiming && hasSpear)
-        {
+        if (playerInput.isAiming && hasSpear) {
             playerMovement.Aim(transform, playerInput.rightHorizontalInput, playerInput.rightVerticalInput);
         }
     }
 
-    public void Throw()
-    {
-        if (hasSpear)
-        {
+    public void Throw() {
+        if (hasSpear) {
             hasSpear = playerMovement.Throw();
         }
     }
@@ -45,11 +40,11 @@ public class PlayerManager : MonoBehaviour, IDamageable {
         GameManager.PlayerDied?.Invoke();
     }
 
-    public void PickUpSpear(Spear spearToPickup)
-    {
-        if (playerInput.isInteracting)
-        {
+    public void PickUpSpear(Spear _spearToPickup) {
+
             Debug.Log("PAK OP LUL");
+        if (playerInput.isInteracting) {
+            Debug.Log("OKEE LUL");
         }
     }
 

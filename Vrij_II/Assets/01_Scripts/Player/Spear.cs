@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class Spear : MonoBehaviour
-{
+public class Spear : MonoBehaviour {
     [SerializeField]
     private Rigidbody rb;
     [SerializeField]
@@ -16,32 +13,27 @@ public class Spear : MonoBehaviour
 
     private bool playerInRange;
 
-    private void Update(){
+    private void Update() {
 
         pickupCanvas.SetActive(playerInRange);
-        pickupCanvas.transform.position = transform.position + new Vector3(0,1,0);
+        pickupCanvas.transform.position = transform.position + new Vector3(0, 1, 0);
 
 
-        if (rb.velocity == Vector3.zero)
-        {
+        if (rb.velocity == Vector3.zero) {
             spearTrails.Stop();
         }
 
-        if (playerInRange)
-        {
+        if (playerInRange) {
             PlayerManager.SpearInRangeCall?.Invoke(this);
         }
     }
 
 
-    public void Fire(float _throwStrenght)
-    {
+    public void Fire(float _throwStrenght) {
         rb.AddForce(-boneTransform.up * _throwStrenght, ForceMode.Impulse);
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        playerInRange = other.gameObject.GetComponent<PlayerManager>();
-        
+    private void OnTriggerStay(Collider _other) {
+        playerInRange = _other.gameObject.GetComponent<PlayerManager>();
     }
 }

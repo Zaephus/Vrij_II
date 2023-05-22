@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInputManager : MonoBehaviour
-{
+public class PlayerInputManager : MonoBehaviour {
 
     public float leftHorizontalInput;
     public float leftVerticalInput;
@@ -13,38 +12,31 @@ public class PlayerInputManager : MonoBehaviour
     public bool isInteracting;
 
     // A method that receives input from input manager, that lets you move around
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        Vector2 inputVector = context.ReadValue<Vector2>();
+    public void OnMove(InputAction.CallbackContext _context) {
+        Vector2 inputVector = _context.ReadValue<Vector2>();
         leftHorizontalInput = inputVector.x;
         leftVerticalInput = inputVector.y;
     }
 
     // A method that receives input from input manager, when you look around/aim
-    public void OnLook(InputAction.CallbackContext context)
-    {
+    public void OnLook(InputAction.CallbackContext _context) {
 
-        Vector2 inputVector = context.ReadValue<Vector2>();
+        Vector2 inputVector = _context.ReadValue<Vector2>();
         rightHorizontalInput = inputVector.x;
         rightVerticalInput = inputVector.y;
     }
 
-    public void OnAim(InputAction.CallbackContext context)
-    {
-        if (hasSpear)
-        {
-            if (context.performed)
-            {
+    public void OnAim(InputAction.CallbackContext _context) {
+        if (hasSpear) {
+            if (_context.performed) {
                 isAiming = true;
             }
-            if (context.canceled)
-            {
+            if (_context.canceled) {
                 isAiming = false;
             }
 
         }
-        else
-        {
+        else {
             isAiming = false;
         }
 
@@ -52,24 +44,19 @@ public class PlayerInputManager : MonoBehaviour
         GetComponent<Animator>().SetBool("isAiming", isAiming);
     }
 
-    public void OnFire(InputAction.CallbackContext context)
-    {
-        if (context.started && isAiming)
-        {
+    public void OnFire(InputAction.CallbackContext _context) {
+        if (_context.started && isAiming) {
             GetComponent<Animator>().SetTrigger("ThrowSpear");
         }
 
     }
 
-    public void OnInteract(InputAction.CallbackContext context)
-    {
+    public void OnInteract(InputAction.CallbackContext _context) {
 
-        if (context.started)
-        {
+        if (_context.started) {
             isInteracting = true;
         }
-        else
-        {
+        else {
             isInteracting = false;
         }
 
