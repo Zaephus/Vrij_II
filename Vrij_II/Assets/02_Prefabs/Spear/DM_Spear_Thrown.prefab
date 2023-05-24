@@ -294,6 +294,7 @@ MonoBehaviour:
   boneTransform: {fileID: 4768877722941645237}
   pickupCanvas: {fileID: 907168048227921847}
   spearTrails: {fileID: 3668699837156006305}
+  playerInRange: 0
 --- !u!65 &939257348198428451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -305,8 +306,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.06933105, y: 0.28268027, z: 0.5217867}
-  m_Center: {x: -0.0042001605, y: 0.0034157038, z: -0.054653168}
+  m_Size: {x: 0.06933105, y: 0.12764263, z: 1.6501322}
+  m_Center: {x: -0.0042037163, y: 0, z: 0.5095201}
 --- !u!65 &8229188924794820203
 BoxCollider:
   m_ObjectHideFlags: 0
