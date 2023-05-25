@@ -87,6 +87,8 @@ public class PlayerManager : MonoBehaviour, IDamageable {
     }
 
     private IEnumerator FadeOutVignette() {
+        StopCoroutine(FadeInVignette());
+        yield return new WaitForEndOfFrame();
         while(globalVolume.weight > 0) {
             globalVolume.weight -= vignetteFadeInSpeed * Time.deltaTime;
             yield return new WaitForEndOfFrame();
