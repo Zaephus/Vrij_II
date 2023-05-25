@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -32,7 +33,7 @@ public class PlayerMovement {
     [SerializeField]
     public GameObject spear;
     [SerializeField]
-    private float throwStrenght;
+    private float throwStrength;
 
     public void Move(Transform _playerTransform, float _horizontalInput, float _verticalInput, bool _hasSpear) {
 
@@ -82,6 +83,7 @@ public class PlayerMovement {
         if (angle < -90 || angle > 90) {
             _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
         }
+        
     }
 
     public bool Throw(GameObject _spearToThrow) {
@@ -90,7 +92,7 @@ public class PlayerMovement {
         _spearToThrow.transform.rotation = spear.transform.rotation;
         Spear _spear = _spearToThrow.GetComponent<Spear>();
         _spearToThrow.SetActive(true);
-        _spear.Fire(throwStrenght);
+        _spear.Fire(throwStrength);
         return false;
     }
 

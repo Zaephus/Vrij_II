@@ -1,3 +1,5 @@
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +7,8 @@ using SaveSystem;
 
 public class GameManager : MonoBehaviour {
 
-    public static System.Action PlayerDied;
+    public static Action PlayerDied;
+    public static Action FinishReached;
 
     [HideInInspector]
     public SaveManager saveManager;
@@ -18,13 +21,8 @@ public class GameManager : MonoBehaviour {
     public GameObject mainMenu;
     public GameObject level;
 
-    // [SerializeField]
-    // private GameObject gameOverCanvas;
-
     private void Start() {
         saveManager = GetComponent<SaveManager>();
-
-        // PlayerDied += EndGame;
 
         SwitchState(GameState.Initialization);
     }
@@ -39,11 +37,13 @@ public class GameManager : MonoBehaviour {
     
     }
 
+    // TODO: Make this more loosely coupled to the amount of states.
     public void SwitchState(GameState _state) {
         if(currentState != null) {
             currentState.OnEnd();
         }
 
+        // TODO: Add null-check.
         switch(_state) {
             case GameState.Initialization:
                 currentState = GetComponent<InitializationState>();
@@ -53,6 +53,12 @@ public class GameManager : MonoBehaviour {
                 break;
             case GameState.Running:
                 currentState = GetComponent<RunningState>();
+                break;
+            case GameState.Finished:
+                currentState = GetComponent<EndState>();
+                break;
+            case GameState.GameOver:
+                currentState = GetComponent<GameOverState>();
                 break;
             default:
                 return;
@@ -64,10 +70,5 @@ public class GameManager : MonoBehaviour {
 
         currentState.OnStart();
     }
-
-    // private void EndGame() {
-    //     level.SetActive(false);
-    //     gameOverCanvas.SetActive(true);
-    // }
 
 }

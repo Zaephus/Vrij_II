@@ -52,7 +52,6 @@ public class EnemyController : MonoBehaviour {
 
     public void OnTriggerEnter(Collider _other) {
         if(state == "AttackState") {
-            Debug.Log("Hit something");
             if(_other.GetComponent<IDamageable>() != null) {
                 _other.GetComponent<IDamageable>().Hit();
             }
