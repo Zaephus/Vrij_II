@@ -79,10 +79,10 @@ MonoBehaviour:
   m_AssetVersion: 2
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 215
+    m_Bits: 4294967295
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 215
+    m_Bits: 4294967295
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0
@@ -113,5 +113,6 @@ MonoBehaviour:
   m_Active: 1
   renderInSceneView: 0
   settings:
+    shader: {fileID: 4800000, guid: 9dd6062554bd8ca4eaa4f3b53d52f897, type: 3}
     renderPassEvent: 550
     screenHeight: 176

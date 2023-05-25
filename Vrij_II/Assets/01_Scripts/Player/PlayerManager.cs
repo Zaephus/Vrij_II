@@ -1,4 +1,7 @@
+
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerManager : MonoBehaviour, IDamageable {
 
@@ -11,9 +14,18 @@ public class PlayerManager : MonoBehaviour, IDamageable {
     [SerializeField]
     private bool hasSpear;
 
+    [SerializeField]
+    private Volume globalVolume;
+
+    [SerializeField]
+    private float vignetteFadeInSpeed;
+    [SerializeField]
+    private float vignetteFadeOutSpeed;
+
+    private int grassAmount;
+
     public static System.Action<Spear> SpearInRangeCall;
     private GameObject currentOverworldSpear;
-
 
     private void Start() {
         SpearInRangeCall += PickUpSpear;
@@ -48,6 +60,38 @@ public class PlayerManager : MonoBehaviour, IDamageable {
             _spearToPickup.gameObject.SetActive(false);
             hasSpear = true;
             currentOverworldSpear = _spearToPickup.gameObject;
+        }
+    }
+
+    private void OnTriggerEnter(Collider _other) {
+        if(_other.tag == "TallGrass") {
+            grassAmount++;
+            StartCoroutine(FadeInVignette());
+        }
+    }
+
+    private void OnTriggerExit(Collider _other) {
+        if(_other.tag == "TallGrass") {
+            grassAmount--;
+            if(grassAmount <= 0) {
+                StartCoroutine(FadeOutVignette());
+            }
+        }
+    }
+
+    private IEnumerator FadeInVignette() {
+        while(globalVolume.weight < 1) {
+            globalVolume.weight += vignetteFadeInSpeed * Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    private IEnumerator FadeOutVignette() {
+        StopCoroutine(FadeInVignette());
+        yield return new WaitForEndOfFrame();
+        while(globalVolume.weight > 0) {
+            globalVolume.weight -= vignetteFadeInSpeed * Time.deltaTime;
+            yield return new WaitForEndOfFrame();
         }
     }
 

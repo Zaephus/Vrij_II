@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-#if UNITY_EDITOR
-
 [ExecuteInEditMode]
 public class DrawBoxCollider : MonoBehaviour {
 
@@ -62,5 +60,3 @@ public class DrawBoxCollider : MonoBehaviour {
     }
     
 }
-
-#endif

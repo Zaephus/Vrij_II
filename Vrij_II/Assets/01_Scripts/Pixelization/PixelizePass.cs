@@ -12,7 +12,7 @@ namespace Pixelization {
         private RenderTargetIdentifier pixelBuffer;
 
         private int pixelBufferID = Shader.PropertyToID("_PixelBuffer");
-
+    
         private Material material;
 
         private int pixelScreenHeight;
@@ -24,7 +24,7 @@ namespace Pixelization {
             renderPassEvent = _settings.renderPassEvent;
 
             if(material == null) {
-                material = CoreUtils.CreateEngineMaterial("Hidden/Pixelize");
+                material = CoreUtils.CreateEngineMaterial(settings.shader);
             }
 
         }

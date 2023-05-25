@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+
 using UnityEngine;
 
 public class PatrolState : BaseState<EnemyController> {
@@ -8,15 +6,15 @@ public class PatrolState : BaseState<EnemyController> {
     [SerializeField]
     private Transform[] waypoints;
 
-    private Transform currentWaypoint;
+    private Transform currentWaypoint = null;
 
     public override void OnStart() {
         if(waypoints.Length > 0) {
-            currentWaypoint = waypoints[0];
+            currentWaypoint = waypoints[FindClosestWaypoint()];
         }
         if(currentWaypoint != null) {
-            runner.agent.SetDestination(currentWaypoint.position);
             runner.agent.isStopped = false;
+            runner.agent.SetDestination(currentWaypoint.position);
         }
     }
 
@@ -48,7 +46,8 @@ public class PatrolState : BaseState<EnemyController> {
         
         if(Vector3.Distance(runner.transform.position, runner.target.position) <= runner.viewDistance) {
 
-            Vector3 targetDir = runner.target.position - runner.transform.position;
+            Vector3 targetDir = (runner.target.position - runner.transform.position).normalized;
+            Debug.DrawLine(transform.position, transform.position + targetDir * 3);
 
             Ray ray = new Ray(runner.transform.position, targetDir.normalized);
             RaycastHit hit;
@@ -61,6 +60,18 @@ public class PatrolState : BaseState<EnemyController> {
 
         }
         
+    }
+
+    private int FindClosestWaypoint() {
+        Transform closest = waypoints[0];
+        int k = 0;
+        for(int i = 0; i < waypoints.Length; i++) {
+            if(Vector3.Distance(transform.position, closest.position) > Vector3.Distance(transform.position, waypoints[i].position)) {
+                closest = waypoints[i];
+                k = i;
+            }
+        }
+        return k;
     }
 
 }

@@ -658,24 +658,6 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.75, z: 0}
---- !u!114 &1058137731142726037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7125894086951399301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5da084ff348701d439ad7f12edcef56d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 5
-  runSpeed: 10
-  aimSpeed: 5
-  rb: {fileID: 982502890162181999}
-  animator: {fileID: 4562074485045784389}
-  target: {fileID: 171279538394911360}
 --- !u!114 &1435549935529238551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,7 +778,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4562074485045784389}
-  hasSpear: 1
+  isAiming: 0
+  rigs: []
+  spearHeldTransform: {fileID: 0}
+  spearAimTransform: {fileID: 0}
+  spearBoneTransform: {fileID: 0}
 --- !u!114 &8531211552016520308
 MonoBehaviour:
   m_ObjectHideFlags: 0

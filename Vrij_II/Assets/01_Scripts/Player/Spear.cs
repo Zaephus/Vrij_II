@@ -1,7 +1,9 @@
+
 using UnityEngine;
 using UnityEngine.VFX;
 
 public class Spear : MonoBehaviour {
+
     [SerializeField]
     private Rigidbody rb;
     [SerializeField]
@@ -27,8 +29,8 @@ public class Spear : MonoBehaviour {
 
     }
 
-    public void Fire(float _throwStrenght) {
-        rb.AddForce(-boneTransform.up * _throwStrenght, ForceMode.Impulse);
+    public void Fire(float _throwStrength) {
+        rb.AddForce(-boneTransform.up * _throwStrength, ForceMode.Impulse);
     }
 
     private void OnTriggerStay(Collider _other) {

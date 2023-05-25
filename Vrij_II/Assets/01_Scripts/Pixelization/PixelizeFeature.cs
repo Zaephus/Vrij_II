@@ -32,6 +32,7 @@ namespace Pixelization {
 
     [System.Serializable]
     public class CustomPassSettings {
+        public Shader shader;
         public RenderPassEvent renderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
         public int screenHeight;
     }
