@@ -4183,7 +4183,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268226608}
-  m_LocalRotation: {x: -0, y: -0.74460727, z: -0, w: 0.6675028}
+  m_LocalRotation: {x: -0, y: -0.8953766, z: -0, w: -0.44530973}
   m_LocalPosition: {x: 2.51, y: 0.07700002, z: -9.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15321,7 +15321,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106602634}
-  m_LocalRotation: {x: -0, y: -0.51135355, z: -0, w: -0.85937047}
+  m_LocalRotation: {x: -0, y: -0.99976504, z: -0, w: -0.021676237}
   m_LocalPosition: {x: -15.11, y: 0.07700002, z: -9.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25529,7 +25529,7 @@ VisualEffect:
       - m_Value: -0.2
         m_Name: FootSpread
         m_Overridden: 1
-      - m_Value: 2
+      - m_Value: 1.06
         m_Name: FootStepRate
         m_Overridden: 1
     m_Vector2f:
@@ -25537,7 +25537,10 @@ VisualEffect:
     m_Vector3f:
       m_Array: []
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 1, y: 0.6705292, z: 0.2783019, w: 1}
+        m_Name: FootStepColor
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:
