@@ -38,7 +38,7 @@ public class FootstepColor : MonoBehaviour {
 
             foreach (TextureColor textureColor in textureColors) {
                 if (textureColor.albedo == terrain.terrainData.terrainLayers[primaryIndex].diffuseTexture) {
-                    Vector4 colorVector = new Vector4(textureColor.color.r/255f, textureColor.color.g/255f, textureColor.color.b/255f, 1);
+                    Vector4 colorVector = new Vector4(textureColor.color.r, textureColor.color.g, textureColor.color.b, 0.8f);
                     footsteps.SetVector4("FootStepColor", colorVector);
                     Debug.Log(colorVector);
                 }
@@ -50,7 +50,7 @@ public class FootstepColor : MonoBehaviour {
     public class TextureColor {
 
         public Texture albedo;
-        public Color32 color;
+        public Color color;
     }
 
 }
