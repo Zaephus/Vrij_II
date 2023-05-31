@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 550d3ef63afcec24cbb128b25791c2ed
+guid: a8769c4280481bb418c2a74c34035182
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: 56752e9c31a8e594a9b8d4b8ab58c102, type: 2}
+      name: M_cactus1
+    second: {fileID: 2100000, guid: 9aff721265026ca4da40372ea967e9c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_cactus2
+    second: {fileID: 2100000, guid: dec5c8bf027010c43a9da8e4c7422e1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_cactus3
+    second: {fileID: 2100000, guid: 51fd221db3f3e2746aa82400f43bac43, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -42,7 +52,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
