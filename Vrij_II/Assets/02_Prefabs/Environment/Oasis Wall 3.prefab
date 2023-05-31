@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2445099859205311934}
   m_Layer: 0
-  m_Name: Wall v3
+  m_Name: Oasis Wall 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,6 +209,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -37445397394511822, guid: 2e23074145e6de84fa52850815aa4731,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d4ea9590444d36f4381aefa334cce7a8, type: 2}
     - target: {fileID: 919132149155446097, guid: 2e23074145e6de84fa52850815aa4731,
         type: 3}
       propertyPath: m_Name
