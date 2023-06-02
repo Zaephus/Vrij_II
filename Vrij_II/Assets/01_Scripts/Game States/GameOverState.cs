@@ -9,12 +9,13 @@ public class GameOverState : BaseState<GameManager> {
     private GameObject gameOverMenu;
 
     public override void OnStart() {
-        runner.level.SetActive(false);
         gameOverMenu.SetActive(true);
     }
 
     public override void OnUpdate() {}
 
-    public override void OnEnd() {}
+    public override void OnEnd() {
+        gameOverMenu.SetActive(false);
+    }
 
 }

@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputManager : MonoBehaviour {
 
+    public static System.Action GamePaused;
+
     public float leftHorizontalInput;
     public float leftVerticalInput;
     public float rightHorizontalInput;
@@ -53,7 +55,11 @@ public class PlayerInputManager : MonoBehaviour {
 
     // A method that receives input from input manager, when the interact button is pressed
     public void OnInteract(InputAction.CallbackContext _context) {
-
         isInteracting = _context.performed;
     }
+
+    public void OnPause(InputAction.CallbackContext _context) {
+        GamePaused?.Invoke();
+    }
+    
 }

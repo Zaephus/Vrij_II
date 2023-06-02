@@ -16,7 +16,7 @@ namespace SaveSystem {
 
         private void Awake() {
             uniqueId = GetComponent<UniqueId>();
-            SaveManager.InitializeObjectSaver += Initialize;
+            SaveManager.InitializeSaveSystem += Initialize;
         }
 
         private void Initialize() {
