@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 4863969075902618941, guid: 310ee4c51a56aaa49b72276eff5e6d0e,
         type: 3}
       propertyPath: m_Name
-      value: Banner Varient
+      value: Banner Varient Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4863969077104093610, guid: 310ee4c51a56aaa49b72276eff5e6d0e,
         type: 3}
@@ -73,6 +73,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7156514289523362588, guid: 310ee4c51a56aaa49b72276eff5e6d0e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8de854d914e9b434baa5c29a1aa75d0c, type: 2}
+    - target: {fileID: 7727643939710197190, guid: 310ee4c51a56aaa49b72276eff5e6d0e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
