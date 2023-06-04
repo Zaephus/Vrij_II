@@ -128,7 +128,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4077895887420395855}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -525.5779, y: 12.665489, z: 459.46613}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -298,7 +298,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4077895888237089721
 Transform:
@@ -396,7 +396,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4077895888492427147
 Transform:
@@ -489,6 +489,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_6
       objectReference: {fileID: 0}
+    - target: {fileID: 1665678722598428178, guid: c234f5d8d12f4e64a9cd9be8e0c31f5e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2041957287246398632, guid: c234f5d8d12f4e64a9cd9be8e0c31f5e,
         type: 3}
       propertyPath: m_RootOrder
@@ -573,6 +578,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -704,6 +714,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828347967327672 stripped
@@ -778,6 +793,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
@@ -864,6 +884,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_3
       objectReference: {fileID: 0}
+    - target: {fileID: 9188570336995409517, guid: 1ad1737d2fd385e49a333b750279993f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ad1737d2fd385e49a333b750279993f, type: 3}
 --- !u!4 &5501169009344970794 stripped
@@ -939,6 +964,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349720541539179 stripped
@@ -958,6 +988,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -1029,6 +1064,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886780352332}
     m_Modifications:
+    - target: {fileID: 2382204501228458839, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -1164,6 +1204,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dead tree 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2767780348513147754, guid: 51281f72a21539546a2875bee0491037,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51281f72a21539546a2875bee0491037, type: 3}
 --- !u!4 &2341040845479594231 stripped
@@ -1238,6 +1283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
@@ -1314,6 +1364,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349720584370755 stripped
@@ -1333,6 +1388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814923072908233934, guid: 0966ff4a27ebff4468c1294e865dec6d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6627347109724771956, guid: 0966ff4a27ebff4468c1294e865dec6d,
         type: 3}
@@ -1464,6 +1524,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828347869092928 stripped
@@ -1538,6 +1603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173579226489686214, guid: 04d08c4fad02a8a469d07da97c0efb9a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04d08c4fad02a8a469d07da97c0efb9a, type: 3}
@@ -1629,6 +1699,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886497811268}
     m_Modifications:
+    - target: {fileID: 1470823751910996875, guid: 0643df16bd73809439cfe2b104510592,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3873983279465438201, guid: 0643df16bd73809439cfe2b104510592,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1734,6 +1809,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bones
       objectReference: {fileID: 0}
+    - target: {fileID: 7078692669173734046, guid: 0643df16bd73809439cfe2b104510592,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8051642917439505099, guid: 0643df16bd73809439cfe2b104510592,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1819,6 +1899,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828347814224538 stripped
@@ -1893,6 +1978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173579226489686214, guid: 04d08c4fad02a8a469d07da97c0efb9a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04d08c4fad02a8a469d07da97c0efb9a, type: 3}
@@ -1969,6 +2059,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349720415314190 stripped
@@ -2044,6 +2139,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828347818785010 stripped
@@ -2118,6 +2218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
@@ -2213,6 +2318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dead palm tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084154234787340070, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8150708291606077766, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
         type: 3}
@@ -2343,6 +2453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_10 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
@@ -2674,6 +2789,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349720358867046 stripped
@@ -2748,6 +2868,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
@@ -2834,6 +2959,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_2
       objectReference: {fileID: 0}
+    - target: {fileID: 1017262939180351485, guid: 3fb9301110026b64c99a5fe3b51d2ae8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fb9301110026b64c99a5fe3b51d2ae8, type: 3}
 --- !u!4 &4450193428822673244 stripped
@@ -2853,6 +2983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -2983,6 +3118,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
@@ -3189,6 +3329,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886780352332}
     m_Modifications:
+    - target: {fileID: 2382204501228458839, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -3324,6 +3469,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828347627284854 stripped
@@ -3339,6 +3489,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886780352332}
     m_Modifications:
+    - target: {fileID: 2382204501228458839, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -3418,6 +3573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_9 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473324468056593443, guid: 51e52d5b010a9da429b5c3cf7addd49f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7853509941969014425, guid: 51e52d5b010a9da429b5c3cf7addd49f,
         type: 3}
@@ -3564,6 +3724,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828347533941741 stripped
@@ -3639,6 +3804,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083164542133625324, guid: f0d5c71d27ccc894392a95da46c296ae,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0d5c71d27ccc894392a95da46c296ae, type: 3}
 --- !u!4 &4383238773852809034 stripped
@@ -3658,6 +3828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -3733,6 +3908,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_9 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473324468056593443, guid: 51e52d5b010a9da429b5c3cf7addd49f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7853509941969014425, guid: 51e52d5b010a9da429b5c3cf7addd49f,
         type: 3}
@@ -3819,6 +3999,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895887481212916}
     m_Modifications:
+    - target: {fileID: 2512564637060223400, guid: 0a2fb894e4c9efd4fb4380f7fda6c709,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5367018018281661830, guid: 0a2fb894e4c9efd4fb4380f7fda6c709,
         type: 3}
       propertyPath: m_RootOrder
@@ -3898,6 +4083,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -4028,6 +4218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dead tree 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767780348513147754, guid: 51281f72a21539546a2875bee0491037,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51281f72a21539546a2875bee0491037, type: 3}
@@ -4229,6 +4424,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 3 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -4303,6 +4503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -4434,6 +4639,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palm tree 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2065259218724805318, guid: bd1713ffcc8fb2f4bbf3da04d99f909b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd1713ffcc8fb2f4bbf3da04d99f909b, type: 3}
 --- !u!4 &3419655201113490600 stripped
@@ -4453,6 +4663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_9 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473324468056593443, guid: 51e52d5b010a9da429b5c3cf7addd49f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7853509941969014425, guid: 51e52d5b010a9da429b5c3cf7addd49f,
         type: 3}
@@ -4599,6 +4814,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dead tree 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2767780348513147754, guid: 51281f72a21539546a2875bee0491037,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51281f72a21539546a2875bee0491037, type: 3}
 --- !u!4 &2341040845991707625 stripped
@@ -4618,6 +4838,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dead tree 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037614512376697933, guid: 628aa9e7b3f0c4440baedc5fbab4b5ba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7965990496915166909, guid: 628aa9e7b3f0c4440baedc5fbab4b5ba,
         type: 3}
@@ -4693,6 +4918,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -4824,6 +5054,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349719987981750 stripped
@@ -4898,6 +5133,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_10 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
@@ -4974,6 +5214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828347419130860 stripped
@@ -4993,6 +5238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dead tree 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037614512376697933, guid: 628aa9e7b3f0c4440baedc5fbab4b5ba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7965990496915166909, guid: 628aa9e7b3f0c4440baedc5fbab4b5ba,
         type: 3}
@@ -5199,6 +5449,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7826844378242464894, guid: 1839fd356372aa14ca52745be4230afe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1839fd356372aa14ca52745be4230afe, type: 3}
 --- !u!4 &6586701365678841444 stripped
@@ -5274,6 +5529,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palm tree 3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 954092916931066299, guid: c20c7d747038bbb4d95460072f7e4e7f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c20c7d747038bbb4d95460072f7e4e7f, type: 3}
 --- !u!4 &4531138456387991081 stripped
@@ -5289,6 +5549,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886780352332}
     m_Modifications:
+    - target: {fileID: 2382204501228458839, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -5424,6 +5689,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349719935754031 stripped
@@ -5443,6 +5713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -5574,6 +5849,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_9
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a135bf05dc6f434abebd38ab06938c1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a135bf05dc6f434abebd38ab06938c1, type: 3}
 --- !u!4 &4547828347322502768 stripped
@@ -5649,6 +5929,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828347273177833 stripped
@@ -5668,6 +5953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_BoneRib1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222506000077777155, guid: f57bcb8017263ac4485cd15c4bb3aae3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6706168334300165049, guid: f57bcb8017263ac4485cd15c4bb3aae3,
         type: 3}
@@ -5829,6 +6119,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_9 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7473324468056593443, guid: 51e52d5b010a9da429b5c3cf7addd49f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7853509941969014425, guid: 51e52d5b010a9da429b5c3cf7addd49f,
         type: 3}
       propertyPath: m_RootOrder
@@ -5919,6 +6214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 3 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -5989,6 +6289,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886780352332}
     m_Modifications:
+    - target: {fileID: 2382204501228458839, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -6068,6 +6373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -6299,6 +6609,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_3
       objectReference: {fileID: 0}
+    - target: {fileID: 9188570336995409517, guid: 1ad1737d2fd385e49a333b750279993f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ad1737d2fd385e49a333b750279993f, type: 3}
 --- !u!4 &5501169010139237063 stripped
@@ -6373,6 +6688,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826844378242464894, guid: 1839fd356372aa14ca52745be4230afe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1839fd356372aa14ca52745be4230afe, type: 3}
@@ -6479,6 +6799,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4619729190336739039, guid: 3de52317f760b504eb8a9b201c283e08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780575754100496366, guid: 3de52317f760b504eb8a9b201c283e08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453040961443042946, guid: 3de52317f760b504eb8a9b201c283e08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3de52317f760b504eb8a9b201c283e08, type: 3}
 --- !u!4 &1447891912222328288 stripped
@@ -6498,6 +6833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -6574,6 +6914,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 3 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -6644,6 +6989,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886780352332}
     m_Modifications:
+    - target: {fileID: 2382204501228458839, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -6794,6 +7144,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349719681065279 stripped
@@ -6813,6 +7168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -7124,6 +7484,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828347082126727 stripped
@@ -7143,6 +7508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -7249,10 +7619,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 136.139
       objectReference: {fileID: 0}
+    - target: {fileID: 1334952357158904851, guid: f991fbaae80c0814a8d227613c30c023,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1493484082115938926, guid: f991fbaae80c0814a8d227613c30c023,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357625972677449469, guid: f991fbaae80c0814a8d227613c30c023,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8380591977868394852, guid: f991fbaae80c0814a8d227613c30c023,
         type: 3}
@@ -7399,6 +7779,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349719614208059 stripped
@@ -7474,6 +7859,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palm tree 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2065259218724805318, guid: bd1713ffcc8fb2f4bbf3da04d99f909b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd1713ffcc8fb2f4bbf3da04d99f909b, type: 3}
 --- !u!4 &3419655201215847472 stripped
@@ -7493,6 +7883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -7568,6 +7963,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1665678722598428178, guid: c234f5d8d12f4e64a9cd9be8e0c31f5e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2041957287246398632, guid: c234f5d8d12f4e64a9cd9be8e0c31f5e,
         type: 3}
@@ -7889,6 +8289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dead tree 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2767780348513147754, guid: 51281f72a21539546a2875bee0491037,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51281f72a21539546a2875bee0491037, type: 3}
 --- !u!4 &2341040844322628704 stripped
@@ -7908,6 +8313,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dead tree 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037614512376697933, guid: 628aa9e7b3f0c4440baedc5fbab4b5ba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7965990496915166909, guid: 628aa9e7b3f0c4440baedc5fbab4b5ba,
         type: 3}
@@ -7983,6 +8393,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Palm tree 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871998816674437853, guid: 0e5a13afc335d1c4099e1daf72b46648,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5248665749449375847, guid: 0e5a13afc335d1c4099e1daf72b46648,
         type: 3}
@@ -8124,6 +8539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_2
       objectReference: {fileID: 0}
+    - target: {fileID: 1017262939180351485, guid: 3fb9301110026b64c99a5fe3b51d2ae8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fb9301110026b64c99a5fe3b51d2ae8, type: 3}
 --- !u!4 &4450193428062500530 stripped
@@ -8143,6 +8563,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dead tree 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037614512376697933, guid: 628aa9e7b3f0c4440baedc5fbab4b5ba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7965990496915166909, guid: 628aa9e7b3f0c4440baedc5fbab4b5ba,
         type: 3}
@@ -8214,6 +8639,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886780352332}
     m_Modifications:
+    - target: {fileID: 2382204501228458839, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -8363,6 +8793,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173579226489686214, guid: 04d08c4fad02a8a469d07da97c0efb9a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04d08c4fad02a8a469d07da97c0efb9a, type: 3}
@@ -8598,6 +9033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -8859,6 +9299,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -8934,6 +9379,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 3 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -9008,6 +9458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814923072908233934, guid: 0966ff4a27ebff4468c1294e865dec6d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6627347109724771956, guid: 0966ff4a27ebff4468c1294e865dec6d,
         type: 3}
@@ -9149,6 +9604,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828346691591740 stripped
@@ -9223,6 +9683,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_10 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
@@ -9314,6 +9779,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5173579226489686214, guid: 04d08c4fad02a8a469d07da97c0efb9a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04d08c4fad02a8a469d07da97c0efb9a, type: 3}
 --- !u!4 &1087985605830284233 stripped
@@ -9388,6 +9858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_10 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
@@ -9619,6 +10094,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886780352332}
     m_Modifications:
+    - target: {fileID: 2382204501228458839, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -9698,6 +10178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -9829,6 +10314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349719307134889 stripped
@@ -9903,6 +10393,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
@@ -9979,6 +10474,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828346602449318 stripped
@@ -9998,6 +10498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -10074,6 +10579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ruine2
       objectReference: {fileID: 0}
+    - target: {fileID: 7166595745465057462, guid: 58a65b998da989142984bd224b1d3105,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7511736381403896332, guid: 58a65b998da989142984bd224b1d3105,
         type: 3}
       propertyPath: m_RootOrder
@@ -10148,6 +10658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -10224,6 +10739,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 3 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -10294,6 +10814,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886780352332}
     m_Modifications:
+    - target: {fileID: 2382204501228458839, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -10444,6 +10969,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886780352332}
     m_Modifications:
+    - target: {fileID: 2382204501228458839, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -10579,6 +11109,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828346465229667 stripped
@@ -10598,6 +11133,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -10729,6 +11269,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349719093660219 stripped
@@ -10748,6 +11293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dead palm tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084154234787340070, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8150708291606077766, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
         type: 3}
@@ -10823,6 +11373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -10954,6 +11509,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828346421961196 stripped
@@ -10973,6 +11533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_BoneRib
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851724050877431920, guid: a1ea7c86f3143654fa63858ac692053d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5196901069467458250, guid: a1ea7c86f3143654fa63858ac692053d,
         type: 3}
@@ -11129,6 +11694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_1
       objectReference: {fileID: 0}
+    - target: {fileID: 883527815095083069, guid: c0a2c5d4f80b5f1449cf6730ec4f0e95,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0a2c5d4f80b5f1449cf6730ec4f0e95, type: 3}
 --- !u!4 &4584281537772507451 stripped
@@ -11203,6 +11773,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 1 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
@@ -11279,6 +11854,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349718976801027 stripped
@@ -11353,6 +11933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 1 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
@@ -11429,6 +12014,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828346257908499 stripped
@@ -11503,6 +12093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
@@ -11579,6 +12174,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_7
       objectReference: {fileID: 0}
+    - target: {fileID: 5333294383053847786, guid: 5c776cf622e204e498ffd8aa1e203200,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c776cf622e204e498ffd8aa1e203200, type: 3}
 --- !u!4 &8781987271309667816 stripped
@@ -11598,6 +12198,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desert Wall 3 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083778694335245363, guid: df1392930836480478ccd56504adcc0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8525017629106277001, guid: df1392930836480478ccd56504adcc0f,
         type: 3}
@@ -11849,6 +12454,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4077895886497811268}
     m_Modifications:
+    - target: {fileID: 3932956777556417745, guid: 6d34ae5917d42534cac941b601c1a8d1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4784489523097391010, guid: 6d34ae5917d42534cac941b601c1a8d1,
         type: 3}
       propertyPath: m_RootOrder
@@ -11999,6 +12609,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349718807443565 stripped
@@ -12073,6 +12688,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_10 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
@@ -12149,6 +12769,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349718723860170 stripped
@@ -12223,6 +12848,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_10 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
@@ -12299,6 +12929,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349718761371114 stripped
@@ -12373,6 +13008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826844378242464894, guid: 1839fd356372aa14ca52745be4230afe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1839fd356372aa14ca52745be4230afe, type: 3}
@@ -12449,6 +13089,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828346054001684 stripped
@@ -12524,6 +13169,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828346022939096 stripped
@@ -12543,6 +13193,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Ruine2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166595745465057462, guid: 58a65b998da989142984bd224b1d3105,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7511736381403896332, guid: 58a65b998da989142984bd224b1d3105,
         type: 3}
@@ -12674,6 +13329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828345998240862 stripped
@@ -12693,6 +13353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Ruine4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945459125293206029, guid: c70263d6954be1c4386980472601f112,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7721679851998449847, guid: c70263d6954be1c4386980472601f112,
         type: 3}
@@ -12839,6 +13504,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349718592057410 stripped
@@ -12913,6 +13583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_10 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
@@ -12989,6 +13664,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349718636400344 stripped
@@ -13064,6 +13744,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Wall 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4615255345316195599, guid: 2ea40e61499c7014794b187e2e272235,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea40e61499c7014794b187e2e272235, type: 3}
 --- !u!4 &4339349718617160079 stripped
@@ -13083,6 +13768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814923072908233934, guid: 0966ff4a27ebff4468c1294e865dec6d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6627347109724771956, guid: 0966ff4a27ebff4468c1294e865dec6d,
         type: 3}
@@ -13229,6 +13919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_10 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
 --- !u!4 &4547828345934469073 stripped
@@ -13303,6 +13998,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_sandStone_10 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3e20567620ebd489a2c52a71b3c043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
@@ -13389,6 +14089,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sandStone_3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9188570336995409517, guid: 1ad1737d2fd385e49a333b750279993f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ad1737d2fd385e49a333b750279993f, type: 3}
 --- !u!4 &5501169008988092671 stripped
@@ -13463,6 +14168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Palm tree 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 954092916931066299, guid: c20c7d747038bbb4d95460072f7e4e7f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c20c7d747038bbb4d95460072f7e4e7f, type: 3}
