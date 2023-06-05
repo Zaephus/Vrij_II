@@ -12,6 +12,7 @@ public class VFXPositionBinder : MonoBehaviour {
 
         playerCharacter = FindObjectOfType<PlayerManager>().transform;
 
+#if UNITY_EDITOR
         if(vfxGraph == null) {
             Debug.LogError("VFX graph component not assigned!");
             return;
@@ -27,6 +28,7 @@ public class VFXPositionBinder : MonoBehaviour {
             Debug.LogError("Position parameter not found in the VFX graph!");
             return;
         }
+#endif
 
     }
 
