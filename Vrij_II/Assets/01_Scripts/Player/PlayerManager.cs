@@ -38,7 +38,7 @@ public class PlayerManager : MonoBehaviour, IDamageable {
     }
 
     private void FixedUpdate() {
-        playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput, hasSpear);
+        playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput, hasSpear, playerInput.isAiming);
         if (playerInput.isAiming && hasSpear) {
             playerMovement.Aim(transform, playerInput.rightHorizontalInput, playerInput.rightVerticalInput);
         }
