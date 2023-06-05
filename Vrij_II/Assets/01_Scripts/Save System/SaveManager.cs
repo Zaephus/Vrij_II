@@ -11,14 +11,13 @@ namespace SaveSystem {
     public delegate void ObjectSerializedCallback(string _result);
     public delegate void FileLoadedCallback(string _data);
 
-    // TODO: Refactor SaveManager class.
-    // Structure needs to be clearer, it is not always apparent which function belongs to saving, and which to loading.
     public class SaveManager : MonoBehaviour {
 
         public static Action SaveGameCall;
+        public static Action ManualSaveGameCall;
         public static Action LoadGameCall;
         public static Action<ObjectSerializedCallback> SerializationCall;
-        public static Action InitializeObjectSaver;
+        public static Action InitializeSaveSystem;
         public static Action<string, FileLoadedCallback> RegisterSaver;
 
         private ObjectSerializedCallback serializedCallback;
@@ -36,7 +35,7 @@ namespace SaveSystem {
             SaveGameCall += TrySaveGame;
             LoadGameCall += TryLoadGame;
             RegisterSaver += RegisterObjectSaver;
-            InitializeObjectSaver?.Invoke();
+            InitializeSaveSystem?.Invoke();
         }
 
         public void OnUpdate() {

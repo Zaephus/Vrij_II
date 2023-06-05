@@ -9,12 +9,13 @@ public class EndState : BaseState<GameManager> {
     private GameObject endMenu;
 
     public override void OnStart() {
-        runner.level.SetActive(false);
         endMenu.SetActive(true);
     }
 
     public override void OnUpdate() {}
 
-    public override void OnEnd() {}
+    public override void OnEnd() {
+        endMenu.SetActive(false);
+    }
     
 }

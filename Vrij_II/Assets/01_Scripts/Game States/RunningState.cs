@@ -5,20 +5,30 @@ using UnityEngine;
 
 public class RunningState : BaseState<GameManager> {
 
+    [SerializeField]
+    private GameObject level;
+
     public override void OnStart() {
-        runner.level.SetActive(true);
+        level.SetActive(true);
 
         GameManager.PlayerDied += GameOver;
         GameManager.FinishReached += EndGame;
 
+        PlayerInputManager.GamePaused += PauseGame;
+
     }
 
     public override void OnUpdate() {
-        runner.saveManager.OnUpdate();
+
     }
 
     public override void OnEnd() {
+        PlayerInputManager.GamePaused -= PauseGame;
+        level.SetActive(false);
+    }
 
+    public void PauseGame() {
+        runner.SwitchState(GameState.Paused);
     }
 
     public void EndGame() {
@@ -26,7 +36,6 @@ public class RunningState : BaseState<GameManager> {
     }
 
     public void GameOver() {
-        
         runner.SwitchState(GameState.GameOver);
     }
     

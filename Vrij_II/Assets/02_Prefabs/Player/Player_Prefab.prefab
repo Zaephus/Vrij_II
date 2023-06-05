@@ -1860,6 +1860,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2652e5a5-f88d-473e-bfdb-10a2fd910240
     m_ActionName: Player/Aim[/SwitchProControllerHID/leftTrigger,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5328703834928069489}
+        m_TargetAssemblyTypeName: PlayerInputManager, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7fb20697-18c4-406e-b887-f1be527eb772
+    m_ActionName: Player/Pause[/Keyboard/escape,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -2685,41 +2701,23 @@ MonoBehaviour:
   terrain: {fileID: 0}
   textureColors:
   - albedo: {fileID: 2800000, guid: a7b05dec520c8cf4c8e08dfef1f84db4, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2150649986
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 92975eac003d6b744815ff80bf8b3aee, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2155064036
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: c6d3dfb14834d2642842e5bc8bdf6c8a, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2151447175
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 6e3abed3edda0ae4b876a53ee95f7d37, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2151387514
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 85ed2b41abc7c82499e10ac4feaa0590, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2155523812
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 3d7e23f397bd4e347bc2a33df00d0897, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2150327368
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 62a8bc25af5c388458823063b0415e1f, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2149662549
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 3e38a850c0ef7cf44bdba15f73c994b8, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2153282982
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 0dd443a2df90ef247be261e60d0ce83b, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2154075077
+    color: {r: 0, g: 0, b: 0, a: 0}
   footsteps: {fileID: 3061710181975480455}
   blendTerrain: 0
 --- !u!1 &5875596899615878540
@@ -4474,6 +4472,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2652e5a5-f88d-473e-bfdb-10a2fd910240
     m_ActionName: Player/Aim[/SwitchProControllerHID/leftTrigger,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7fb20697-18c4-406e-b887-f1be527eb772
+    m_ActionName: Player/Pause[/Keyboard/escape,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -4634,7 +4636,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 0.38
+      - m_Value: 0.23
         m_Name: FootSize
         m_Overridden: 1
       - m_Value: -0.2
@@ -4721,41 +4723,23 @@ MonoBehaviour:
   terrain: {fileID: 0}
   textureColors:
   - albedo: {fileID: 2800000, guid: a7b05dec520c8cf4c8e08dfef1f84db4, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2150649986
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 92975eac003d6b744815ff80bf8b3aee, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2155064036
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: c6d3dfb14834d2642842e5bc8bdf6c8a, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2151447175
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 6e3abed3edda0ae4b876a53ee95f7d37, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2151387514
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 85ed2b41abc7c82499e10ac4feaa0590, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2155523812
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 3d7e23f397bd4e347bc2a33df00d0897, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2150327368
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 62a8bc25af5c388458823063b0415e1f, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2149662549
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 3e38a850c0ef7cf44bdba15f73c994b8, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2153282982
+    color: {r: 0, g: 0, b: 0, a: 0}
   - albedo: {fileID: 2800000, guid: 0dd443a2df90ef247be261e60d0ce83b, type: 3}
-    color:
-      serializedVersion: 2
-      rgba: 2154075077
+    color: {r: 0, g: 0, b: 0, a: 0}
   footsteps: {fileID: 904609306234550909}
   blendTerrain: 0
 --- !u!1 &9150333209140386470

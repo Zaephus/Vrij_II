@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class MainMenuState : BaseState<GameManager> {
 
+    [SerializeField]
+    private GameObject mainMenu;
+
     public override void OnStart() {
-        runner.mainMenu.SetActive(true);
-        runner.level.SetActive(false);
+        mainMenu.SetActive(true);
     }
 
     public override void OnUpdate() {
@@ -15,11 +17,10 @@ public class MainMenuState : BaseState<GameManager> {
     }
 
     public override void OnEnd() {
-        
+        mainMenu.SetActive(false);
     }
 
     public void StartGame() {
-        runner.mainMenu.SetActive(false);
         runner.SwitchState(GameState.Running);
     }
     
