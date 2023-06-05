@@ -15,8 +15,10 @@ public class FootstepColor : MonoBehaviour {
     [SerializeField]
     private bool blendTerrain;
 
-    private void Start() {
-        
+    private void Awake() {
+        if (terrain == null) {
+            terrain = FindObjectOfType<Terrain>();
+        }
     }
 
     private void Update() {
