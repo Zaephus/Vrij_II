@@ -78,7 +78,12 @@ public class PlayerMovement {
             dir = new Vector3(0, 0, aimDistance);
         }
 
-        Vector3 targetPosition = _playerTransform.position + (dir).normalized * aimDistance + new Vector3(0, 1.5f, 0);
+        Vector3 targetPosition = target.position;
+
+        if (_horizontalInput >= 0.01f || _verticalInput >= 0.01f) {
+            targetPosition = _playerTransform.position + (dir).normalized * aimDistance + new Vector3(0, 1.5f, 0);
+            target.position = targetPosition;
+        }
 
         Debug.DrawLine(targetPosition, _playerTransform.position);
         //target.position = targetPosition;
