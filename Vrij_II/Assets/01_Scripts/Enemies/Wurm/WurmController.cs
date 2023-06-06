@@ -8,18 +8,22 @@ using Wurm;
 public class WurmController : MonoBehaviour {
 
     private BaseState<WurmController> currentState;
-    [SerializeField, ReadOnly]
-    private WurmState state;
+    [ReadOnly]
+    public WurmState state;
 
     public NavMeshAgent agent;
 
     public Transform target;
 
+    [HideInInspector]
+    public float range;
+
     public void Start() {
-        SwitchState(WurmState.Moving);
+        SwitchState(WurmState.Idle);
         if(target == null) {
             target = FindAnyObjectByType<PlayerManager>().transform;
         }
+        range = GetComponent<SphereCollider>().radius;
     }
 
     public void Update() {}
@@ -53,10 +57,14 @@ public class WurmController : MonoBehaviour {
     }
 
     public void OnTriggerEnter(Collider _other) {
-        if(state == WurmState.Attacking) {
-            if(_other.GetComponent<IDamageable>() != null) {
-                _other.GetComponent<IDamageable>().Hit();
-            }
+        if(_other.GetComponent<PlayerManager>() != null) {
+            SwitchState(WurmState.Moving);
+        }
+    }
+
+    public void OnTriggerExit(Collider _other) {
+        if(_other.GetComponent<PlayerManager>() != null) {
+            SwitchState(WurmState.Idle);
         }
     }
 

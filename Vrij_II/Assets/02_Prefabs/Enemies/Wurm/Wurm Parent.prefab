@@ -155,7 +155,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 5417288549694005414}
   - component: {fileID: 1432455714281986747}
   - component: {fileID: 5606410353812240844}
+  - component: {fileID: 1655422875697391998}
   m_Layer: 0
   m_Name: Wurm Parent
   m_TagString: Untagged
@@ -219,6 +220,7 @@ MonoBehaviour:
   state: 0
   agent: {fileID: 8455653277681256259}
   target: {fileID: 0}
+  range: 0
 --- !u!114 &5417288549694005414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,8 +247,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
-  followTime: 10
+  followTime: 5
   trailEffect: {fileID: 4042117693159912142}
+  beforeAttackWaitTime: 0.1
 --- !u!114 &5606410353812240844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +265,20 @@ MonoBehaviour:
   runner: {fileID: 0}
   animator: {fileID: 8392459636876701182}
   attackEffect: {fileID: 3665774675649910224}
-  beforeAttackWaitTime: 0
+  vfxTimingOffset: 0.01
+--- !u!135 &1655422875697391998
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7240062480017202501}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 23.96
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9164750345953241334
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ namespace Wurm {
         private VisualEffect attackEffect;
 
         [SerializeField]
-        private float beforeAttackWaitTime;
+        private float vfxTimingOffset = 0.01f;
 
         public override void OnStart() {
             StartCoroutine(Attack());
@@ -30,8 +31,8 @@ namespace Wurm {
         }
 
         private IEnumerator Attack() {
-            yield return new WaitForSeconds(beforeAttackWaitTime);
             animator.SetTrigger("Attack");
+            yield return new WaitForSeconds(vfxTimingOffset);
             attackEffect.enabled = true;
         }
 

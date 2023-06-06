@@ -14,6 +14,9 @@ namespace Wurm {
         [SerializeField]
         private VisualEffect trailEffect;
 
+        [SerializeField]
+        private float beforeAttackWaitTime;
+
         public override void OnStart() {
             StartCoroutine(MoveToTarget());
             trailEffect.enabled = true;
@@ -31,30 +34,32 @@ namespace Wurm {
             Vector3 targetPos = runner.target.position;
 
             while(timeLeft > 0.0f) {
-
                 targetPos = runner.target.position;
                 runner.agent.SetDestination(targetPos);
 
                 timeLeft -= Time.deltaTime;
                 yield return new WaitForEndOfFrame();
-
             }
 
-            Vector3 lastPos = transform.position;
+            if(Vector3.Distance(targetPos, transform.position) > runner.range) {
+                runner.SwitchState(WurmState.Idle);
+                yield break;
+            }
+
             int stationaryCounter = 60;
 
             yield return new WaitForEndOfFrame();
 
             while(runner.agent.remainingDistance >= runner.agent.stoppingDistance) {
 
-                if(transform.position == lastPos) {
+                if(runner.agent.velocity.magnitude <= Mathf.Epsilon) {
                     if(stationaryCounter <= 0) {
+                        runner.agent.ResetPath();
                         break;
                     }
                     stationaryCounter--;
                 }
                 else {
-                    lastPos = transform.position;
                     stationaryCounter = 60;
                 }
 
@@ -62,7 +67,17 @@ namespace Wurm {
 
             }
 
-            runner.SwitchState(WurmState.Attacking);
+            while(runner.agent.velocity.magnitude >= Mathf.Epsilon) {
+                yield return new WaitForEndOfFrame();
+            }
+            
+            trailEffect.enabled = false;
+            
+            yield return new WaitForSeconds(beforeAttackWaitTime);
+
+            if(runner.state == WurmState.Moving) {
+                runner.SwitchState(WurmState.Attacking);
+            }
 
         }
 
