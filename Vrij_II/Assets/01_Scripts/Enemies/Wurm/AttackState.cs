@@ -31,7 +31,12 @@ namespace Wurm {
         }
 
         private IEnumerator Attack() {
-            animator.SetTrigger("Attack");
+            if(Random.value >= 0.5f) {
+                animator.SetTrigger("DoubleAttackTrigger");
+            }
+            else {
+                animator.SetTrigger("SingleAttackTrigger");
+            }
             yield return new WaitForSeconds(vfxTimingOffset);
             attackEffect.enabled = true;
         }
