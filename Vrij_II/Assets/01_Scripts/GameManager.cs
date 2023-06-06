@@ -12,9 +12,13 @@ public class GameManager : MonoBehaviour {
 
     public GameState gameState;
 
+    [HideInInspector]
+    public Vector3 respawnPoint;
+
     private BaseState<GameManager> currentState;
 
     private void Start() {
+        GameCheckpoint.CheckpointReached += SetRespawnPoint;
         SwitchState(GameState.MainMenu);
     }
 
@@ -63,6 +67,10 @@ public class GameManager : MonoBehaviour {
 
     public void ExitGame() {
         Application.Quit();
+    }
+
+    private void SetRespawnPoint(Vector3 _point) {
+        respawnPoint = _point;
     }
 
 }
