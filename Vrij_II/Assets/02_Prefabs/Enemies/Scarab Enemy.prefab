@@ -878,10 +878,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9701872bc1c534892685187d1f052b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   agent: {fileID: 2448870275541977663}
   target: {fileID: 0}
-  viewDistance: 15
-  attackRange: 2
+  viewDistance: 8
+  attackRange: 3
+  health: 2
 --- !u!114 &-8806823086882691454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,6 +897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
+  patrolSpeed: 2
   waypoints: []
 --- !u!114 &2187030825163768579
 MonoBehaviour:
@@ -909,6 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
+  chaseSpeed: 3.5
 --- !u!114 &-2815089858098040056
 MonoBehaviour:
   m_ObjectHideFlags: 0

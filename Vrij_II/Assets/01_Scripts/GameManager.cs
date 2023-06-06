@@ -62,7 +62,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void RestartGame() {
-        SceneManager.LoadScene("0_MainScene", LoadSceneMode.Single);
+        // SceneManager.LoadScene("0_MainScene", LoadSceneMode.Single);
+        ExitGame();
     }
 
     public void ExitGame() {
