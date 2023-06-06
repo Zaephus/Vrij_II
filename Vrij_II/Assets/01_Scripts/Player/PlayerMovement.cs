@@ -35,7 +35,7 @@ public class PlayerMovement {
     [SerializeField]
     private float throwStrength;
 
-    public void Move(Transform _playerTransform, float _horizontalInput, float _verticalInput, bool _hasSpear) {
+    public void Move(Transform _playerTransform, float _horizontalInput, float _verticalInput, bool _hasSpear, bool _isAiming) {
 
         float clampValue = 1.0f;
 
@@ -46,19 +46,27 @@ public class PlayerMovement {
         Vector3 dir = Vector3.ClampMagnitude(new Vector3(_horizontalInput, 0, _verticalInput), clampValue);
         float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
 
+        if (!_isAiming) {
 
-        if (dir.magnitude >= 0.5f) {
-            rb.AddForce(_playerTransform.forward * runSpeed * 10, ForceMode.Force);
-            _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
+            if (dir.magnitude >= 0.5f) {
+                rb.AddForce(_playerTransform.forward * runSpeed * 10, ForceMode.Force);
+                _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
+            }
+            else if (dir.magnitude >= 0.01f && dir.magnitude < 0.5f) {
+                rb.AddForce(_playerTransform.forward * walkSpeed * 10, ForceMode.Force);
+                _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
+            }
+            animator.SetFloat("RegularMovement", dir.magnitude);
+            footsteps.SetFloat("FootStepRate", dir.magnitude * footstepModifier);
         }
-        else if (dir.magnitude >= 0.01f && dir.magnitude < 0.5f) {
-            rb.AddForce(_playerTransform.forward * walkSpeed * 10, ForceMode.Force);
-            _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
+        else {
+            rb.velocity = Vector3.zero;
+            animator.SetFloat("RegularMovement", 0);
+            footsteps.SetFloat("FootStepRate", 0 * footstepModifier);
         }
 
-        animator.SetFloat("VelocityZ", dir.magnitude);
-        footsteps.SetFloat("FootStepRate", dir.magnitude * footstepModifier);
-        animator.SetFloat("VelocityX", dir.magnitude);
+        //animator.SetFloat("VelocityZ", dir.z * 2);
+        //animator.SetFloat("VelocityX", dir.x *2);
     }
 
     // TODO: Add a slope limit.
@@ -70,26 +78,29 @@ public class PlayerMovement {
             dir = new Vector3(0, 0, aimDistance);
         }
 
-        Vector3 targetPosition = _playerTransform.position + (dir).normalized * aimDistance + new Vector3(0, 1.5f, 0);
+        Vector3 targetPosition = target.position;
+
+        if (_horizontalInput >= 0.01f || _verticalInput >= 0.01f) {
+            targetPosition = _playerTransform.position + (dir).normalized * aimDistance + new Vector3(0, 1.5f, 0);
+            target.position = targetPosition;
+        }
 
         Debug.DrawLine(targetPosition, _playerTransform.position);
+        //target.position = targetPosition;
 
-        target.position = targetPosition;
 
         Vector3 angleDir = (targetPosition - _playerTransform.position);
         //check angle from player
         float angle = Mathf.Atan2(angleDir.x, angleDir.z) * Mathf.Rad2Deg;
         //rotate player if angle outside of bounds
-        if (angle < -90 || angle > 90) {
-            _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
-        }
-        
+
+        _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
     }
 
-    public bool Throw(GameObject _spearToThrow) {
+    public bool Throw(GameObject _spearToThrow, Transform _position) {
 
-        _spearToThrow.transform.position = spear.transform.position;
-        _spearToThrow.transform.rotation = spear.transform.rotation;
+        _spearToThrow.transform.position = _position.position;
+        _spearToThrow.transform.rotation = _position.rotation;
         Spear _spear = _spearToThrow.GetComponent<Spear>();
         _spearToThrow.SetActive(true);
         _spear.Fire(throwStrength);

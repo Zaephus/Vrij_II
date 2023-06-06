@@ -15,7 +15,7 @@ public class AnimatorLayerWeight : MonoBehaviour
     [SerializeField]
     private Transform spearHeldTransform;
     [SerializeField]
-    private Transform spearAimTransform;
+    public Transform spearAimTransform;
     [SerializeField]
     private Transform spearBoneTransform;
 

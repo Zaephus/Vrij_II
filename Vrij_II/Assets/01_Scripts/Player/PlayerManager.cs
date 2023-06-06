@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class PlayerManager : MonoBehaviour, IDamageable {
+public class PlayerManager : MonoBehaviour{
 
     [SerializeField]
     private PlayerInputManager playerInput;
@@ -38,7 +38,7 @@ public class PlayerManager : MonoBehaviour, IDamageable {
     }
 
     private void FixedUpdate() {
-        playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput, hasSpear);
+        playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput, hasSpear, playerInput.isAiming);
         if (playerInput.isAiming && hasSpear) {
             playerMovement.Aim(transform, playerInput.rightHorizontalInput, playerInput.rightVerticalInput);
         }
@@ -46,7 +46,7 @@ public class PlayerManager : MonoBehaviour, IDamageable {
 
     public void Throw() {
         if (hasSpear) {
-            hasSpear = playerMovement.Throw(currentOverworldSpear);
+            hasSpear = playerMovement.Throw(currentOverworldSpear, GetComponent<AnimatorLayerWeight>().spearAimTransform);
         }
     }
 
@@ -60,6 +60,7 @@ public class PlayerManager : MonoBehaviour, IDamageable {
             _spearToPickup.gameObject.SetActive(false);
             hasSpear = true;
             currentOverworldSpear = _spearToPickup.gameObject;
+            playerMovement.spear.GetComponent<SpearHeld>().SwitchSpear(_spearToPickup.type);
         }
     }
 
