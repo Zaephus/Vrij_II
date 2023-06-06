@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Scarab;
 
-public class EnemyController : MonoBehaviour {
+public class ScarabController : MonoBehaviour {
 
-    private BaseState<EnemyController> currentState;
-    private string state;
+    private BaseState<ScarabController> currentState;
+    private ScarabState state;
 
     public NavMeshAgent agent;
 
@@ -16,42 +17,46 @@ public class EnemyController : MonoBehaviour {
     public float attackRange;
 
     private void Start() {
-
-        SwitchState("PatrolState");
+        SwitchState(ScarabState.Patrolling);
+        if(target == null) {
+            target = FindAnyObjectByType<PlayerManager>().transform;
+        }
     }
 
     private void Update() {
         currentState.OnUpdate();
     }
 
-    public void SwitchState(string _stateType) {
+    public void SwitchState(ScarabState _state) {
         if(currentState != null) {
             currentState.OnEnd();
         }
 
-        switch(_stateType) {
-            case "PatrolState":
+        switch(_state) {
+            case ScarabState.Patrolling:
                 currentState = GetComponent<PatrolState>();
                 break;
-            case "ChaseState":
+            case ScarabState.Chasing:
                 currentState = GetComponent<ChaseState>();
                 break;
-            case "AttackState":
+            case ScarabState.Attacking:
                 currentState = GetComponent<AttackState>();
                 break;
             default:
                 return;
         }
 
-        state = _stateType;
+        state = _state;
 
-        Debug.Log("Switched State to " + _stateType);
+#if UNITY_EDITOR
+        Debug.Log("Switched State to " + _state);
+#endif
 
         currentState.OnStart();
     }
 
     public void OnTriggerEnter(Collider _other) {
-        if(state == "AttackState") {
+        if(state == ScarabState.Attacking) {
             if(_other.GetComponent<IDamageable>() != null) {
                 _other.GetComponent<IDamageable>().Hit();
             }

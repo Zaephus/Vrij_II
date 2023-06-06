@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour {
     public static Action PlayerDied;
     public static Action FinishReached;
 
-    [ReadOnly]
     public GameState gameState;
 
     private BaseState<GameManager> currentState;
@@ -51,7 +50,9 @@ public class GameManager : MonoBehaviour {
 
         gameState = _state;
 
+#if UNITY_EDITOR
         Debug.Log("Switched State to " + _state, this);
+#endif
 
         currentState.OnStart();
     }

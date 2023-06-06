@@ -7,10 +7,10 @@ namespace SaveSystem {
 
     public class EnemySaver : ObjectSaver<EnemyData> {
 
-        private EnemyController enemy;
+        private ScarabController enemy;
 
         private void Start() {
-            enemy = GetComponent<EnemyController>();
+            enemy = GetComponent<ScarabController>();
         }
 
         protected override void SaveObject(ObjectSerializedCallback _callback) {
