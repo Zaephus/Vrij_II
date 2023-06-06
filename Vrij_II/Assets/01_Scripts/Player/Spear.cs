@@ -2,8 +2,12 @@
 using UnityEngine;
 using UnityEngine.VFX;
 
+
+public enum SpearType {One, Two};
+
 public class Spear : MonoBehaviour {
 
+    public SpearType type;
     [SerializeField]
     private Rigidbody rb;
     [SerializeField]
@@ -12,6 +16,8 @@ public class Spear : MonoBehaviour {
     private GameObject pickupCanvas;
     [SerializeField]
     private VisualEffect spearTrails;
+    [SerializeField]
+    private Collider triggerCollider;
 
     public bool playerInRange;
 
@@ -22,15 +28,17 @@ public class Spear : MonoBehaviour {
 
         if (rb.velocity == Vector3.zero) {
             spearTrails.Stop();
+            triggerCollider.enabled = false;
         }
         else {
             playerInRange = false;
+            triggerCollider.enabled = true;
         }
 
     }
 
     public void Fire(float _throwStrength) {
-        rb.AddForce(-boneTransform.up * _throwStrength, ForceMode.Impulse);
+        rb.AddForce(transform.forward * _throwStrength, ForceMode.Impulse);
     }
 
     private void OnTriggerStay(Collider _other) {
@@ -38,6 +46,13 @@ public class Spear : MonoBehaviour {
 
         if (_other.gameObject.GetComponent<PlayerManager>()) {
             PlayerManager.SpearInRangeCall?.Invoke(this);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        IDamageable target;
+        if (other.TryGetComponent<IDamageable>(out target)) {
+            target.Hit();
         }
     }
 }
