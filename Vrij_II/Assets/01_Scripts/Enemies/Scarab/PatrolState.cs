@@ -5,6 +5,9 @@ namespace Scarab {
     public class PatrolState : BaseState<ScarabController> {
 
         [SerializeField]
+        private float patrolSpeed;
+
+        [SerializeField]
         private Transform[] waypoints;
 
         private Transform currentWaypoint = null;
@@ -17,13 +20,17 @@ namespace Scarab {
                 runner.agent.isStopped = false;
                 runner.agent.SetDestination(currentWaypoint.position);
             }
+
+            runner.agent.speed = patrolSpeed;
         }
 
         public override void OnUpdate() {
             if(currentWaypoint != null) {
                 Navigate();
             }
-            CheckTarget();
+            if(runner.manager.playerInRange) {
+                CheckTarget();
+            }
         }
 
         public override void OnEnd() {
@@ -46,15 +53,16 @@ namespace Scarab {
         private void CheckTarget() {
             
             if(Vector3.Distance(runner.transform.position, runner.target.position) <= runner.viewDistance) {
-
-                Vector3 targetDir = (runner.target.position - runner.transform.position).normalized;
+                Vector3 targetPos = new Vector3(runner.target.position.x, transform.position.y, runner.target.position.z);
+                Vector3 targetDir = (targetPos - runner.transform.position).normalized;
                 Debug.DrawLine(transform.position, transform.position + targetDir * 3);
 
                 Ray ray = new Ray(runner.transform.position, targetDir.normalized);
                 RaycastHit hit;
 
                 if(Physics.Raycast(ray, out hit, runner.viewDistance)) {
-                    if(hit.collider.GetComponent<IDamageable>() != null) {
+                    Debug.Log("Checking for target");
+                    if(hit.collider.GetComponent<PlayerManager>() != null) {
                         runner.SwitchState(ScarabState.Chasing);
                     }
                 }

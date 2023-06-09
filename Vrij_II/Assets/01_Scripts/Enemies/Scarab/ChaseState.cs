@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,13 @@ namespace Scarab {
 
     public class ChaseState : BaseState<ScarabController> {
 
+        [SerializeField]
+        private float chaseSpeed;
+
         public override void OnStart() {
             runner.agent.SetDestination(runner.target.position);
             runner.agent.isStopped = false;
+            runner.agent.speed = chaseSpeed;
         }
 
         public override void OnUpdate() {
@@ -26,7 +31,11 @@ namespace Scarab {
                 runner.agent.SetDestination(runner.target.position);
             }
 
-            if(Vector3.Distance(runner.transform.position, runner.target.position) >= runner.viewDistance) {
+            if(Vector3.Distance(transform.position, runner.target.position) >= runner.viewDistance) {
+                runner.SwitchState(ScarabState.Patrolling);
+            }
+
+            if(Vector3.Distance(transform.position, runner.manager.transform.position) >= runner.manager.globalRange) {
                 runner.SwitchState(ScarabState.Patrolling);
             }
 

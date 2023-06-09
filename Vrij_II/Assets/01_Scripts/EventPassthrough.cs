@@ -11,4 +11,5 @@ public class EventPassthrough : MonoBehaviour {
     private void CallEvent() {
         passthroughEvent?.Invoke();
     }
+
 }

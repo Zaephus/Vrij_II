@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndGameCheckpoint : MonoBehaviour {
+public class DeathPlane : MonoBehaviour {
 
     private void OnTriggerEnter(Collider _other) {
         if(_other.GetComponent<PlayerManager>() != null) {
-            GameManager.FinishReached?.Invoke();
+            GameManager.PlayerDied?.Invoke();
         }
     }
     
