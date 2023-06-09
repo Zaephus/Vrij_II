@@ -6,7 +6,7 @@ using UnityEngine;
 public class Controller : MonoBehaviour {
 
     [SerializeField]
-    [NamedArrayAttribute(new string[] { "frontLeftJoint", "frontRightJoint", "backLeftJoint", "backRightJoint" })]
+    [NamedArrayAttribute(new string[] { "frontLeftJoint", "frontRightJoint", "middleLeftJoint", "middleRightJoint", "backLeftJoint", "backRightJoint" })]
     private List<IKJoint> joints = new List<IKJoint>();
 
     private IKJoint frontLeftJoint;
@@ -33,7 +33,7 @@ public class Controller : MonoBehaviour {
 
         Vector3 dir = new Vector3(Input.GetAxisRaw("Vertical"), 0, Input.GetAxis("Horizontal"));
 
-        transform.position += dir * Time.deltaTime * 10;
+        transform.position += dir * Time.deltaTime * 1;
     }
 
     private void Update() {
@@ -59,22 +59,25 @@ public class Controller : MonoBehaviour {
             
             // Try moving one diagonal pair of legs
             do {
-                frontLeftJoint?.TryMove(threshold);
-                backRightJoint?.TryMove(threshold);
+                joints[0].TryMove(threshold);
+                joints[3].TryMove(threshold);
+                joints[5].TryMove(threshold);
                 // Wait a frame
                 yield return new WaitForSeconds(0.1f);
 
                 // Stay in this loop while either leg is moving.
                 // If only one leg in the pair is moving, the calls to TryMove() will let
                 // the other leg move if it wants to.
-            } while (backLeftJoint.isMoving || frontRightJoint.isMoving);
+            } while (joints[0].isMoving || joints[3].isMoving || joints[5].isMoving);
 
             // Do the same thing for the other diagonal pair
             do {
-                frontRightJoint?.TryMove(threshold);
-                backLeftJoint?.TryMove(threshold);
+                joints[1].TryMove(threshold);
+                joints[2].TryMove(threshold);
+                joints[4].TryMove(threshold);
+               
                 yield return new WaitForSeconds(0.1f);
-            } while (backRightJoint.isMoving || frontLeftJoint.isMoving);
+            } while (joints[1].isMoving || joints[2].isMoving || joints[4].isMoving);
 
         }
     }
