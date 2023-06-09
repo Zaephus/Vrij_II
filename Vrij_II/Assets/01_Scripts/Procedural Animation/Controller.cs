@@ -29,13 +29,6 @@ public class Controller : MonoBehaviour {
         StartCoroutine(LegUpdateCoroutine());
     }
 
-    private void FixedUpdate() {
-
-        Vector3 dir = new Vector3(Input.GetAxisRaw("Vertical"), 0, Input.GetAxis("Horizontal"));
-
-        transform.position += dir * Time.deltaTime * 1;
-    }
-
     private void Update() {
 
         foreach (IKJoint joint in joints) {

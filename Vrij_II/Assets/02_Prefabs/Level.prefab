@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 8302170396184790208}
   m_Layer: 0
   m_Name: Final terrain asset
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -240,11 +240,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2432823187770762286}
     m_Modifications:
+    - target: {fileID: 1150735926749487649, guid: 05f5eee9d70315a45b829c4e622ee678,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150735926825830850, guid: 05f5eee9d70315a45b829c4e622ee678,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150735927113041969, guid: 05f5eee9d70315a45b829c4e622ee678,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150735927550197087, guid: 05f5eee9d70315a45b829c4e622ee678,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150735928189366523, guid: 05f5eee9d70315a45b829c4e622ee678,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150735928274795191, guid: 05f5eee9d70315a45b829c4e622ee678,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150735928297659878, guid: 05f5eee9d70315a45b829c4e622ee678,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150735928856646639, guid: 05f5eee9d70315a45b829c4e622ee678,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3442634156959979736, guid: 05f5eee9d70315a45b829c4e622ee678,
         type: 3}
       propertyPath: playerCharacter
       value: 
-      objectReference: {fileID: 4722948703782140158}
+      objectReference: {fileID: 0}
     - target: {fileID: 4077895887420395854, guid: 05f5eee9d70315a45b829c4e622ee678,
         type: 3}
       propertyPath: m_RootOrder
@@ -586,6 +626,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 6562836925310929988, guid: 145ae16e06c6dce448d7f344411d55e1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -169.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562836925310929988, guid: 145ae16e06c6dce448d7f344411d55e1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 93.69904
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562836925310929988, guid: 145ae16e06c6dce448d7f344411d55e1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 191.52551
+      objectReference: {fileID: 0}
     - target: {fileID: 6562836925462684208, guid: 145ae16e06c6dce448d7f344411d55e1,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -656,12 +711,6 @@ PrefabInstance:
 --- !u!4 &1914539550563433654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7613040977061730977, guid: 145ae16e06c6dce448d7f344411d55e1,
-    type: 3}
-  m_PrefabInstance: {fileID: 8302170395919066647}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4722948703782140158 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3655923645984169705, guid: 145ae16e06c6dce448d7f344411d55e1,
     type: 3}
   m_PrefabInstance: {fileID: 8302170395919066647}
   m_PrefabAsset: {fileID: 0}
@@ -1226,6 +1275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Area 2 - 4 (Level 1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478067252758500859, guid: 6078dda480f6c3e4e94b1e8b0366b509,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6078dda480f6c3e4e94b1e8b0366b509, type: 3}
