@@ -19,6 +19,9 @@ public class Spear : MonoBehaviour {
     [SerializeField]
     private Collider triggerCollider;
 
+    [SerializeField]
+    private float damage = 1.0f;
+
     public bool playerInRange;
 
     private void Update() {
@@ -32,13 +35,13 @@ public class Spear : MonoBehaviour {
         }
         else {
             playerInRange = false;
-            triggerCollider.enabled = true;
         }
 
     }
 
     public void Fire(float _throwStrength) {
         rb.AddForce(transform.forward * _throwStrength, ForceMode.Impulse);
+        triggerCollider.enabled = true;
     }
 
     private void OnTriggerStay(Collider _other) {
@@ -52,7 +55,7 @@ public class Spear : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         IDamageable target;
         if (other.TryGetComponent<IDamageable>(out target)) {
-            target.Hit();
+            target.Hit(damage);
         }
     }
 }

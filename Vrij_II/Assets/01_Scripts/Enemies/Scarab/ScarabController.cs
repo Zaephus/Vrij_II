@@ -4,20 +4,29 @@ using UnityEngine;
 using UnityEngine.AI;
 using Scarab;
 
-public class ScarabController : MonoBehaviour {
+public class ScarabController : MonoBehaviour, IDamageable {
 
     private BaseState<ScarabController> currentState;
     private ScarabState state;
 
+    [HideInInspector]
+    public ScarabManager manager;
+
     public NavMeshAgent agent;
 
-    public Transform target;
+    public Transform target = null;
 
     public float viewDistance;
     public float attackRange;
 
+    [SerializeField]
+    private float health;
+
     private void Start() {
         SwitchState(ScarabState.Patrolling);
+        if(manager == null) {
+            manager = FindAnyObjectByType<ScarabManager>();
+        }
         if(target == null) {
             target = FindAnyObjectByType<PlayerManager>().transform;
         }
@@ -55,10 +64,21 @@ public class ScarabController : MonoBehaviour {
         currentState.OnStart();
     }
 
+    public void Hit(float _dmg) {
+        health -= _dmg;
+        if(health <= 0.0f) {
+            Die();
+        }
+    }
+
+    public void Die() {
+        Destroy(gameObject);
+    }
+
     public void OnTriggerEnter(Collider _other) {
         if(state == ScarabState.Attacking) {
-            if(_other.GetComponent<IDamageable>() != null) {
-                _other.GetComponent<IDamageable>().Hit();
+            if(_other.GetComponent<PlayerManager>() != null) {
+                _other.GetComponent<PlayerManager>().Hit();
             }
         }
     }

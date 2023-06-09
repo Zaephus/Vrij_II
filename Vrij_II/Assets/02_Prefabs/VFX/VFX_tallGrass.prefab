@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1641063523706490664}
   - component: {fileID: 1641063523706490645}
   - component: {fileID: 1641063523706490644}
+  - component: {fileID: 6733143840148734559}
   m_Layer: 0
   m_Name: VFX_tallGrass
   m_TagString: TallGrass
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641063523706490671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9978924, y: 0.041665077, z: -2.8123817}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -125,10 +126,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.2
-  m_Height: 4.960069
+  m_Radius: 2
+  m_Height: 8
   m_Direction: 1
-  m_Center: {x: -0.008661509, y: 0.45, z: -0.018482447}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &1641063523706490644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,3 +145,18 @@ MonoBehaviour:
   vfxGraph: {fileID: 1641063523706490667}
   playerCharacter: {fileID: 0}
   positionParameterName: PlayerPosition
+--- !u!114 &6733143840148734559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641063523706490671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExecuteInEditor: 1
+  m_Bindings: []
+  m_VisualEffect: {fileID: 1641063523706490667}

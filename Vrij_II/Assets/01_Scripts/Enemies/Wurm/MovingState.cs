@@ -37,6 +37,13 @@ namespace Wurm {
                 targetPos = runner.target.position;
                 runner.agent.SetDestination(targetPos);
 
+                if(runner.agent.velocity.magnitude <= Mathf.Epsilon) {
+                    trailEffect.enabled = false;
+                }
+                else {
+                    trailEffect.enabled = true;
+                }
+
                 timeLeft -= Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
