@@ -341,12 +341,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2219951091836028138}
+  - component: {fileID: 1550656010674298450}
+  - component: {fileID: 1550656010674298455}
   - component: {fileID: 1550656010674298457}
   - component: {fileID: 1550656010674298454}
-  - component: {fileID: 1550656010674298455}
   - component: {fileID: 1550656010674298452}
   - component: {fileID: 1550656010674298453}
-  - component: {fileID: 1550656010674298450}
   - component: {fileID: 1550656010674298451}
   m_Layer: 0
   m_Name: Scarab Red
@@ -372,36 +372,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1550656010674298457
-MonoBehaviour:
+--- !u!195 &1550656010674298450
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550656010674298448}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9701872bc1c534892685187d1f052b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  target: {fileID: 0}
-  viewDistance: 15
-  attackRange: 2
---- !u!114 &1550656010674298454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550656010674298448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a5cf4877fb889449c1583bc137b0bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runner: {fileID: 0}
-  waypoints: []
+  m_AgentTypeID: 0
+  m_Radius: 1.05
+  m_Speed: 2
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.75
+  m_BaseOffset: 0.05
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!136 &1550656010674298455
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -416,6 +408,39 @@ CapsuleCollider:
   m_Height: 2.16
   m_Direction: 2
   m_Center: {x: 0, y: 0.82, z: -0.01999998}
+--- !u!114 &1550656010674298457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550656010674298448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9701872bc1c534892685187d1f052b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  agent: {fileID: 1550656010674298450}
+  target: {fileID: 0}
+  viewDistance: 15
+  attackRange: 2
+  health: 0
+--- !u!114 &1550656010674298454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550656010674298448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a5cf4877fb889449c1583bc137b0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runner: {fileID: 0}
+  patrolSpeed: 0
+  waypoints: []
 --- !u!114 &1550656010674298452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,28 +470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
---- !u!195 &1550656010674298450
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550656010674298448}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.05
-  m_Speed: 2
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.2
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.25
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  chaseSpeed: 0
 --- !u!114 &1550656010674298451
 MonoBehaviour:
   m_ObjectHideFlags: 0
