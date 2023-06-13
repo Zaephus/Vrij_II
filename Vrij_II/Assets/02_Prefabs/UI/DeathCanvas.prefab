@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 764118819175887116}
   - component: {fileID: 5129332578194540232}
   - component: {fileID: 7875186191187699625}
+  - component: {fileID: 1320622994}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -128,8 +129,8 @@ RectTransform:
   m_GameObject: {fileID: 7227044757124296567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 52881, y: 29846.8, z: 29846.8}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 96397, y: 54185.48, z: 54185.48}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4869097913376961337}
   m_RootOrder: 0
@@ -199,3 +200,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1320622994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7227044757124296567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee600c97012b1fb4aa9436d6d586c0dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propertyName: _Desolve
+  targetValue: 1
+  duration: 1
