@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class DrawWaypoint : MonoBehaviour {
+public class DrawPoint : MonoBehaviour {
 
     [SerializeField]
     private Color color;

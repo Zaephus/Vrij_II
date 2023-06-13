@@ -10,17 +10,25 @@ namespace Scarab {
         private float beforeAttackDelay;
         [SerializeField]
         private float afterAttackDelay;
+
+        [SerializeField]
+        private Animator animator;
         
         [SerializeField]
         private float attackSpeed;
 
         public override void OnStart() {
-            runner.StartCoroutine(Attack());
+            // StartCoroutine(Attack());
+            animator.SetTrigger("Attack Start");
         }
 
         public override void OnUpdate() {}
 
         public override void OnEnd() {}
+
+        public void StartAttack() {
+            StartCoroutine(Attack());
+        }
 
         // TODO: Add rotation to attack.
         private IEnumerator Attack() {
