@@ -36,7 +36,7 @@ public class SpearHeld : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         IDamageable target;
         if (other.TryGetComponent<IDamageable>(out target)) {
-            target.Hit(0.5f);
+            target.Hit(1f);
         }
     }
 
