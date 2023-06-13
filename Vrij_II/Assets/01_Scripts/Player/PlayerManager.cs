@@ -51,7 +51,7 @@ public class PlayerManager : MonoBehaviour {
     private void FixedUpdate() {
         playerMovement.Move(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput, hasSpear, playerInput.isAiming);
         if (playerInput.isAiming && hasSpear) {
-            playerMovement.Aim(transform, playerInput.rightHorizontalInput, playerInput.rightVerticalInput);
+            playerMovement.Aim(transform, playerInput.leftHorizontalInput, playerInput.leftVerticalInput);
         }
     }
 

@@ -94,13 +94,13 @@ public class PlayerMovement {
         float angle = Mathf.Atan2(angleDir.x, angleDir.z) * Mathf.Rad2Deg;
         //rotate player if angle outside of bounds
 
-        _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
+        //_playerTransform.rotation = Quaternion.Euler(0, angle, 0);
     }
 
     public bool Throw(GameObject _spearToThrow, Transform _position) {
 
-        _spearToThrow.transform.position = _position.position;
-        _spearToThrow.transform.rotation = _position.rotation;
+        _spearToThrow.transform.position = spear.transform.position;
+        _spearToThrow.transform.rotation = spear.transform.rotation;
         Spear _spear = _spearToThrow.GetComponent<Spear>();
         _spearToThrow.SetActive(true);
         _spear.Fire(throwStrength);
