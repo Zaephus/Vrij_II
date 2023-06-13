@@ -175,9 +175,9 @@ MonoBehaviour:
   manager: {fileID: 0}
   agent: {fileID: 2323902990434956664}
   target: {fileID: 0}
-  viewDistance: 8
-  attackRange: 3
-  health: 2
+  viewDistance: 10
+  attackRange: 5
+  health: 1
 --- !u!114 &2323902990434956659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
-  chaseSpeed: 3.5
+  chaseSpeed: 4
 --- !u!114 &2323902990434956669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,10 +220,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
-  beforeAttackDelay: 0.3
+  beforeAttackDelay: 0
   afterAttackDelay: 0.8
   animator: {fileID: 3206915486681038036}
-  attackSpeed: 6
+  attackSpeed: 12
 --- !u!114 &2323902990434956665
 MonoBehaviour:
   m_ObjectHideFlags: 0
