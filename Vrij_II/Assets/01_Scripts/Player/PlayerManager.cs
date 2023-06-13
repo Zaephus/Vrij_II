@@ -61,6 +61,10 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
+    public void Stab() {
+        StartCoroutine(playerMovement.spear.GetComponent<SpearHeld>().Stab());
+    }
+
     public void Hit() {
         GameManager.PlayerDied?.Invoke();
     }

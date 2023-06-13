@@ -412,6 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6428391683938895163}
   - component: {fileID: 5372115889467697057}
+  - component: {fileID: 2023622426}
   m_Layer: 0
   m_Name: DM_SpearHeld
   m_TagString: Untagged
@@ -450,6 +451,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spearOne: {fileID: 4308729500051099129}
   spearTwo: {fileID: 118095023299626578}
+  hitbox: {fileID: 2023622426}
+--- !u!65 &2023622426
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2364556056272701512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 1.01}
 --- !u!1 &2382100982829150136
 GameObject:
   m_ObjectHideFlags: 0

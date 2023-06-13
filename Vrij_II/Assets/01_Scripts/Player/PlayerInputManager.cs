@@ -12,7 +12,6 @@ public class PlayerInputManager : MonoBehaviour {
     public bool isAiming;
     public bool hasSpear;
     public bool isInteracting;
-    public bool isThrowing;
 
     // A method that receives input from input manager, that lets you move around
     public void OnMove(InputAction.CallbackContext _context) {
@@ -51,7 +50,10 @@ public class PlayerInputManager : MonoBehaviour {
     public void OnFire(InputAction.CallbackContext _context) {
         if (_context.started && isAiming) {
             GetComponent<Animator>().SetTrigger("ThrowSpear");
-            isThrowing = true;
+        }
+
+        if (_context.started && !isAiming) {
+            GetComponent<Animator>().SetTrigger("Stab");
         }
     }
 
