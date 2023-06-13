@@ -51,6 +51,10 @@ public class PlayerInputManager : MonoBehaviour {
         if (_context.started && isAiming) {
             GetComponent<Animator>().SetTrigger("ThrowSpear");
         }
+
+        if (_context.started && !isAiming && hasSpear) {
+            GetComponent<Animator>().SetTrigger("Stab");
+        }
     }
 
     // A method that receives input from input manager, when the interact button is pressed

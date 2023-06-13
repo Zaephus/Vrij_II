@@ -9,6 +9,8 @@ public class SpearHeld : MonoBehaviour {
     private GameObject spearOne;
     [SerializeField]
     private GameObject spearTwo;
+    [SerializeField]
+    private Collider hitbox;
 
     public void SwitchSpear(SpearType _spearType) {
 
@@ -20,6 +22,21 @@ public class SpearHeld : MonoBehaviour {
         if (_spearType == SpearType.Two) {
             spearOne.SetActive(false);
             spearTwo.SetActive(true);
+        }
+    }
+
+    public IEnumerator Stab() {
+        hitbox.enabled = true;
+        yield return new WaitForSeconds(1f);
+
+        hitbox.enabled = false;
+        yield return false;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        IDamageable target;
+        if (other.TryGetComponent<IDamageable>(out target)) {
+            target.Hit(0.5f);
         }
     }
 
