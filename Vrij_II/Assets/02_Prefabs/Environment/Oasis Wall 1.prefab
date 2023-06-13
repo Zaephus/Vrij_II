@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 4107025149367391367}
   - component: {fileID: 2600430341132320133}
   - component: {fileID: 981918272695498272}
+  - component: {fileID: -8172441544968792793}
   m_Layer: 0
   m_Name: Oasis Wall 1
   m_TagString: Untagged
@@ -225,6 +226,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -4777969045601013103, guid: 3d9f5c086b98b6c419ed23fcf3a2ea2a, type: 3}
+--- !u!208 &-8172441544968792793
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4850404896019957655}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 10.829, y: 0.47100002, z: 3.6820002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.335, y: 0.777, z: 0.19600001}
+  m_TimeToStationary: 0.5
 --- !u!1001 &15512899469890534
 PrefabInstance:
   m_ObjectHideFlags: 0
