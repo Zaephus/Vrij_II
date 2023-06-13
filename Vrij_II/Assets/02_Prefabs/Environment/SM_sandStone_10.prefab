@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2418850529203493156}
   - component: {fileID: 465433118113820142}
   - component: {fileID: 4490313790621992802}
+  - component: {fileID: -3516338572193566005}
   m_Layer: 0
   m_Name: SM_sandStone_10
   m_TagString: Untagged
@@ -98,3 +99,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5051219835641486459, guid: 5a3e20567620ebd489a2c52a71b3c043, type: 3}
+--- !u!208 &-3516338572193566005
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122726512708799547}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 10.315001, y: 4.6590004, z: 4.1410003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.066, y: 4.611, z: 0.42600003}
+  m_TimeToStationary: 0.5

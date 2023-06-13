@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7205532125426900669}
+  - component: {fileID: -3236294115189321210}
   m_Layer: 0
   m_Name: Desert Wall 4
   m_TagString: Untagged
@@ -49,6 +50,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &-3236294115189321210
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3144585844965589855}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &330792425936094078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56,6 +73,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2673451012715223046, guid: 04d08c4fad02a8a469d07da97c0efb9a,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594867969523446511, guid: 04d08c4fad02a8a469d07da97c0efb9a,
         type: 3}
       propertyPath: m_Name
@@ -146,6 +168,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2673451012715223046, guid: 04d08c4fad02a8a469d07da97c0efb9a,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594867969523446511, guid: 04d08c4fad02a8a469d07da97c0efb9a,
         type: 3}
       propertyPath: m_Name
@@ -236,6 +263,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2895642822099539367, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5855934682221243210, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
         type: 3}
       propertyPath: m_Name
@@ -326,6 +358,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2895642822099539367, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5855934682221243210, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
         type: 3}
       propertyPath: m_Name
@@ -401,6 +438,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2673451012715223046, guid: 04d08c4fad02a8a469d07da97c0efb9a,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594867969523446511, guid: 04d08c4fad02a8a469d07da97c0efb9a,
         type: 3}
       propertyPath: m_Name
@@ -491,6 +533,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2673451012715223046, guid: 04d08c4fad02a8a469d07da97c0efb9a,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594867969523446511, guid: 04d08c4fad02a8a469d07da97c0efb9a,
         type: 3}
       propertyPath: m_Name
@@ -581,6 +628,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -481026583711233560, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -671,6 +723,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2895642822099539367, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5855934682221243210, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
         type: 3}
       propertyPath: m_Name
@@ -761,6 +818,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -481026583711233560, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -851,6 +913,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2895642822099539367, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5855934682221243210, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
         type: 3}
       propertyPath: m_Name
@@ -941,6 +1008,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2673451012715223046, guid: 04d08c4fad02a8a469d07da97c0efb9a,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594867969523446511, guid: 04d08c4fad02a8a469d07da97c0efb9a,
         type: 3}
       propertyPath: m_Name
@@ -1031,6 +1103,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -481026583711233560, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -1121,6 +1198,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2673451012715223046, guid: 04d08c4fad02a8a469d07da97c0efb9a,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594867969523446511, guid: 04d08c4fad02a8a469d07da97c0efb9a,
         type: 3}
       propertyPath: m_Name
@@ -1366,6 +1448,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dead tree 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4652435007195231363, guid: 51281f72a21539546a2875bee0491037,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51281f72a21539546a2875bee0491037, type: 3}
 --- !u!4 &7600311981894113783 stripped
@@ -1381,6 +1468,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -2895642822099539367, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5855934682221243210, guid: 1f63e007a4f88a64d8b57dc76754b1eb,
         type: 3}
       propertyPath: m_Name
@@ -1471,6 +1563,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7205532125426900669}
     m_Modifications:
+    - target: {fileID: -481026583711233560, guid: 768007f8b7243ae408caa28b52619695,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5593242618155234344, guid: 768007f8b7243ae408caa28b52619695,
         type: 3}
       propertyPath: m_Name
@@ -1620,6 +1717,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dead tree 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652435007195231363, guid: 51281f72a21539546a2875bee0491037,
+        type: 3}
+      propertyPath: m_Carve
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51281f72a21539546a2875bee0491037, type: 3}

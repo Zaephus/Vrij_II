@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1380184674451103579}
   - component: {fileID: 3802042970258566033}
   - component: {fileID: 9021815085014665696}
+  - component: {fileID: 5311479471721802446}
   m_Layer: 0
   m_Name: SM_Bush 1
   m_TagString: Untagged
@@ -98,3 +99,19 @@ CapsuleCollider:
   m_Height: 2.49
   m_Direction: 1
   m_Center: {x: -0.006547927, y: 0.23297623, z: -0.019555567}
+--- !u!208 &5311479471721802446
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3441715073157417540}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.4640001, y: 0.785, z: 1.3800001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.007, y: 0.23300001, z: -0.020000001}
+  m_TimeToStationary: 0.5

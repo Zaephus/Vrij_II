@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9066922069371801020}
   - component: {fileID: 3074036410557225365}
   - component: {fileID: 4855734240556995258}
+  - component: {fileID: 7386880282575420468}
   m_Layer: 0
   m_Name: Dead tree 1
   m_TagString: Untagged
@@ -98,3 +99,19 @@ CapsuleCollider:
   m_Height: 2.4585772
   m_Direction: 1
   m_Center: {x: -0.053907044, y: 0.37504357, z: -0.025206506}
+--- !u!208 &7386880282575420468
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037614512376697933}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.7010001, y: 2.036, z: 1.8880001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.15300001, y: 2.0140002, z: -0.85600007}
+  m_TimeToStationary: 0.5
