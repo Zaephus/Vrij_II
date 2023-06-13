@@ -52,7 +52,7 @@ public class PlayerInputManager : MonoBehaviour {
             GetComponent<Animator>().SetTrigger("ThrowSpear");
         }
 
-        if (_context.started && !isAiming) {
+        if (_context.started && !isAiming && hasSpear) {
             GetComponent<Animator>().SetTrigger("Stab");
         }
     }
