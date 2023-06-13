@@ -21,11 +21,6 @@ public class Controller : MonoBehaviour {
     private float threshold = 8;
 
     private void Start() {
-        frontLeftJoint = joints[0];
-        frontRightJoint = joints[1];
-        backLeftJoint = joints[2];
-        backRightJoint = joints[3];
-
         StartCoroutine(LegUpdateCoroutine());
     }
 

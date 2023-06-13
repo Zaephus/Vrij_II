@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8891168027470949336}
   - component: {fileID: 3469287837956785389}
   - component: {fileID: 3469287837956785390}
+  - component: {fileID: -480571618924791723}
   m_Layer: 0
   m_Name: SM_Ruine4
   m_TagString: Untagged
@@ -111,3 +112,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.807218, y: 10.129209, z: 8.51625}
   m_Center: {x: -1.0906303, y: 4.5727525, z: -0.7405923}
+--- !u!208 &-480571618924791723
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6945459125293206029}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5.4080005, y: 6.6180005, z: 5.2190003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -1.325, y: 3.0200002, z: -1.3290001}
+  m_TimeToStationary: 0.5

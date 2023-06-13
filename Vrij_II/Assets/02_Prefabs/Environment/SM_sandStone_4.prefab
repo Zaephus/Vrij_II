@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2170384467309504574}
   - component: {fileID: 3469287837651401943}
   - component: {fileID: 3469287837651401944}
+  - component: {fileID: 1002987631467120889}
   m_Layer: 0
   m_Name: SM_sandStone_4
   m_TagString: Untagged
@@ -111,3 +112,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0819108, y: 3.0677485, z: 2.2598498}
   m_Center: {x: -2.9788685, y: 1.5256226, z: 0.08408732}
+--- !u!208 &1002987631467120889
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368799687902071275}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.9770002, y: 2.5560002, z: 1.13}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.043, y: 2.5470002, z: 0.08400001}
+  m_TimeToStationary: 0.5
