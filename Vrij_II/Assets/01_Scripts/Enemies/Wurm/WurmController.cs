@@ -26,6 +26,12 @@ public class WurmController : MonoBehaviour {
             target = FindAnyObjectByType<PlayerManager>().transform;
         }
         range = GetComponent<SphereCollider>().radius;
+
+        AttackState attackState = GetComponent<AttackState>();
+        attackState.attackEffect.Reinit();
+
+        MovingState movingState = GetComponent<MovingState>();
+        movingState.trailEffect.Reinit();
     }
 
     public void Update() {}

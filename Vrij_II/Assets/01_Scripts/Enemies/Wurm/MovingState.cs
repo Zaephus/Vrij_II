@@ -11,8 +11,7 @@ namespace Wurm {
         [SerializeField, Tooltip("The time before the Wurm will lock in its target position.")]
         private float followTime = 10.0f;
 
-        [SerializeField]
-        private VisualEffect trailEffect;
+        public VisualEffect trailEffect;
 
         [SerializeField]
         private float beforeAttackWaitTime;

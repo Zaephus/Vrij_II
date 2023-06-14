@@ -11,8 +11,7 @@ namespace Wurm {
         [SerializeField]
         private Animator animator;
 
-        [SerializeField]
-        private VisualEffect attackEffect;
+        public VisualEffect attackEffect;
 
         [SerializeField]
         private float vfxTimingOffset = 0.01f;
