@@ -76,8 +76,6 @@ public class PlayerMovement {
         Vector3 dir = Vector3.Normalize(new Vector3(_horizontalInput, 0, _verticalInput));
         Vector3 targetPosition = target.position;
 
-        Debug.Log("Direction: " + dir);
-
         if (_horizontalInput != 0.00f || _verticalInput != 0.00f) {
             targetPosition = _playerTransform.position + (dir).normalized * aimDistance + new Vector3(0, 1.5f, 0);
             target.position = targetPosition;
@@ -88,7 +86,6 @@ public class PlayerMovement {
         Vector3 angleDir = (targetPosition - _playerTransform.position);
         //check angle from player
         float angle = Mathf.Atan2(angleDir.x, angleDir.z) * Mathf.Rad2Deg;
-        Debug.Log(angle);
         //rotate player if angle outside of bounds
         _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
     }

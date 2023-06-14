@@ -27,6 +27,7 @@ public class SpearHeld : MonoBehaviour {
         }
     }
 
+
     public IEnumerator Stab() {
         hitbox.enabled = true;
         yield return new WaitForSeconds(1f);
