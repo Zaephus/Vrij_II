@@ -23,7 +23,7 @@ namespace YellowScarab {
         private float attackSpeed;
 
         public override void OnStart() {
-            animator.SetTrigger("Attack Start");
+            StartCoroutine(RotateTowards());
         }
 
         public override void OnUpdate() {}
@@ -31,7 +31,7 @@ namespace YellowScarab {
         public override void OnEnd() {}
 
         public void StartAttack() {
-            StartCoroutine(RotateTowards());
+            StartCoroutine(Attack());
         }
 
         private IEnumerator RotateTowards() {
@@ -45,7 +45,7 @@ namespace YellowScarab {
                 yield return new WaitForEndOfFrame();
             }
 
-            StartCoroutine(Attack());
+            animator.SetTrigger("Attack Start");
 
         }
 

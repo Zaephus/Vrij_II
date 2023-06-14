@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class RunningState : BaseState<GameManager> {
 
-    [SerializeField]
-    private GameObject level;
+    public GameObject level;
 
     public override void OnStart() {
         level.SetActive(true);
@@ -24,6 +23,7 @@ public class RunningState : BaseState<GameManager> {
 
     public override void OnEnd() {
         PlayerInputManager.GamePaused -= PauseGame;
+        // TODO: Cannot destroy gameobjects with destroyImmediate here.
         level.SetActive(false);
     }
 
@@ -36,7 +36,15 @@ public class RunningState : BaseState<GameManager> {
     }
 
     public void GameOver() {
+        Destroy(level);
         runner.SwitchState(GameState.GameOver);
+    }
+
+    private void OnDestroy() {
+        GameManager.PlayerDied -= GameOver;
+        GameManager.FinishReached -= EndGame;
+
+        PlayerInputManager.GamePaused -= PauseGame;
     }
     
 }

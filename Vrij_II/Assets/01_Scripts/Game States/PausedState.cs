@@ -20,4 +20,9 @@ public class PausedState : BaseState<GameManager> {
         pauseMenu.SetActive(false);
     }
 
+    public void RestartGame() {
+        Destroy(GetComponent<RunningState>().level);
+        runner.RestartGame();
+    }
+
 }
