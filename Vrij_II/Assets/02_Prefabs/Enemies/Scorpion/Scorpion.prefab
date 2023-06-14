@@ -1693,7 +1693,7 @@ MonoBehaviour:
   particle: {fileID: 3699186619001963975}
   maxFollowTime: 3
   rotateSpeed: 5
-  attackSpeed: 5
+  attackSpeed: 1
   tailTargetIK: {fileID: 1833653091518482116}
   pickupPoints:
   - {fileID: 1833653092537919439}
@@ -1701,10 +1701,10 @@ MonoBehaviour:
   - {fileID: 1833653093455870392}
   pathMidPoint: {fileID: 8981456551793279169}
   pathEndPoint: {fileID: 2445560559322718858}
-  preAttackDelay: 0.5
+  preAttackDelay: 0.25
   preThrowDelay: 0.1
   afterThrowDelay: 0.1
-  afterAttackDelay: 0.5
+  afterAttackDelay: 0.25
 --- !u!136 &5139989756277552213
 CapsuleCollider:
   m_ObjectHideFlags: 0
