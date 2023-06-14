@@ -7,6 +7,8 @@ public class MainMenuState : BaseState<GameManager> {
 
     [SerializeField]
     private GameObject mainMenu;
+    [SerializeField]
+    private GameObject startVideo;
 
     public override void OnStart() {
         mainMenu.SetActive(true);
@@ -20,7 +22,13 @@ public class MainMenuState : BaseState<GameManager> {
         mainMenu.SetActive(false);
     }
 
+    public void StartVideo() {
+        mainMenu.SetActive(false);
+        startVideo.SetActive(true);
+    }
+
     public void StartGame() {
+        startVideo.SetActive(false);
         runner.SwitchState(GameState.Running);
     }
     

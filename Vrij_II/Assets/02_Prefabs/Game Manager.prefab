@@ -50,6 +50,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
+  respawnPoint: {x: 0, y: 0, z: 0}
+  levelPrefab: {fileID: 1554875379426472064, guid: 585fc68433654f3459734c9a3661a8d7,
+    type: 3}
 --- !u!114 &5850984053653513133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
   mainMenu: {fileID: 0}
+  startVideo: {fileID: 0}
 --- !u!114 &5850984053653513132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,3 +124,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
   endMenu: {fileID: 0}
+  endVideo: {fileID: 0}
