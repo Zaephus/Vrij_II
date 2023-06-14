@@ -31,7 +31,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: On Hit
+    m_ConditionEvent: DefendTrigger
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8380957815036692488}
@@ -83,7 +83,7 @@ AnimatorController:
   m_Name: Hit Animation
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: On Hit
+  - m_Name: DefendTrigger
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0

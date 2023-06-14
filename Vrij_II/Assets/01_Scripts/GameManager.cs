@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
 
     private void Start() {
         GameCheckpoint.CheckpointReached += SetRespawnPoint;
-        SwitchState(GameState.MainMenu);
+        SwitchState(gameState);
     }
 
     private void Update() {

@@ -13,6 +13,12 @@ public enum ScarabState {
     Attacking = 2
 }
 
+public enum ScorpionState {
+    Idle = 0,
+    Defending = 1,
+    Attacking = 2
+}
+
 public enum WurmState {
     Idle = 0,
     Moving = 1,
