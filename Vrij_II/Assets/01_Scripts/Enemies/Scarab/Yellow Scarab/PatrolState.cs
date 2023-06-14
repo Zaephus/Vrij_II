@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-namespace Scarab {
+namespace YellowScarab {
     public class PatrolState : BaseState<ScarabController> {
 
         [SerializeField]
@@ -61,7 +61,6 @@ namespace Scarab {
                 RaycastHit hit;
 
                 if(Physics.Raycast(ray, out hit, runner.viewDistance)) {
-                    Debug.Log("Checking for target");
                     if(hit.collider.GetComponent<PlayerManager>() != null) {
                         runner.SwitchState(ScarabState.Chasing);
                     }

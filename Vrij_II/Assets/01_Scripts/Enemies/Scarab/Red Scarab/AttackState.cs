@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Scarab {
+namespace RedScarab {
 
     public class AttackState : BaseState<ScarabController> {
 
         [SerializeField]
+        private float maxRotateTime;
+        [SerializeField]
         private float beforeAttackDelay;
         [SerializeField]
         private float afterAttackDelay;
+
+        [SerializeField]
+        private float rotateSpeed;
 
         [SerializeField]
         private Animator animator;
@@ -18,7 +23,6 @@ namespace Scarab {
         private float attackSpeed;
 
         public override void OnStart() {
-            // StartCoroutine(Attack());
             animator.SetTrigger("Attack Start");
         }
 
@@ -27,21 +31,33 @@ namespace Scarab {
         public override void OnEnd() {}
 
         public void StartAttack() {
-            StartCoroutine(Attack());
+            StartCoroutine(RotateTowards());
         }
 
-        // TODO: Add rotation to attack.
-        private IEnumerator Attack() {
+        private IEnumerator RotateTowards() {
 
-            Vector3 targetDir = (runner.target.position - runner.transform.position).normalized;
+            float timeLeft = maxRotateTime;
+
+            while(timeLeft > 0.0f && runner.state == ScarabState.Attacking) {
+                transform.forward = Vector3.RotateTowards(transform.forward, (runner.target.transform.position - transform.position).normalized, rotateSpeed * Time.deltaTime, 0.0f);
+
+                timeLeft -= Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+
+            StartCoroutine(Attack());
+
+        }
+
+        private IEnumerator Attack() {;
 
             float distLeft = runner.attackRange;
 
             yield return new WaitForSeconds(beforeAttackDelay);
 
             while(distLeft > 0.0f) {
-                runner.agent.Move(targetDir * attackSpeed * Time.deltaTime);
-                distLeft -= (targetDir * attackSpeed * Time.deltaTime).magnitude;
+                runner.agent.Move(transform.forward * attackSpeed * Time.deltaTime);
+                distLeft -= (transform.forward * attackSpeed * Time.deltaTime).magnitude;
                 yield return new WaitForEndOfFrame();
             }
 
