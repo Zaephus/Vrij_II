@@ -6,7 +6,7 @@ public class DeathPlane : MonoBehaviour {
 
     private void OnTriggerEnter(Collider _other) {
 
-        Debug.Log(_other.name);
+        Debug.Log(_other.name, _other.gameObject);
 
         if(_other.GetComponent<PlayerManager>() != null) {
             GameManager.PlayerDied?.Invoke();
