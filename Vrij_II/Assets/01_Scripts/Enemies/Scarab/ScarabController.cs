@@ -16,7 +16,6 @@ public class ScarabController : MonoBehaviour, IDamageable {
     private ScarabType type;
 
     private BaseState<ScarabController> currentState;
-    [HideInInspector]
     public ScarabState state;
 
     public ScarabManager manager;
