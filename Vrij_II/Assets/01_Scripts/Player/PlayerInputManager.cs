@@ -49,10 +49,12 @@ public class PlayerInputManager : MonoBehaviour {
     // A method that receives input from input manager, when the fire button is pressed
     public void OnFire(InputAction.CallbackContext _context) {
         if (_context.started && isAiming) {
+            PlayerManager.ThrowAction?.Invoke();
             GetComponent<Animator>().SetTrigger("ThrowSpear");
         }
 
         if (_context.started && !isAiming && hasSpear) {
+            PlayerManager.StabAction?.Invoke();
             GetComponent<Animator>().SetTrigger("Stab");
         }
     }

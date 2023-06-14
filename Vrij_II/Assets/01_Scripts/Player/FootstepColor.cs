@@ -16,35 +16,43 @@ public class FootstepColor : MonoBehaviour {
     private bool blendTerrain;
 
     private void Awake() {
-        if (terrain == null) {
+        if(terrain == null) {
             terrain = FindObjectOfType<Terrain>();
+        }
+        if(terrain == null) {
+            Debug.LogWarning("No terrain was found!");
         }
     }
 
     private void Update() {
+        
+        if(terrain != null) {
 
-        Vector3 terrainPosition = transform.position - terrain.transform.position;
-        Vector3 splatMapPosition = new Vector3(terrainPosition.x / terrain.terrainData.size.x, 0, terrainPosition.z / terrain.terrainData.size.z);
+            Vector3 terrainPosition = transform.position - terrain.transform.position;
+            Vector3 splatMapPosition = new Vector3(terrainPosition.x / terrain.terrainData.size.x, 0, terrainPosition.z / terrain.terrainData.size.z);
 
-        int x = Mathf.FloorToInt(splatMapPosition.x * terrain.terrainData.alphamapWidth);
-        int z = Mathf.FloorToInt(splatMapPosition.z * terrain.terrainData.alphamapHeight);
+            int x = Mathf.FloorToInt(splatMapPosition.x * terrain.terrainData.alphamapWidth);
+            int z = Mathf.FloorToInt(splatMapPosition.z * terrain.terrainData.alphamapHeight);
 
-        float[,,] alphaMap = terrain.terrainData.GetAlphamaps(x, z, 1, 1);
-        if (!blendTerrain) {
-            int primaryIndex = 0;
-            for (int i = 1; i < alphaMap.Length; i++) {
-                if (alphaMap[0, 0, i] > alphaMap[0, 0, primaryIndex]) {
-                   primaryIndex = i;
+            float[,,] alphaMap = terrain.terrainData.GetAlphamaps(x, z, 1, 1);
+            if (!blendTerrain) {
+                int primaryIndex = 0;
+                for (int i = 1; i < alphaMap.Length; i++) {
+                    if (alphaMap[0, 0, i] > alphaMap[0, 0, primaryIndex]) {
+                    primaryIndex = i;
+                    }
+                }
+
+                foreach (TextureColor textureColor in textureColors) {
+                    if (textureColor.albedo == terrain.terrainData.terrainLayers[primaryIndex].diffuseTexture) {
+                        Vector4 colorVector = new Vector4(textureColor.color.r, textureColor.color.g, textureColor.color.b, 0.8f);
+                        footsteps.SetVector4("FootStepColor", colorVector);
+                    }
                 }
             }
 
-            foreach (TextureColor textureColor in textureColors) {
-                if (textureColor.albedo == terrain.terrainData.terrainLayers[primaryIndex].diffuseTexture) {
-                    Vector4 colorVector = new Vector4(textureColor.color.r, textureColor.color.g, textureColor.color.b, 0.8f);
-                    footsteps.SetVector4("FootStepColor", colorVector);
-                }
-            }
         }
+
     }
 
     [System.Serializable]

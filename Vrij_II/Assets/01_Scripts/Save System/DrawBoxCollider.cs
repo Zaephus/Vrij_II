@@ -28,18 +28,19 @@ public class DrawBoxCollider : MonoBehaviour {
 
     private void DrawCollider() {
 
+        Vector3 boxCenter = Vector3.Scale(boxCollider.center, transform.localScale); 
         Vector3 size = Vector3.Scale(boxCollider.size/2, transform.localScale);
          
         Vector3[] colliderVertices = {
-            transform.position + transform.rotation * (boxCollider.center + new Vector3(size.x, size.y, size.z)),
-            transform.position + transform.rotation * (boxCollider.center + new Vector3(size.x, size.y, -size.z)),
-            transform.position + transform.rotation * (boxCollider.center + new Vector3(-size.x, size.y, -size.z)),
-            transform.position + transform.rotation * (boxCollider.center + new Vector3(-size.x, size.y, size.z)),
+            transform.position + transform.rotation * (boxCenter + new Vector3(size.x, size.y, size.z)),
+            transform.position + transform.rotation * (boxCenter + new Vector3(size.x, size.y, -size.z)),
+            transform.position + transform.rotation * (boxCenter + new Vector3(-size.x, size.y, -size.z)),
+            transform.position + transform.rotation * (boxCenter + new Vector3(-size.x, size.y, size.z)),
 
-            transform.position + transform.rotation * (boxCollider.center + new Vector3(size.x, -size.y, size.z)),
-            transform.position + transform.rotation * (boxCollider.center + new Vector3(size.x, -size.y, -size.z)),
-            transform.position + transform.rotation * (boxCollider.center + new Vector3(-size.x, -size.y, -size.z)),
-            transform.position + transform.rotation * (boxCollider.center + new Vector3(-size.x, -size.y, size.z))
+            transform.position + transform.rotation * (boxCenter + new Vector3(size.x, -size.y, size.z)),
+            transform.position + transform.rotation * (boxCenter + new Vector3(size.x, -size.y, -size.z)),
+            transform.position + transform.rotation * (boxCenter + new Vector3(-size.x, -size.y, -size.z)),
+            transform.position + transform.rotation * (boxCenter + new Vector3(-size.x, -size.y, size.z))
         };
 
         Debug.DrawLine(colliderVertices[0], colliderVertices[1], color);
