@@ -95,10 +95,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.0529478
-  m_Height: 5.017768
+  m_Radius: 1.2
+  m_Height: 5
   m_Direction: 1
-  m_Center: {x: 0.054560445, y: 1.5314159, z: 0.24460915}
+  m_Center: {x: 0, y: 1.5, z: 0.3}
 --- !u!208 &-8025072489942894500
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -108,10 +108,10 @@ NavMeshObstacle:
   m_GameObject: {fileID: 5814923072908233934}
   m_Enabled: 1
   serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 4.418, y: 1.9490001, z: 1.366}
+  m_Shape: 0
+  m_Extents: {x: 1.2, y: 2.5, z: 1.2}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0.116000004, y: 1.9300001, z: -0.054}
+  m_Center: {x: 0, y: 1.5, z: 0.3}
   m_TimeToStationary: 0.5

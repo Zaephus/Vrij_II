@@ -15,24 +15,17 @@ namespace RedScarab {
 
         [SerializeField]
         private float rotateSpeed;
-
-        [SerializeField]
-        private Animator animator;
         
         [SerializeField]
         private float attackSpeed;
 
         public override void OnStart() {
-            animator.SetTrigger("Attack Start");
+            StartCoroutine(RotateTowards());
         }
 
         public override void OnUpdate() {}
 
         public override void OnEnd() {}
-
-        public void StartAttack() {
-            StartCoroutine(RotateTowards());
-        }
 
         private IEnumerator RotateTowards() {
 

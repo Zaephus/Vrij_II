@@ -60,6 +60,11 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
+    private void OnDestroy() {
+        SpearInRangeCall -= PickUpSpear;
+        ZoomCamera -= StartCamZoom;
+    }
+
     public void Throw() {
         if (hasSpear) {
             hasSpear = playerMovement.Throw(currentOverworldSpear, GetComponent<AnimatorLayerWeight>().spearAimTransform);
