@@ -427,8 +427,8 @@ MonoBehaviour:
   agent: {fileID: 1550656010674298450}
   target: {fileID: 0}
   viewDistance: 15
-  attackRange: 2
-  health: 5
+  attackRange: 15
+  health: 2
 --- !u!114 &-8565394493007186066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
-  chaseSpeed: 5
+  chaseSpeed: 2
 --- !u!114 &144449769896746046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,11 +474,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
-  maxRotateTime: 0
-  beforeAttackDelay: 0
-  afterAttackDelay: 0
-  rotateSpeed: 0
-  attackSpeed: 0
+  maxRotateTime: 2
+  beforeAttackDelay: 2
+  afterAttackDelay: 2
+  rotateSpeed: 7
+  attackSpeed: 15
 --- !u!114 &1550656010674298451
 MonoBehaviour:
   m_ObjectHideFlags: 0

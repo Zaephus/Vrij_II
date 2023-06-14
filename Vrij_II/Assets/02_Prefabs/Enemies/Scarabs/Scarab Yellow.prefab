@@ -173,6 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9701872bc1c534892685187d1f052b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  state: 0
   manager: {fileID: 0}
   agent: {fileID: 2323902990434956664}
   target: {fileID: 0}
@@ -221,10 +223,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
+  maxRotateTime: 1
   beforeAttackDelay: 0
   afterAttackDelay: 0.8
+  rotateSpeed: 5
   animator: {fileID: 3206915486681038036}
-  attackSpeed: 12
+  attackSpeed: 20
 --- !u!114 &2323902990434956665
 MonoBehaviour:
   m_ObjectHideFlags: 0

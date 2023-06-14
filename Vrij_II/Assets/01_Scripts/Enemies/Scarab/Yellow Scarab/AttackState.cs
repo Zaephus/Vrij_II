@@ -22,30 +22,34 @@ namespace YellowScarab {
         [SerializeField]
         private float attackSpeed;
 
-        public override void OnStart() {
-            animator.SetTrigger("Attack Start");
-        }
-
-        public override void OnUpdate() {}
-
-        public override void OnEnd() {}
-
-        public void StartAttack() {
+        public override void OnStart()
+        {
             StartCoroutine(RotateTowards());
         }
 
-        private IEnumerator RotateTowards() {
+        public override void OnUpdate() { }
+
+        public override void OnEnd() { }
+
+        public void StartAttack()
+        {
+            StartCoroutine(Attack());
+        }
+
+        private IEnumerator RotateTowards()
+        {
 
             float timeLeft = maxRotateTime;
 
-            while(timeLeft > 0.0f && runner.state == ScarabState.Attacking) {
+            while (timeLeft > 0.0f && runner.state == ScarabState.Attacking)
+            {
                 transform.forward = Vector3.RotateTowards(transform.forward, (runner.target.transform.position - transform.position).normalized, rotateSpeed * Time.deltaTime, 0.0f);
 
                 timeLeft -= Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
 
-            StartCoroutine(Attack());
+            animator.SetTrigger("Attack Start");
 
         }
 
