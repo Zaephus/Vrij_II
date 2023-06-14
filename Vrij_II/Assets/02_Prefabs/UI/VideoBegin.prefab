@@ -229,7 +229,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7767534599119723852}
   - component: {fileID: 8542697396601158209}
-  - component: {fileID: 102603490}
   m_Layer: 0
   m_Name: VideoBegin
   m_TagString: Untagged
@@ -282,19 +281,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &102603490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767534599119723855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e1f65bfd81b2342b99b1194f2e4344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyDelay: 19.5
 --- !u!1 &7767534599293628187
 GameObject:
   m_ObjectHideFlags: 0
