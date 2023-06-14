@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MaterialPropertyChanger : MonoBehaviour
 {
@@ -6,26 +7,20 @@ public class MaterialPropertyChanger : MonoBehaviour
     public float targetValue = 1f;
     public float duration = 1f;
 
-    private SpriteRenderer spriteRenderer;
+    private Image image;
     private Material material;
     private float currentValue;
     private float timer;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        material = spriteRenderer.material;
+        image = GetComponent<Image>();
+        material = image.material;
         currentValue = material.GetFloat(propertyName);
         timer = 0f;
     }
 
     private void Update()
-    {
-       // Desolve();
-    }
-
-
-    private void Desolve()
     {
         timer += Time.deltaTime;
 
