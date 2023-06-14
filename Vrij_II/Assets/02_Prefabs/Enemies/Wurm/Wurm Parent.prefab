@@ -413,6 +413,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 532820490017160912}
     m_Modifications:
+    - target: {fileID: 357997821773760163, guid: 09c6346ddf473504894a26fd609c234e,
+        type: 3}
+      propertyPath: passthroughEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5606410353812240844}
     - target: {fileID: 1393216353417266440, guid: 09c6346ddf473504894a26fd609c234e,
         type: 3}
       propertyPath: m_RootOrder
@@ -473,6 +478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wurm Model
       objectReference: {fileID: 0}
+    - target: {fileID: 9171979270670859276, guid: 09c6346ddf473504894a26fd609c234e,
+        type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 8160544195375718257}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09c6346ddf473504894a26fd609c234e, type: 3}
 --- !u!4 &692730572972536193 stripped

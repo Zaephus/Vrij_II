@@ -2,12 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using Scarab;
+using YellowScarab;
+using RedScarab;
 
 public class ScarabController : MonoBehaviour, IDamageable {
 
+    public enum ScarabType {
+        Yellow,
+        Red
+    }
+
+    [SerializeField]
+    private ScarabType type;
+
     private BaseState<ScarabController> currentState;
-    private ScarabState state;
+    [HideInInspector]
+    public ScarabState state;
 
     [HideInInspector]
     public ScarabManager manager;
@@ -41,18 +51,35 @@ public class ScarabController : MonoBehaviour, IDamageable {
             currentState.OnEnd();
         }
 
-        switch(_state) {
-            case ScarabState.Patrolling:
-                currentState = GetComponent<PatrolState>();
-                break;
-            case ScarabState.Chasing:
-                currentState = GetComponent<ChaseState>();
-                break;
-            case ScarabState.Attacking:
-                currentState = GetComponent<AttackState>();
-                break;
-            default:
-                return;
+        if(type == ScarabType.Yellow) {
+            switch(_state) {
+                case ScarabState.Patrolling:
+                    currentState = GetComponent<YellowScarab.PatrolState>();
+                    break;
+                case ScarabState.Chasing:
+                    currentState = GetComponent<YellowScarab.ChaseState>();
+                    break;
+                case ScarabState.Attacking:
+                    currentState = GetComponent<YellowScarab.AttackState>();
+                    break;
+                default:
+                    return;
+            }
+        }
+        else if(type == ScarabType.Red) {
+            switch(_state) {
+                case ScarabState.Patrolling:
+                    currentState = GetComponent<RedScarab.PatrolState>();
+                    break;
+                case ScarabState.Chasing:
+                    currentState = GetComponent<RedScarab.ChaseState>();
+                    break;
+                case ScarabState.Attacking:
+                    currentState = GetComponent<RedScarab.AttackState>();
+                    break;
+                default:
+                    return;
+            }
         }
 
         state = _state;

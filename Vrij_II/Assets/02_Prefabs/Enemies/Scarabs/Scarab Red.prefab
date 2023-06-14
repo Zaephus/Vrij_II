@@ -344,9 +344,9 @@ GameObject:
   - component: {fileID: 1550656010674298450}
   - component: {fileID: 1550656010674298455}
   - component: {fileID: 1550656010674298457}
-  - component: {fileID: 1550656010674298454}
-  - component: {fileID: 1550656010674298452}
-  - component: {fileID: 1550656010674298453}
+  - component: {fileID: -8565394493007186066}
+  - component: {fileID: -3320955078484889117}
+  - component: {fileID: 144449769896746046}
   - component: {fileID: 1550656010674298451}
   - component: {fileID: 8793832969000605993}
   m_Layer: 0
@@ -421,13 +421,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9701872bc1c534892685187d1f052b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  state: 0
   manager: {fileID: 0}
   agent: {fileID: 1550656010674298450}
   target: {fileID: 0}
   viewDistance: 15
   attackRange: 2
   health: 0
---- !u!114 &1550656010674298454
+--- !u!114 &-8565394493007186066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -436,13 +438,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1550656010674298448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a5cf4877fb889449c1583bc137b0bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 6481a97a608ad3b45a0c9bb21ee819ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
   patrolSpeed: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
   waypoints: []
---- !u!114 &1550656010674298452
+--- !u!114 &-3320955078484889117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -469,10 +474,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e480ab4035dd33144a495781f004effc, type: 3}
+  m_Script: {fileID: 11500000, guid: 4eefb86ddf2e10e4b99f01f6ea6f88a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
   chaseSpeed: 0
+--- !u!114 &144449769896746046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550656010674298448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f37c2c82716ff94bbaf540c564b940c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runner: {fileID: 0}
+  maxRotateTime: 0
+  beforeAttackDelay: 0
+  afterAttackDelay: 0
+  rotateSpeed: 0
+  animator: {fileID: 0}
+  attackSpeed: 0
 --- !u!114 &1550656010674298451
 MonoBehaviour:
   m_ObjectHideFlags: 0
