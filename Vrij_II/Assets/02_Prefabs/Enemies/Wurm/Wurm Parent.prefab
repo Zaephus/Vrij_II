@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 1432455714281986747}
   - component: {fileID: 5606410353812240844}
   - component: {fileID: 1655422875697391998}
+  - component: {fileID: 5877965787059987878}
   m_Layer: 0
   m_Name: Wurm Parent
   m_TagString: Untagged
@@ -279,6 +280,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 23.96
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5877965787059987878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7240062480017202501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242c827af092e3841887bc5898a42258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMaterial: {fileID: 2100000, guid: d6e7fe0274a633947ba1254c3d7abeee, type: 2}
+  renderers:
+  - {fileID: 8847271145662436340}
+  useTargetMaterial: 0
 --- !u!1 &9164750345953241334
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +484,12 @@ Transform:
 --- !u!95 &4257024114529665400 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2439645662404883953, guid: 09c6346ddf473504894a26fd609c234e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1929968557603894409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &8847271145662436340 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6921876591431837565, guid: 09c6346ddf473504894a26fd609c234e,
     type: 3}
   m_PrefabInstance: {fileID: 1929968557603894409}
   m_PrefabAsset: {fileID: 0}

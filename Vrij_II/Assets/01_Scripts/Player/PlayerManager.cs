@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -6,7 +7,10 @@ using Cinemachine;
 
 public class PlayerManager : MonoBehaviour {
 
-    public static System.Action<float> ZoomCamera;
+    public static Action<float> ZoomCamera;
+
+    public static Action StabAction;
+    public static Action ThrowAction;
 
     [SerializeField]
     private PlayerInputManager playerInput;
