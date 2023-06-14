@@ -19,7 +19,6 @@ public class ScarabController : MonoBehaviour, IDamageable {
     [HideInInspector]
     public ScarabState state;
 
-    [HideInInspector]
     public ScarabManager manager;
 
     public NavMeshAgent agent;
@@ -34,9 +33,6 @@ public class ScarabController : MonoBehaviour, IDamageable {
 
     private void Start() {
         SwitchState(ScarabState.Patrolling);
-        if(manager == null) {
-            manager = FindAnyObjectByType<ScarabManager>();
-        }
         if(target == null) {
             target = FindAnyObjectByType<PlayerManager>().transform;
         }

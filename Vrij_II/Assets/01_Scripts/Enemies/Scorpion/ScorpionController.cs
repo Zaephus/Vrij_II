@@ -49,6 +49,11 @@ public class ScorpionController : MonoBehaviour, IDamageable {
 
     }
 
+    private void OnDestroy() {
+        PlayerManager.ThrowAction -= Defend;
+        PlayerManager.StabAction -= Defend;
+    }
+
     public void SwitchState(ScorpionState _state) {
         if(currentState != null) {
             currentState.OnEnd();
