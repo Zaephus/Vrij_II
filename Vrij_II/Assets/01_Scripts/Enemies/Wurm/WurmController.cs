@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Wurm;
 
-public class WurmController : MonoBehaviour, IDamageable {
+public class WurmController : MonoBehaviour {
 
     private BaseState<WurmController> currentState;
     [ReadOnly]
@@ -18,8 +18,7 @@ public class WurmController : MonoBehaviour, IDamageable {
     [HideInInspector]
     public float range;
 
-    [SerializeField]
-    private float health;
+    public float health;
 
     public void Start() {
         SwitchState(WurmState.Idle);
@@ -59,18 +58,8 @@ public class WurmController : MonoBehaviour, IDamageable {
         currentState.OnStart();
     }
 
-    public void Hit(float _dmg) {
-        health -= _dmg;
-        if(health <= 0.0f) {
-            Die();
-        }
-    }
-
-    public void Die() {
-        Destroy(gameObject);
-    }
-
     private void OnTriggerEnter(Collider _other) {
+        Debug.Log("collided");
         if(_other.GetComponent<PlayerManager>() != null) {
             SwitchState(WurmState.Moving);
         }
