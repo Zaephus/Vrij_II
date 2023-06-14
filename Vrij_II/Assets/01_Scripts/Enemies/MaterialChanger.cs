@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class MaterialChanger : MonoBehaviour
 {
-    // Store the original materials of the mesh renderers
-    private Dictionary<MeshRenderer, Material[]> originalMaterials = new Dictionary<MeshRenderer, Material[]>();
+    // Store the original materials of the renderers
+    private Dictionary<Renderer, Material[]> originalMaterials = new Dictionary<Renderer, Material[]>();
 
-    // The material to apply to the mesh renderers
+    // The material to apply to the renderers
     public Material targetMaterial;
 
-    // List of mesh renderers to modify
-    public List<MeshRenderer> meshRenderers;
+    // List of renderers to modify
+    public List<Renderer> renderers;
 
     // Flag to indicate whether to use the target material or the original materials
     public bool useTargetMaterial = false;
@@ -18,6 +18,7 @@ public class MaterialChanger : MonoBehaviour
     // Apply the target material or revert to the original materials based on the flag
     public void Update()
     {
+
         if (useTargetMaterial)
         {
             ApplyTargetMaterial();
@@ -26,25 +27,22 @@ public class MaterialChanger : MonoBehaviour
         {
             RevertToOriginalMaterials();
         }
-
-        // Toggle the flag
-       // useTargetMaterial = !useTargetMaterial;
     }
 
-    // Apply the target material to all mesh renderers
+    // Apply the target material to all renderers
     private void ApplyTargetMaterial()
     {
         // Store the original materials if not already stored
         if (originalMaterials.Count == 0)
         {
-            foreach (MeshRenderer renderer in meshRenderers)
+            foreach (Renderer renderer in renderers)
             {
                 originalMaterials.Add(renderer, renderer.sharedMaterials);
             }
         }
 
-        // Apply the target material to all mesh renderers
-        foreach (MeshRenderer renderer in meshRenderers)
+        // Apply the target material to all renderers
+        foreach (Renderer renderer in renderers)
         {
             Material[] newMaterials = new Material[renderer.sharedMaterials.Length];
             for (int i = 0; i < newMaterials.Length; i++)
@@ -55,10 +53,10 @@ public class MaterialChanger : MonoBehaviour
         }
     }
 
-    // Revert the materials of the mesh renderers to their original materials
+    // Revert the materials of the renderers to their original materials
     private void RevertToOriginalMaterials()
     {
-        foreach (KeyValuePair<MeshRenderer, Material[]> kvp in originalMaterials)
+        foreach (KeyValuePair<Renderer, Material[]> kvp in originalMaterials)
         {
             kvp.Key.sharedMaterials = kvp.Value;
         }

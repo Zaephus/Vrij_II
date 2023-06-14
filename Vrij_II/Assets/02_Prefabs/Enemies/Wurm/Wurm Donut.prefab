@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2454183191657709720}
   - component: {fileID: 426704888155534418}
   - component: {fileID: 7010898854921787193}
+  - component: {fileID: 3673305508294326132}
   m_Layer: 0
   m_Name: Wurm Donut
   m_TagString: Untagged
@@ -97,3 +98,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.42, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3673305508294326132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2227885049045407111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242c827af092e3841887bc5898a42258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMaterial: {fileID: 2100000, guid: d6e7fe0274a633947ba1254c3d7abeee, type: 2}
+  renderers:
+  - {fileID: 426704888155534418}
+  useTargetMaterial: 0

@@ -1599,6 +1599,7 @@ GameObject:
   - component: {fileID: 2283762722652287945}
   - component: {fileID: 3164978546154455353}
   - component: {fileID: 5139989756277552213}
+  - component: {fileID: 9030156344966665462}
   m_Layer: 0
   m_Name: Scorpion
   m_TagString: Untagged
@@ -1718,6 +1719,56 @@ CapsuleCollider:
   m_Height: 2.75
   m_Direction: 2
   m_Center: {x: 0, y: 0.6, z: 0.25}
+--- !u!114 &9030156344966665462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833653092344622880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242c827af092e3841887bc5898a42258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMaterial: {fileID: 2100000, guid: d6e7fe0274a633947ba1254c3d7abeee, type: 2}
+  renderers:
+  - {fileID: 7899885813498270033}
+  - {fileID: 8339910534730510868}
+  - {fileID: 8139238713683290795}
+  - {fileID: 7901412851153829297}
+  - {fileID: 3611117471005029513}
+  - {fileID: 9196086971901730172}
+  - {fileID: 5392026325902756155}
+  - {fileID: 8831484759789205852}
+  - {fileID: 5021815927256678526}
+  - {fileID: 4966996574554199828}
+  - {fileID: 924108750485396470}
+  - {fileID: 7566895774556950368}
+  - {fileID: 8040285370990905273}
+  - {fileID: 1696110080822086905}
+  - {fileID: 2489201325786768478}
+  - {fileID: 2126281894197120645}
+  - {fileID: 5983248536852919031}
+  - {fileID: 1522006442541669416}
+  - {fileID: 8120488983961900779}
+  - {fileID: 3770423248389666591}
+  - {fileID: 2977272140052749433}
+  - {fileID: 6527955462951599018}
+  - {fileID: 2311291147338493044}
+  - {fileID: 5896473218342352952}
+  - {fileID: 1309935254478786614}
+  - {fileID: 51228003786329368}
+  - {fileID: 5566436377826861538}
+  - {fileID: 5732135141020685291}
+  - {fileID: 4875533341549960066}
+  - {fileID: 7078682886116204947}
+  - {fileID: 7650528443364680245}
+  - {fileID: 4932278443866792779}
+  - {fileID: 6822770420162948676}
+  - {fileID: 8550013949907056703}
+  - {fileID: 2323598701794062181}
+  - {fileID: 4019352039278892209}
 --- !u!1 &1833653092365364013
 GameObject:
   m_ObjectHideFlags: 0
