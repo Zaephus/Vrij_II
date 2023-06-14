@@ -73,28 +73,21 @@ public class PlayerMovement {
 
     public void Aim(Transform _playerTransform, float _horizontalInput, float _verticalInput) {
 
-        Vector3 dir = Vector3.ClampMagnitude(new Vector3(_horizontalInput, 0, _verticalInput), 1.0f);
-        if (_horizontalInput == 0 && _verticalInput == 0) {
-            dir = new Vector3(0, 0, aimDistance);
-        }
-
+        Vector3 dir = Vector3.Normalize(new Vector3(_horizontalInput, 0, _verticalInput));
         Vector3 targetPosition = target.position;
 
-        if (_horizontalInput >= 0.01f || _verticalInput >= 0.01f) {
+        if (_horizontalInput != 0.00f || _verticalInput != 0.00f) {
             targetPosition = _playerTransform.position + (dir).normalized * aimDistance + new Vector3(0, 1.5f, 0);
             target.position = targetPosition;
         }
 
         Debug.DrawLine(targetPosition, _playerTransform.position);
-        //target.position = targetPosition;
-
 
         Vector3 angleDir = (targetPosition - _playerTransform.position);
         //check angle from player
         float angle = Mathf.Atan2(angleDir.x, angleDir.z) * Mathf.Rad2Deg;
         //rotate player if angle outside of bounds
-
-        //_playerTransform.rotation = Quaternion.Euler(0, angle, 0);
+        _playerTransform.rotation = Quaternion.Euler(0, angle, 0);
     }
 
     public bool Throw(GameObject _spearToThrow, Transform _position) {
