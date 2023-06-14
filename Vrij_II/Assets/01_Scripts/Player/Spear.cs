@@ -44,16 +44,6 @@ public class Spear : MonoBehaviour {
         triggerCollider.enabled = true;
     }
 
-    //private void OnTriggerStay(Collider _other) {
-
-    //    Debug.Log(_other.name);
-
-    //    playerInRange = _other.gameObject.GetComponent<PlayerManager>();
-
-    //    if (_other.gameObject.GetComponent<PlayerManager>()) {
-    //        PlayerManager.SpearInRangeCall?.Invoke(this);
-    //    }
-    //}
 
     private void OnCollisionStay(Collision _other) {
 

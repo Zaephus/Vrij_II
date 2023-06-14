@@ -11,6 +11,8 @@ public class SpearHeld : MonoBehaviour {
     private GameObject spearTwo;
     [SerializeField]
     private Collider hitbox;
+    [SerializeField]
+    private float damage = 1;
 
     public void SwitchSpear(SpearType _spearType) {
 
@@ -36,7 +38,7 @@ public class SpearHeld : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         IDamageable target;
         if (other.TryGetComponent<IDamageable>(out target)) {
-            target.Hit(1f);
+            target.Hit(damage);
         }
     }
 
