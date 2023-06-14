@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 2323902990434956668}
   - component: {fileID: 2323902990434956669}
   - component: {fileID: 2323902990434956665}
+  - component: {fileID: 2481324699121319295}
   m_Layer: 0
   m_Name: Scarab Yellow
   m_TagString: Untagged
@@ -245,6 +246,41 @@ MonoBehaviour:
   - {fileID: 3206915485105961359}
   tail: {fileID: 0}
   threshold: 0.6
+--- !u!114 &2481324699121319295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323902990434956666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242c827af092e3841887bc5898a42258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMaterial: {fileID: 2100000, guid: d6e7fe0274a633947ba1254c3d7abeee, type: 2}
+  meshRenderers:
+  - {fileID: 1405408067001753316}
+  - {fileID: 5132175570545994298}
+  - {fileID: 6490931682623369190}
+  - {fileID: 6364787483539562837}
+  - {fileID: 571523208490428525}
+  - {fileID: 5362697547293671832}
+  - {fileID: 4511811744410839793}
+  - {fileID: 2358959274603255662}
+  - {fileID: 4269646665787713182}
+  - {fileID: 4269646665839189855}
+  - {fileID: 4269646666092014234}
+  - {fileID: 4269646664894868487}
+  - {fileID: 4269646664889196049}
+  - {fileID: 4269646664446665993}
+  - {fileID: 4269646665984935345}
+  - {fileID: 4269646665043433499}
+  - {fileID: 4269646664655207404}
+  - {fileID: 4269646665840357605}
+  - {fileID: 4269646665413960173}
+  - {fileID: 4269646664426895685}
+  useTargetMaterial: 0
 --- !u!1 &2323902990740193220
 GameObject:
   m_ObjectHideFlags: 0
