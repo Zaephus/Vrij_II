@@ -36,6 +36,7 @@ public class PlayerManager : MonoBehaviour {
 
     private int grassAmount;
     private bool isInGrass;
+    private bool isZooming;
 
     public static System.Action<Spear> SpearInRangeCall;
     private GameObject currentOverworldSpear;
@@ -123,11 +124,15 @@ public class PlayerManager : MonoBehaviour {
         StartCoroutine(CameraZoom(_targetZoom));
     }
     private IEnumerator CameraZoom(float _targetZoom) {
+        
+        isZooming = false;
+        yield return new WaitForEndOfFrame();
+        isZooming = true;
 
         float startTime = Time.time;
         float startZoom = playerCamera.m_Lens.OrthographicSize;
 
-        while(_targetZoom - playerCamera.m_Lens.OrthographicSize > Mathf.Epsilon || _targetZoom - playerCamera.m_Lens.OrthographicSize < -Mathf.Epsilon) {
+        while(isZooming && (_targetZoom - playerCamera.m_Lens.OrthographicSize > Mathf.Epsilon || _targetZoom - playerCamera.m_Lens.OrthographicSize < -Mathf.Epsilon)) {
 
             float t = (Time.time - startTime) / zoomDuration;
             playerCamera.m_Lens.OrthographicSize = Mathf.SmoothStep(startZoom, _targetZoom, t);
@@ -135,6 +140,8 @@ public class PlayerManager : MonoBehaviour {
             yield return new WaitForEndOfFrame();
 
         }
+
+        isZooming = false;
 
     }
 
