@@ -15,6 +15,9 @@ public class WurmBody : MonoBehaviour, IDamageable {
     [SerializeField]
     private VisualEffect deathEffect;
 
+    [SerializeField]
+    private MaterialChanger materialChanger;
+
     private void Start() {
         deathEffect.Reinit();
     }
@@ -23,6 +26,9 @@ public class WurmBody : MonoBehaviour, IDamageable {
         parent.health -= _dmg;
         if(parent.health <= 0.0f) {
             StartCoroutine(Die());
+        }
+        else {
+            materialChanger.StartCoroutine(materialChanger.SwapMaterials());
         }
     }
 

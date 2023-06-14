@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf95fecf6e57f24dac5b0204dec2b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameState: 0
+  gameState: 1
   respawnPoint: {x: 0, y: 0, z: 0}
   levelPrefab: {fileID: 1554875379426472064, guid: 585fc68433654f3459734c9a3661a8d7,
     type: 3}
@@ -110,6 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
   gameOverMenu: {fileID: 0}
+  deathEffectCanvas: {fileID: 0}
+  deathMaterial: {fileID: 2100000, guid: fbe397e8a37b9e345bafc03fce49a695, type: 2}
+  deathEffectSpeed: 4
 --- !u!114 &5850984053653513134
 MonoBehaviour:
   m_ObjectHideFlags: 0

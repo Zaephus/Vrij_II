@@ -10,7 +10,8 @@ public enum GameState {
 public enum ScarabState {
     Patrolling = 0,
     Chasing = 1,
-    Attacking = 2
+    Attacking = 2,
+    Idle = 3
 }
 
 public enum ScorpionState {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 using Scorpion;
 
 public class ScorpionController : MonoBehaviour, IDamageable {
@@ -22,7 +23,16 @@ public class ScorpionController : MonoBehaviour, IDamageable {
     [SerializeField]
     private float health;
 
+    [SerializeField]
+    private MaterialChanger materialChanger;
+
+    [SerializeField]
+    private VisualEffect deathEffect;
+    [SerializeField]
+    private float deathDelay;
+
     private void Start() {
+        deathEffect.Reinit();
         SwitchState(ScorpionState.Idle);
         if(target == null) {
             target = FindAnyObjectByType<PlayerManager>().transform;
@@ -30,7 +40,9 @@ public class ScorpionController : MonoBehaviour, IDamageable {
     }
 
     private void Update() {
-        currentState.OnUpdate();
+        if(health > 0) {
+            currentState.OnUpdate();
+        }
 
         if(Vector3.Distance(target.position, transform.position) <= defendRange) {
             if(!targetInDefendRange) {
@@ -85,11 +97,17 @@ public class ScorpionController : MonoBehaviour, IDamageable {
     public void Hit(float _dmg) {
         health -= _dmg;
         if(health <= 0.0f) {
-            Die();
+            StartCoroutine(Die());
+        }
+        else {
+            materialChanger.StartCoroutine(materialChanger.SwapMaterials());
         }
     }
 
-    public void Die() {
+    public IEnumerator Die() {
+        SwitchState(ScorpionState.Idle);
+        deathEffect.Play();
+        yield return new WaitForSeconds(deathDelay);
         Destroy(gameObject);
     }
 

@@ -2,6 +2,7 @@
 using UnityEngine;
 
 namespace Scorpion {
+    
     public class IdleState : BaseState<ScorpionController> {
 
         public override void OnStart() {}
