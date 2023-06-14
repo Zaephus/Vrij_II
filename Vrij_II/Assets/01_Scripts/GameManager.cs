@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour {
 
     private BaseState<GameManager> currentState;
 
+    [SerializeField]
+    private GameObject levelPrefab;
+
     private void Start() {
         GameCheckpoint.CheckpointReached += SetRespawnPoint;
         SwitchState(gameState);
@@ -24,6 +27,10 @@ public class GameManager : MonoBehaviour {
 
     private void Update() {
         currentState.OnUpdate();
+    }
+
+    private void OnDestroy() {
+        GameCheckpoint.CheckpointReached -= SetRespawnPoint;
     }
 
     public void SwitchState(GameState _state) {
@@ -62,8 +69,10 @@ public class GameManager : MonoBehaviour {
     }
 
     public void RestartGame() {
-        // SceneManager.LoadScene("0_MainScene", LoadSceneMode.Single);
-        ExitGame();
+        GameObject level = Instantiate(levelPrefab);
+        GetComponent<RunningState>().level = level;
+        level.SetActive(false);
+        SwitchState(GameState.MainMenu);
     }
 
     public void ExitGame() {

@@ -19,26 +19,27 @@ public class Controller : MonoBehaviour {
 
     [SerializeField]
     private float threshold = 8;
-
+    
     private void Start() {
         StartCoroutine(LegUpdateCoroutine());
     }
 
     private void Update() {
-
+        
         foreach (IKJoint joint in joints) {
-            joint.ResolveIK();
+            joint?.ResolveIK();
         }
 
         tail?.TryMove(0);
         tail?.ResolveIK();
     }
 
+    private void OnDestroy() {
+        StopAllCoroutines();
+    }
+
     private IEnumerator IdleCoroutine() {
-
-
         return null;
-
     }
 
     private IEnumerator LegUpdateCoroutine() {

@@ -74,6 +74,7 @@ namespace YellowScarab {
             Transform closest = waypoints[0];
             int k = 0;
             for(int i = 0; i < waypoints.Length; i++) {
+                // TODO: Variable waypoints has not been assigned.
                 if(Vector3.Distance(transform.position, closest.position) > Vector3.Distance(transform.position, waypoints[i].position)) {
                     closest = waypoints[i];
                     k = i;
