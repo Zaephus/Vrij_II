@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 namespace Scorpion {
 
@@ -9,9 +10,16 @@ namespace Scorpion {
 
         [SerializeField]
         private Animator animator;
+        [SerializeField]
+        private VisualEffect defendEffect;
+
+        [SerializeField]
+        private Collider defendCollider;
 
         [SerializeField]
         private float defendDelay;
+        [SerializeField, Range(0.9f, 2.0f)]
+        private float afterDefendDelay;
 
         public override void OnStart() {
             StartCoroutine(Defend());
@@ -22,12 +30,23 @@ namespace Scorpion {
         public override void OnEnd() {}
 
         public void EndDefendState() {
-            runner.SwitchState(ScorpionState.Idle);
+            StartCoroutine(EndDefend());
         }
 
         private IEnumerator Defend() {
+            defendEffect.Play();
             yield return new WaitForSeconds(defendDelay);
             animator.SetTrigger("DefendTrigger");
+            defendCollider.enabled = true;
+        }
+
+        private IEnumerator EndDefend() {
+
+            defendEffect.SendEvent("OnDestroy");
+            defendCollider.enabled = false;
+            yield return new WaitForSeconds(afterDefendDelay);
+            runner.SwitchState(ScorpionState.Idle);
+
         }
 
     }
