@@ -1,3 +1,5 @@
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,21 +14,13 @@ public class MaterialChanger : MonoBehaviour
     // List of renderers to modify
     public List<Renderer> renderers;
 
-    // Flag to indicate whether to use the target material or the original materials
-    public bool useTargetMaterial = false;
+    [SerializeField]
+    private float betweenSwapDelay = 0.1f;
 
-    // Apply the target material or revert to the original materials based on the flag
-    public void Update()
-    {
-
-        if (useTargetMaterial)
-        {
-            ApplyTargetMaterial();
-        }
-        else
-        {
-            RevertToOriginalMaterials();
-        }
+    public IEnumerator SwapMaterials() {
+        ApplyTargetMaterial();
+        yield return new WaitForSeconds(betweenSwapDelay);
+        RevertToOriginalMaterials();
     }
 
     // Apply the target material to all renderers

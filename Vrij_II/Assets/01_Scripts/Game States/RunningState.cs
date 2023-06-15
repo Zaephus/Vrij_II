@@ -23,20 +23,19 @@ public class RunningState : BaseState<GameManager> {
 
     public override void OnEnd() {
         PlayerInputManager.GamePaused -= PauseGame;
-        // TODO: Cannot destroy gameobjects with destroyImmediate here.
-        level.SetActive(false);
     }
 
     public void PauseGame() {
+        level.SetActive(false);
         runner.SwitchState(GameState.Paused);
     }
 
     public void EndGame() {
+        level.SetActive(false);
         runner.SwitchState(GameState.Finished);
     }
 
     public void GameOver() {
-        Destroy(level);
         runner.SwitchState(GameState.GameOver);
     }
 

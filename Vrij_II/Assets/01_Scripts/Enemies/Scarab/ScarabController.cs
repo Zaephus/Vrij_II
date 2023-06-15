@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
 using YellowScarab;
 using RedScarab;
 
@@ -30,7 +31,16 @@ public class ScarabController : MonoBehaviour, IDamageable {
     [SerializeField]
     private float health;
 
+    [SerializeField]
+    private MaterialChanger materialChanger;
+
+    [SerializeField]
+    private VisualEffect deathEffect;
+    [SerializeField]
+    private float deathDelay;
+
     private void Start() {
+        deathEffect.Reinit();
         SwitchState(ScarabState.Patrolling);
         if(target == null) {
             target = FindAnyObjectByType<PlayerManager>().transform;
@@ -57,6 +67,9 @@ public class ScarabController : MonoBehaviour, IDamageable {
                 case ScarabState.Attacking:
                     currentState = GetComponent<YellowScarab.AttackState>();
                     break;
+                case ScarabState.Idle:
+                    currentState = GetComponent<YellowScarab.IdleState>();
+                    break;
                 default:
                     return;
             }
@@ -71,6 +84,9 @@ public class ScarabController : MonoBehaviour, IDamageable {
                     break;
                 case ScarabState.Attacking:
                     currentState = GetComponent<RedScarab.AttackState>();
+                    break;
+                case ScarabState.Idle:
+                    currentState = GetComponent<RedScarab.IdleState>();
                     break;
                 default:
                     return;
@@ -89,11 +105,17 @@ public class ScarabController : MonoBehaviour, IDamageable {
     public void Hit(float _dmg) {
         health -= _dmg;
         if(health <= 0.0f) {
-            Die();
+            StartCoroutine(Die());
+        }
+        else {
+            materialChanger.StartCoroutine(materialChanger.SwapMaterials());
         }
     }
 
-    public void Die() {
+    public IEnumerator Die() {
+        SwitchState(ScarabState.Idle);
+        deathEffect.Play();
+        yield return new WaitForSeconds(deathDelay);
         Destroy(gameObject);
     }
 

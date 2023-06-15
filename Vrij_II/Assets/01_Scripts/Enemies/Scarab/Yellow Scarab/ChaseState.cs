@@ -47,7 +47,7 @@ namespace YellowScarab {
             
             Vector3 targetPos = new Vector3(runner.target.position.x, transform.position.y, runner.target.position.z);
             Vector3 targetDir = (targetPos - runner.transform.position).normalized;
-            Debug.DrawLine(transform.position, transform.position + targetDir * runner.viewDistance);
+            Debug.DrawLine(transform.position, transform.position + targetDir * runner.viewDistance, Color.blue);
 
             Ray ray = new Ray(runner.transform.position, targetDir.normalized);
             RaycastHit hit;

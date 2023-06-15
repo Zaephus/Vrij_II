@@ -495,7 +495,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenuState, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: StartVideo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -503,7 +503,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!95 &54537157
 Animator:
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5de3c502cb15d52459cfbc3c8846aad4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3574370ba4489f4aa740954fa1d2b44, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

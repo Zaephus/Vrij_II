@@ -221,7 +221,7 @@ MonoBehaviour:
   agent: {fileID: 8455653277681256259}
   target: {fileID: 0}
   range: 0
-  health: 15
+  health: 8
 --- !u!114 &5417288549694005414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   targetMaterial: {fileID: 2100000, guid: d6e7fe0274a633947ba1254c3d7abeee, type: 2}
   renderers:
   - {fileID: 8847271145662436340}
-  useTargetMaterial: 0
+  betweenSwapDelay: 0.1
 --- !u!1 &9164750345953241334
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +483,11 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 8160544195375718257}
+    - target: {fileID: 9171979270670859276, guid: 09c6346ddf473504894a26fd609c234e,
+        type: 3}
+      propertyPath: materialChanger
+      value: 
+      objectReference: {fileID: 5877965787059987878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09c6346ddf473504894a26fd609c234e, type: 3}
 --- !u!4 &692730572972536193 stripped

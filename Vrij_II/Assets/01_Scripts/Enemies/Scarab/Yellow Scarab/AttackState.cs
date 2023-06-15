@@ -63,7 +63,9 @@ namespace YellowScarab {
 
             yield return new WaitForSeconds(afterAttackDelay);
 
-            runner.SwitchState(ScarabState.Chasing);
+            if(runner.state == ScarabState.Attacking) {
+                runner.SwitchState(ScarabState.Chasing);
+            }
 
         }
 

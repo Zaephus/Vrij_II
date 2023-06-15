@@ -110,6 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
   gameOverMenu: {fileID: 0}
+  deathEffectCanvas: {fileID: 0}
+  deathMaterial: {fileID: 2100000, guid: fbe397e8a37b9e345bafc03fce49a695, type: 2}
+  deathEffectSpeed: 4
 --- !u!114 &5850984053653513134
 MonoBehaviour:
   m_ObjectHideFlags: 0

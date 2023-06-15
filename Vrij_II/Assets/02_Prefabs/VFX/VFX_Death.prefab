@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3953216323499530289}
   - component: {fileID: 3953216323499530294}
   - component: {fileID: 3953216323499530295}
-  - component: {fileID: 1169711117926942490}
   m_Layer: 0
   m_Name: VFX_Death
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3953216323499530292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.92, y: 0.80831695, z: -13.84}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,8 +42,8 @@ VisualEffect:
   m_GameObject: {fileID: 3953216323499530292}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 23bd752c9ba3d7c4e9d5e5f518e67b07, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: 
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -111,16 +110,3 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1169711117926942490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3953216323499530292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e1f65bfd81b2342b99b1194f2e4344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyDelay: 4
