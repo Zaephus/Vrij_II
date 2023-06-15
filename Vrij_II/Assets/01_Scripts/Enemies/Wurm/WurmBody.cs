@@ -37,6 +37,8 @@ public class WurmBody : MonoBehaviour, IDamageable {
         animator.StopPlayback();
         yield return new WaitForSeconds(5.0f);
         
+        WurmDonut.WurmDied?.Invoke();
+        
         Destroy(parent.gameObject);
     }
 

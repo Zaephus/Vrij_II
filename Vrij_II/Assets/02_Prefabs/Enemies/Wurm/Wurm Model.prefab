@@ -628,6 +628,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   animator: {fileID: 2439645662404883953}
   deathEffect: {fileID: 7398756870046928064}
+  materialChanger: {fileID: 0}
 --- !u!136 &2886520902494677991
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -698,7 +699,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.025
+  m_Radius: 0.01
   m_Center: {x: 0, y: 0, z: 0.012}
 --- !u!1 &4548457958772007539
 GameObject:

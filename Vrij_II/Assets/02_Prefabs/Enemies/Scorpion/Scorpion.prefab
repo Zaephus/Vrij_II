@@ -1646,7 +1646,7 @@ MonoBehaviour:
   viewDistance: 110
   defendRange: 5
   defendChance: 1
-  health: 1
+  health: 3
   materialChanger: {fileID: -3821270074189579699}
   deathEffect: {fileID: 3908365467691345789}
   deathDelay: 2.5
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   particle: {fileID: 3699186619001963975}
   maxFollowTime: 3
   rotateSpeed: 5
-  attackSpeed: 1
+  attackSpeed: 1.5
   tailTargetIK: {fileID: 1833653091518482116}
   pickupPoints:
   - {fileID: 1833653092537919439}
@@ -1705,10 +1705,10 @@ MonoBehaviour:
   - {fileID: 1833653093455870392}
   pathMidPoint: {fileID: 8981456551793279169}
   pathEndPoint: {fileID: 2445560559322718858}
-  preAttackDelay: 0.25
+  preAttackDelay: 0.15
   preThrowDelay: 0.1
   afterThrowDelay: 0.1
-  afterAttackDelay: 0.25
+  afterAttackDelay: 0.15
 --- !u!136 &5139989756277552213
 CapsuleCollider:
   m_ObjectHideFlags: 0

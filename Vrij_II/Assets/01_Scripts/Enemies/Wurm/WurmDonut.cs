@@ -6,6 +6,8 @@ using UnityEngine.VFX;
 
 public class WurmDonut : MonoBehaviour {
 
+    public static System.Action WurmDied;
+
     [SerializeField]
     private float moveSpeed;
 
@@ -19,9 +21,18 @@ public class WurmDonut : MonoBehaviour {
 
     private bool isMoving;
 
+    public int wurmDeathCount = 0;
+    private bool canMoveUp = true;
+
+    private void Start() {
+        WurmDied += IncrementDeathCount;
+    }
+
     private void OnTriggerEnter(Collider _other) {
         if(_other.GetComponent<PlayerManager>() != null) {
-            StartCoroutine(MoveUp());
+            if(canMoveUp) {
+                StartCoroutine(MoveUp());
+            }
         }
     }
 
@@ -40,7 +51,6 @@ public class WurmDonut : MonoBehaviour {
         effect.Play();
 
         while(isMoving && transform.localPosition.y < upHeight) {
-            Debug.Log("Moving up");
             transform.position += new Vector3(0.0f, moveSpeed * Time.deltaTime, 0.0f);
             yield return new WaitForEndOfFrame();
         }
@@ -64,6 +74,14 @@ public class WurmDonut : MonoBehaviour {
 
         effect.Stop();
 
+    }
+
+    private void IncrementDeathCount() {
+        wurmDeathCount++;
+        if(wurmDeathCount == 2) {
+            StartCoroutine(MoveDown());
+            canMoveUp = false;
+        }
     }
     
 }
