@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 public class NamedArrayAttribute : PropertyAttribute {
     public readonly string[] names;
     public NamedArrayAttribute(string[] names) {
@@ -21,3 +22,4 @@ public class NamedArrayDrawer : PropertyDrawer {
         }
     }
 }
+#endif

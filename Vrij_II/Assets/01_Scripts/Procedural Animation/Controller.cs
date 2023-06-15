@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Controller : MonoBehaviour {
-
-    [SerializeField]
+#if UNITY_EDITOR
     [NamedArrayAttribute(new string[] { "frontLeftJoint", "frontRightJoint", "middleLeftJoint", "middleRightJoint", "backLeftJoint", "backRightJoint" })]
+#endif
+    [SerializeField]
     private List<IKJoint> joints = new List<IKJoint>();
 
     private IKJoint frontLeftJoint;
